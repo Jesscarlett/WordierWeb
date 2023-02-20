@@ -85,16 +85,26 @@ img {margin-bottom: -7px}
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">Close</a>
-  <a href="dictionary" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Home</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Hangman</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Contact</a>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Close</a>
+    <a href="dictionary" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
+    <a href="/pswords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Junior Words</a>
+    <a href="/seniorwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Senior Words</a>
+    <a href="/jokes_quotes" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Jokes</a>
+    <a href="/quotes" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Quotes</a>
+    <a href="/choice_helper" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Choice Helper</a>
+    <a href="/conversations" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Conversation Starters</a>
+    <a href="/thesaurus" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Synonyms Antonyms</a>
+    <a href="/fill_sentence" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Fill in Blank</a>
+    <a href="/paragraph" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Complete Sentence</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">About</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Contact</a>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding">WORDIER</span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    <a href="dictionary" class="w3-left w3-padding" style="text-decoration: none;">WORDIER</a>
+    <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
 
 <!-- !PAGE CONTENT! -->
@@ -102,17 +112,53 @@ img {margin-bottom: -7px}
 
 {% block content %}
 {% endblock %}
-<!-- End Page Content -->
+</div>
+
+<div class="w3-content" style="max-width:1500px">
+    <div class="w3-row-padding w3-center" style="margin-top:64px; margin-bottom:64px;">
+        <div class="w3-quarter">
+          <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" ></i>
+          <p class="w3-large">Hangman Game</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+          <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" ></i>
+          <a href = "/thesaurus">
+            <p class="w3-large">Synonyms Antonyms</p>
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" ></i>
+          <a href = "/paragraph">
+              <p class="w3-large">Fill in Blank</p>
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" ></i>
+          <a href = "/fill_sentence">
+              <p class="w3-large">Complete Sentence</p>
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+    </div>
+</div>
+
+<div class="w3-content" style="max-width:1500px">
+{% block content1 %}
+{% endblock %}
+    <!-- End Page Content -->
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+    <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div>
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- Thesaurus Section -->
+<div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-large"><strong>{{ para }}</strong></p>
+        <button class="w3-button w3-large" onclick="input_answer('{{ p_word1 }}')">{{ p_word1 }}</button>
+        <button class="w3-button w3-large" onclick="input_answer('{{ p_word2 }}')">{{ p_word2 }}</button>
+        <button class="w3-button w3-large" onclick="input_answer('{{ p_word3 }}')">{{ p_word3 }}</button>
+        <button class="w3-button w3-large" onclick="input_answer('{{ p_word4 }}')">{{ p_word4 }}</button><br>
+        <p class="w3-xlarge" id="result-message"><strong></strong></p>
+        <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ p_answer }}</p>
+        <textarea class="w3-xlarge" id="my_answer" rows="1" cols="8"></textarea>
+    </div>
+    <p><a href="#" onclick="compare_answer('my_answer');" class="w3-button w3-center w3-light-grey"><i class="fa fa-refresh"> </i> Submit</a></p>
+    <p><a href="#" onclick="location.reload();" class="w3-button w3-center w3-light-grey"><i class="fa fa-refresh"> </i> Refresh</a></p>
+</div>
+
+
+
+<div class="w3-row-padding" style="margin-top:15px">
+    <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ p_answer }}</p>
+</div>
+
+<script>
+function input_answer(answer) {
+    var currentAnswer = document.getElementById("my_answer").value;
+    var selected_letter = answer.charAt(0)
+    currentAnswer += selected_letter;
+    document.getElementById("my_answer").value = currentAnswer;
+}
+
+
+function compare_answer(textarea_id) {
+    var user_answer = document.getElementById(textarea_id).value;
+    var correct_answer = document.getElementById("answer").textContent;;
+    console.log("user_answer:", user_answer);
+    console.log("correct_answer:", correct_answer);
+    if (user_answer === correct_answer) {
+        // Display "Correct answer!" message in the result-message element
+        document.getElementById("result-message").innerHTML = "Bingo!";
+        document.getElementById("result-message").style.color = "green";
+    } else {
+        // Display "Incorrect answer." message in the result-message element
+        document.getElementById("result-message").innerHTML = "Wrong, try again.";
+        document.getElementById("result-message").style.color = "red";
+    }
+}
+
+</script>
+{% endblock %}

@@ -6,21 +6,21 @@
 
 <!-- Header with full-height image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-xxlarge w3-hide-small">Today's Quote and Joke</span><br>
-    <span class="w3-xlarge w3-hide-large w3-hide-medium">Today's Quote and Joke</span><br>
-    <span class="w3-large">{{ quote }}</span><br><br>
-    <span class="w3-large">{{ joke }}</span><br>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download Wordier in app store today</a></p>
-  </div>
-  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-xxlarge w3-hide-small">Today's Quote and Joke</span><br>
+        <span class="w3-xlarge w3-hide-large w3-hide-medium">Today's Quote and Joke</span><br>
+        <span class="w3-large">{{ quote }}</span><br><br>
+        <span class="w3-large">{{ joke }}</span><br>
+        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download Wordier in app store today</a></p>
+    </div>
+    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+        <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+    </div>
 </header>
 
 
@@ -35,28 +35,11 @@
     </form>
 </div>
 
-<div class="w3-row-padding w3-center" style="margin-top:64px; margin-bottom:64px;">
-    <div class="w3-quarter">
-      <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" ></i>
-      <p class="w3-large">Hangman Game</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" ></i>
-      <p class="w3-large">Synonyms Antonyms</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-spinner w3-margin-bottom w3-jumbo" ></i>
-      <p class="w3-large">Fill in Blank</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" ></i>
-      <p class="w3-large">Complete Sentence</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-</div>
+{% endblock %}
+
+{% block content1 %}
+
+
 
 <!-- Primary Words Section -->
 <div class="w3-container w3-light-grey" style="padding:65px 25px">
@@ -97,7 +80,9 @@
 
 <!-- Choice Section -->
 <div class="w3-container w3-center w3-light-grey" style="padding:25px 25px">
-    <p class="w3-large">Difficult to make a choice? Try our Choice Helper!</p>
+    <a href = "/choice_helper">
+        <p class="w3-large">Difficult to make a choice? Try our Choice Helper!</p>
+    </a>
 </div>
 
 <!-- Quotes and Conversations -->
@@ -110,7 +95,7 @@
             <p>{{ q2 }}</p>
             <p>{{ q3 }}</p>
             <p>{{ q4 }}</p>
-            <button class="w3-button w3-light-grey w3-block">Search Quotes</button>
+            <a href="/quotes" class="w3-button w3-light-grey w3-block">Search Quotes</a>
           </div>
     </div>
     <div class="w3-half w3-margin-bottom">
@@ -121,7 +106,7 @@
             <p>{{ cq2 }}</p>
             <p>{{ cq3 }}</p>
             <p>{{ cq4 }}</p>
-            <button class="w3-button w3-light-grey w3-block">More Conversation Ideas</button>
+            <a href="/conversations" class="w3-button w3-light-grey w3-block">More Conversation Ideas</a>
           </div>
     </div>
 </div>

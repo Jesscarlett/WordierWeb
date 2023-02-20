@@ -22,31 +22,6 @@
   </div>
 </header>
 
-<!-- Search Quotes Section -->
-<div class="w3-row-padding w3-center">
-    <p class="w3-center w3-large"><strong>Search Quotes</strong></p>
-    <form method="POST" action="{% url 'jokes_quotes' %}">
-    {% csrf_token %}
-        <input type="text" name="key_word" id="key_word">
-        <input type="submit" value="GO">
-    </form>
-    {% if quote1 %}
-    <p>{{ quote1 }}</p>
-    {% endif %}
-    {% if quote2 %}
-    <p>{{ quote2 }}</p>
-    {% endif %}
-    {% if quote3 %}
-    <p>{{ quote3 }}</p>
-    {% endif %}
-    {% if quote4 %}
-    <p>{{ quote4 }}</p>
-    {% endif %}
-    <p>{{ quote5 }}</p>
-</div>
-
-
-
 <!-- Jokes Section -->
 <div class="w3-row-padding w3-center" style="margin-top:64px">
     <p class="w3-xlarge">Cracking Jokes</p>
@@ -70,47 +45,6 @@
     </div>
     <p><a href="#" onclick="location.reload();" class="w3-button w3-center w3-light-grey"><i class="fa fa-refresh"> </i> Refresh</a>
 </div>
-
-<!-- Menu Section -->
-<div class="w3-row-padding w3-center" style="margin-top:64px; margin-bottom:64px;">
-    <div class="w3-quarter">
-      <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" ></i>
-      <p class="w3-large">Hangman Game</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" ></i>
-      <p class="w3-large">Synonyms Antonyms</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-spinner w3-margin-bottom w3-jumbo" ></i>
-      <p class="w3-large">Fill in Blank</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" ></i>
-      <p class="w3-large">Complete Sentence</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-</div>
-
-<!-- Quotes Section -->
-<div class="w3-row-padding w3-center" style="margin-top:64px">
-    <p class="w3-xlarge">Inspirational Quotes</p>
-    <div class="w3-row-padding" style="margin-top:15px">
-        <p>{{ q1 }}</p>
-        <p>{{ q2 }}</p>
-        <p>{{ q3 }}</p>
-        <p>{{ q4 }}</p>
-        <p>{{ q5 }}</p>
-        <p>{{ q6 }}</p>
-        <p>{{ q7 }}</p>
-        <p>{{ q8 }}</p>
-    </div>
-    <p><a href="#" onclick="location.reload();" class="w3-button w3-center w3-light-grey"><i class="fa fa-refresh"> </i> Refresh</a>
-</div>
-
 
 
 {% endblock %}

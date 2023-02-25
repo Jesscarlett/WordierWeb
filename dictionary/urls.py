@@ -13,6 +13,7 @@ urlpatterns = [
     path('choice_helper', views.choice_helper, name='choice_helper'),
     path('thesaurus', views.thesaurus, name='thesaurus'),
     path('fill_sentence', views.fill_sentence, name='fill_sentence'),
-    path('paragraph', views.paragraph, name='paragraph')
+    path('paragraph', views.paragraph, name='paragraph'),
+    path('hangman_junior', views.hangman_junior, name='hangman_junior')
 ]
 

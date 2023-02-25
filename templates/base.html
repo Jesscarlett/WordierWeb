@@ -39,8 +39,8 @@ img {margin-bottom: -7px}
 .bgimg {
   background-position: center;
   background-size: cover;
-  background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
-  min-height: 80%;
+  background-image:  url("{% static 'tools.png' %}");
+  min-height: 67%;
 }
 
 #myBtn {
@@ -96,7 +96,7 @@ img {margin-bottom: -7px}
     <a href="/thesaurus" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Synonyms Antonyms</a>
     <a href="/fill_sentence" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Fill in Blank</a>
     <a href="/paragraph" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Complete Sentence</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
+    <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">About</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Contact</a>
 </nav>
@@ -117,30 +117,32 @@ img {margin-bottom: -7px}
 <div class="w3-content" style="max-width:1500px">
     <div class="w3-row-padding w3-center" style="margin-top:64px; margin-bottom:64px;">
         <div class="w3-quarter">
-          <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" ></i>
-          <p class="w3-large">Hangman Game</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" style="color:#ED8C82"></i>
+          <a href = "/hangman_junior">
+            <p class="w3-large">Hangman Game</p>
+          </a>
+          <p>Play hangman before? You have 9 chances to guess the word before explosion!</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" ></i>
+          <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" style="color:#F29C12" ></i>
           <a href = "/thesaurus">
             <p class="w3-large">Synonyms Antonyms</p>
           </a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p>Multiple choice thesaurus exercise among 3000 adjectives.</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" ></i>
+          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#9C59B5"></i>
           <a href = "/paragraph">
               <p class="w3-large">Fill in Blank</p>
           </a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p>Arrange the right sequence of words in a complex sentence.</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" ></i>
+          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" style="color:#1ABD9C" ></i>
           <a href = "/fill_sentence">
               <p class="w3-large">Complete Sentence</p>
           </a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          <p>Choose your words from choic of five to complete a simple sentence.</p>
         </div>
     </div>
 </div>

@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div>
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- hangman Section -->
+<div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-large" id="hang_cell"><strong>{{ hang_cell }}</strong></p>
+        <button class="w3-button w3-large" onclick="compare_letter('A')">A</button>
+        <button class="w3-button w3-large" onclick="compare_letter('B')">B</button>
+        <button class="w3-button w3-large" onclick="compare_letter('C')">C</button>
+        <button class="w3-button w3-large" onclick="compare_letter('D')">D</button>
+        <button class="w3-button w3-large" onclick="compare_letter('E')">E</button>
+        <button class="w3-button w3-large" onclick="compare_letter('F')">F</button>
+        <button class="w3-button w3-large" onclick="compare_letter('G')">G</button>
+        <button class="w3-button w3-large" onclick="compare_letter('H')">H</button>
+        <button class="w3-button w3-large" onclick="compare_letter('I')">I</button>
+        <button class="w3-button w3-large" onclick="compare_letter('J')">J</button>
+        <button class="w3-button w3-large" onclick="compare_letter('K')">K</button>
+        <button class="w3-button w3-large" onclick="compare_letter('L')">L</button>
+        <button class="w3-button w3-large" onclick="compare_letter('M')">M</button>
+        <button class="w3-button w3-large" onclick="compare_letter('N')">N</button><br>
+        <button class="w3-button w3-large" onclick="compare_letter('O')">O</button>
+        <button class="w3-button w3-large" onclick="compare_letter('P')">P</button>
+        <button class="w3-button w3-large" onclick="compare_letter('Q')">Q</button>
+        <button class="w3-button w3-large" onclick="compare_letter('R')">R</button>
+        <button class="w3-button w3-large" onclick="compare_letter('S')">S</button>
+        <button class="w3-button w3-large" onclick="compare_letter('T')">T</button>
+        <button class="w3-button w3-large" onclick="compare_letter('U')">U</button>
+        <button class="w3-button w3-large" onclick="compare_letter('V')">V</button>
+        <button class="w3-button w3-large" onclick="compare_letter('W')">W</button>
+        <button class="w3-button w3-large" onclick="compare_letter('X')">X</button>
+        <button class="w3-button w3-large" onclick="compare_letter('Y')">Y</button>
+        <button class="w3-button w3-large" onclick="compare_letter('Z')">Z</button><br>
+        <p class="w3-medium" id="result-message"><strong></strong></p>
+        <p id="meaning" style="display: none">{{ meaning }}</p>
+        <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>
+    </div>
+    <p><a href="#" onclick="location.reload();" class="w3-button w3-center w3-light-grey"><i class="fa fa-refresh"> </i> Refresh</a></p>
+</div>
+
+<div class="w3-center">
+    <img class="w3-image w3-round-large" src="/static/{{ hang_image_source }}" alt="Buildings" width="500" >
+</div>
+
+<div class="w3-row-padding" style="margin-top:15px">
+    <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>
+</div>
+
+<script>
+
+function compare_letter(letter) {
+    var hang_answer = document.getElementById("answer").textContent.toLowerCase();
+    var hang_cell = document.getElementById("hang_cell").textContent;
+    letter = letter.toLowerCase();
+    console.log("hang_answer: " + hang_answer);
+    console.log("hang_cell: " + hang_cell);
+    var i;
+    var letterFound = false;
+    var meaning = document.getElementById("meaning").textContent;
+    console.log("meaning: " + meaning);
+    for (i = 0; i < hang_answer.length; i++) {
+        if (hang_answer[i] === letter) {
+            hang_cell = hang_cell.substr(0, i*3) + letter + "  " + hang_cell.substr(i*3 + 3);
+            letterFound = true;
+        }
+    }
+    if (!letterFound) {
+        document.getElementById("hang_cell").textContent = hang_cell;
+
+        // get the image element
+        var img = document.querySelector('.w3-image');
+
+        // get the current image index from the src attribute
+        var currentImageIndex = parseInt(img.src.split('image')[1]);
+
+        // increment the index by 1
+        var nextImageIndex = currentImageIndex + 1;
+
+        // construct the new image src attribute
+        var newImageSrc = '/static/image' + nextImageIndex + '.jpeg';
+        console.log("newImageSrc: " + newImageSrc);
+        // update the image src attribute
+        img.src = newImageSrc;
+        if (nextImageIndex >= 9) {
+          var newImageSrc = '/static/image9.jpeg';
+          img.src = newImageSrc;
+          document.querySelector('#result-message strong').textContent = meaning;
+          document.querySelector('#result-message').style.display = "block";
+        }
+    }
+    document.getElementById("hang_cell").textContent = hang_cell;
+}
+
+</script>
+{% endblock %}

@@ -684,6 +684,34 @@ def show_para():
                 break
     return para, p_word1, p_word2, p_word3, p_word4, p_answer
 
+def hangman_junior(request):
+    hang_cell, hang_answer, wrong_guess, hang_image_source, hang_count, word_meaning, meaning = hang_junior_func()
+    return render(request, 'hangman_junior.html', {'hang_cell': hang_cell, 'hang_answer': hang_answer,
+                                                   'wrong_guess': wrong_guess, 'hang_image_source': hang_image_source,
+                                                   'hang_count': hang_count, 'word_meaning': word_meaning, 'meaning': meaning})
+
+def hang_junior_func():
+    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBjunior.json") as file:
+        junior_d = json.load(file)
+        hang_j = random.choice(list(junior_d))
+        hang_l = list(hang_j)
+        fill = ""
+        for i in hang_l:
+            fill += "__ "
+        hang_cell = fill
+        hang_answer = hang_j
+        print(hang_answer)
+        wrong_guess = ""
+        hang_image_source = 'image0.jpeg'
+        hang_count = "0"
+        word_meaning = ""
+        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBjunior.json") as file:
+            j_d = json.load(file)
+        meaning = hang_j.capitalize() + " - " + j_d[hang_j]['definition'].lstrip().replace(' ', ' | ', 1) + '\n'
+    return hang_cell, hang_answer, wrong_guess, hang_image_source, hang_count, word_meaning, meaning
+
+
+
 word_list = [
     "abandon",
     "ability",

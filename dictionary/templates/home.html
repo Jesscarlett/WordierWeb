@@ -6,10 +6,10 @@
 
 <!-- Header with full-height image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-left w3-text-white" style="padding:48px">
+    <div class="w3-display-left w3-text-white" style="padding:48px;">
         <span class="w3-xxlarge w3-hide-small">Today's Quote and Joke</span><br>
         <span class="w3-xlarge w3-hide-large w3-hide-medium">Today's Quote and Joke</span><br>
-        <span class="w3-large" style="word-wrap: break-word; max-width: 500px;">{{ quote }}</span><br><br>
+        <span class="w3-large" >{{ quote }}</span><br><br>
         <span class="w3-large">{{ joke }}</span><br>
         <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download Wordier in app store today</a></p>
     </div>
@@ -37,8 +37,6 @@
 <div class="w3-container w3-light-grey" style="padding:65px 25px">
   <div class="w3-row-padding" style="margin-top:15px">
     <div class="w3-col m6">
-        <p class="w3-xlarge">Primary Words</p>
-        <p class="w3-large">Learn vocabulary in Woridier, daily refresh of 10 words.</p>
         <p><strong>{{ w1 }}</strong></p>
         <p>{{ m1 }}</p>
         <p><strong>{{ w2 }}</strong></p>
@@ -47,7 +45,7 @@
         <p><a href="/seniorwords" class="w3-button w3-black"><i class="fa fa-th"> </i> Difficult Words</a></p>
     </div>
     <div class="w3-col m6">
-        <img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+        <img class="w3-image w3-round-large" src="/static/primary.png" alt="primary" width="700" height="394">
     </div>
   </div>
 </div>
@@ -56,10 +54,9 @@
 <div class="w3-container" style="padding:75px 25px">
     <div class="w3-row-padding" style="margin-top:15px">
         <div class="w3-col m6" style="padding: 0px 10px">
-            <img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/ocean2.jpg" alt="Buildings" width="1000" height="394">
+            <img class="w3-image w3-round-large" src="/static/jokes.png" alt="jokes" width="1000" height="394">
         </div>
         <div class="w3-col m6" style="padding: 0px 10px">
-            <p class="w3-xlarge">Cracking Jokes</p>
             <p class="w3-large">"A day without laughter is a day wasted.".</p>
             <p><strong>{{ jq1 }}</strong>    {{ ja1 }}</p>
             <p><strong>{{ jq2 }}</strong>    {{ ja2 }}</p>
@@ -80,9 +77,8 @@
 <!-- Quotes and Conversations -->
 <div class="w3-row-padding" style="padding:75px 25px">
     <div class="w3-half w3-margin-bottom">
-          <img src="https://www.w3schools.com/w3images/ocean2.jpg" alt="Norway" style="width:100%; height:30%;">
+          <img class="w3-image w3-round-large" src="/static/quotes.png" alt="quotes" style="width:100%;">
           <div class="w3-container w3-white">
-            <p class="w3-xlarge">Inspirational Quotes</p>
             <p>{{ q1 }}</p>
             <p>{{ q2 }}</p>
             <p>{{ q3 }}</p>
@@ -91,9 +87,8 @@
           </div>
     </div>
     <div class="w3-half w3-margin-bottom">
-          <img src="https://www.w3schools.com/w3images/mountains2.jpg" alt="Austria" style="width:100%; height:30%;">
+          <img class="w3-image w3-round-large" src="/static/conversation.png" alt="conversation" style="width:100%;">
           <div class="w3-container w3-white" >
-            <p class="w3-xlarge">Conversation Starters</p>
             <p>{{ cq1 }}</p>
             <p>{{ cq2 }}</p>
             <p>{{ cq3 }}</p>

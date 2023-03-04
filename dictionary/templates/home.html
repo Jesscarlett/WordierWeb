@@ -9,10 +9,12 @@
     <div class="w3-display-left w3-text-white" style="padding:48px;">
         <span class="w3-large"></span><br><br>
         <span class="w3-xxlarge w3-hide-small">Today's Quote and Joke</span><br>
-        <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughters.</span><br>
-        <span class="w3-large w3-hide-small" >{{ quote }}</span><br><br>
+        <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughters.</span>
+        <span class="w3-large w3-hide-small" >{{ quote }}</span><br>
         <span class="w3-large w3-hide-small">{{ joke }}</span><br>
         <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download Wordier app today</a></p>
+        <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+        <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
     </div>
 </header>
 
@@ -100,17 +102,38 @@
 </div>
 
 <script>
-  window.onload = function() {
-      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      var isAndroid = /Android/.test(navigator.userAgent);
-      var link = document.querySelector("a.w3-button");
+<!--  window.onload = function() {-->
+<!--      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;-->
+<!--      var isAndroid = /Android/.test(navigator.userAgent);-->
+<!--      var link = document.querySelector("a.w3-button");-->
 
-      if (isIOS) {
+<!--      if (isIOS) {-->
+<!--        link.href = "https://apps.apple.com/us/app/wordier/id1600186527";-->
+<!--      } else if (isAndroid) {-->
+<!--        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp";-->
+<!--      }-->
+<!--  };-->
+
+window.onload = function() {
+    var userAgent = window.navigator.userAgent,
+        platform = window.navigator.platform,
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
+    var link = document.querySelector("a.w3-button");
+    console.log('link:', link)
+    if (iosPlatforms.indexOf(platform) !== -1) {
         link.href = "https://apps.apple.com/us/app/wordier/id1600186527";
-      } else if (isAndroid) {
-        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp";
-      }
-  };
+        }
+    else if (/Android/.test(userAgent)) {
+        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp"
+        }
+    else if (windowsPlatforms.indexOf(platform) !== -1) {
+        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp"
+        }
+}
+
 </script>
 
 

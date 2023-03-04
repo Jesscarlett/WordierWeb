@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://wechatstatic.blob.core.windows.net/static/style/wechatstyle.css">
+<!--<link rel="stylesheet" href="https://wechatstatic.blob.core.windows.net/static/style/wechatstyle.css">-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!link rel="stylesheet" href="https://wechatstatic.blob.core.windows.net/static/style/menustyle.css">
@@ -40,7 +40,7 @@ img {margin-bottom: -7px}
   background-position: center;
   background-size: cover;
   background-image:  url("{% static 'tools.png' %}");
-  min-height: 67%;
+  min-height: 60%;
 }
 
 #myBtn {
@@ -87,6 +87,7 @@ img {margin-bottom: -7px}
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Close</a>
     <a href="dictionary" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
+    <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
     <a href="/pswords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Junior Words</a>
     <a href="/seniorwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Senior Words</a>
     <a href="/jokes_quotes" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Jokes</a>
@@ -96,9 +97,7 @@ img {margin-bottom: -7px}
     <a href="/thesaurus" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Synonyms Antonyms</a>
     <a href="/fill_sentence" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Fill in Blank</a>
     <a href="/paragraph" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Complete Sentence</a>
-    <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">About</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Contact</a>
+    <a href="/about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">About</a>
 </nav>
 
 <!-- Top menu on small screens -->
@@ -115,7 +114,7 @@ img {margin-bottom: -7px}
 </div>
 
 <div class="w3-content" style="max-width:1500px">
-    <div class="w3-row-padding w3-center" style="margin-top:64px; margin-bottom:64px;">
+    <div class="w3-row-padding w3-center" style="margin-top:30px; margin-bottom:30px;">
         <div class="w3-quarter">
           <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" style="color:#ED8C82"></i>
           <a href = "/hangman_junior">
@@ -161,7 +160,7 @@ img {margin-bottom: -7px}
     <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
     <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<!--  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>-->
 </footer>
 
 <script>

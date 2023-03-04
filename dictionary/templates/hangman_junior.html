@@ -15,7 +15,7 @@
 </header>
 
 <!-- hangman Section -->
-<div class="w3-row-padding w3-center" style="margin-top:64px">
+<div class="w3-row-padding w3-center" style="margin-top:10px">
     <div class="w3-row-padding" style="margin-top:15px">
         <p class="w3-large" id="hang_cell"><strong>{{ hang_cell }}</strong></p>
         <button class="w3-button w3-large" onclick="compare_letter('A')">A</button>
@@ -44,6 +44,7 @@
         <button class="w3-button w3-large" onclick="compare_letter('X')">X</button>
         <button class="w3-button w3-large" onclick="compare_letter('Y')">Y</button>
         <button class="w3-button w3-large" onclick="compare_letter('Z')">Z</button><br>
+        <p class="w3-large" id="congrats" style="display: none"><strong>"Bingo!"</strong></p>
         <p class="w3-medium" id="result-message"><strong></strong></p>
         <p id="meaning" style="display: none">{{ meaning }}</p>
         <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>
@@ -102,6 +103,12 @@ function compare_letter(letter) {
         }
     }
     document.getElementById("hang_cell").textContent = hang_cell;
+    if (hang_cell.indexOf("_") < 0) {
+        document.querySelector('#result-message strong').textContent = meaning;
+        document.getElementById("congrats").style.color = "green"
+        document.querySelector('#result-message').style.display = "block";
+        document.querySelector('#congrats').style.display = "block";
+    }
 }
 
 </script>

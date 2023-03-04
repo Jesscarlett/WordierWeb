@@ -33,7 +33,7 @@ def index(request):
 
 
 def quote_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\quotes.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/quotes.json") as file:
         quotes_d = json.load(file)
         i = random.randint(21879, 23145)
         k = str(i)
@@ -42,7 +42,7 @@ def quote_func():
 
 
 def joke_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\jokes.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/jokes.json") as file:
         jokes_d = json.load(file)
         m = random.randint(1000, 1716)
         n = str(m)
@@ -82,7 +82,7 @@ def dict_view(request):
 
 
 def junior_random_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBjunior.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/PSBjunior.json") as file:
         junior_d = json.load(file)
         jr = random.sample(list(junior_d), 10)
         e = str(jr[0])
@@ -119,7 +119,7 @@ def junior_random_func():
 
 
 def senior_random_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBsenior.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/PSBsenior.json") as file:
         senior_d = json.load(file)
         sr = random.sample(list(senior_d), 10)
         x1 = str(sr[0])
@@ -156,7 +156,7 @@ def senior_random_func():
 
 
 def joke_random_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\jokes.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/jokes.json") as file:
         joke_d = json.load(file)
         jo = random.sample(list(joke_d), 8)
         e1 = str(jo[0])
@@ -187,7 +187,7 @@ def joke_random_func():
 
 
 def quote_random_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\quotes.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/quotes.json") as file:
         quotes_d = json.load(file)
         random_numbers = random.sample(range(21879, 23146), 8)
         a1 = str(random_numbers[0])
@@ -210,7 +210,7 @@ def quote_random_func():
 
 
 def conversation_random_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\CQ.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/CQ.json") as file:
         conversation_d = json.load(file)
         con = random.sample(list(conversation_d), 8)
         c1 = str(con[0])
@@ -242,7 +242,7 @@ def show_data_meaning(user_input):
         else:
             x = search_word[0].upper()
 
-        with open(os.path.dirname(os.path.dirname(__file__)) + f"\\static\\D{x}.json") as file:
+        with open(os.path.dirname(os.path.dirname(__file__)) + f"/static/D{x}.json") as file:
             word_dict = json.load(file)
         word = search_word.upper()
         if word in word_dict:
@@ -267,13 +267,13 @@ def show_data_meaning(user_input):
                                                                   "(": None,
                                                                   ")": None}))
 
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBjunior.json") as file:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/PSBjunior.json") as file:
             example1_dict = json.load(file)
 
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBsenior.json") as file:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/PSBsenior.json") as file:
             example2_dict = json.load(file)
 
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\sentencepos.json") as file:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/sentencepos.json") as file:
             example3_dict = json.load(file)
 
         k = word.lower()
@@ -447,7 +447,7 @@ def show_quotes(key_word):
             quote_word = 'success'
         else:
             lower_word = quote_word.lower()
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\quotes.json") as quote_file:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/quotes.json") as quote_file:
             quotes_dict = json.load(quote_file)
             i = random.randint(2, 23144)
             n = 0
@@ -519,7 +519,7 @@ def show_thesaurus():
     num_list = [1, 2]
     x = random.choice(num_list)
     if x == 1:
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\antonyms.json") as f:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/antonyms.json") as f:
             ant_dict = json.load(f)
             entry_list = list(ant_dict.keys())
             the_word = random.choice(entry_list)
@@ -536,7 +536,7 @@ def show_thesaurus():
             word4 = "D. " + the_group[3]
             the_question = 'What is the word opposite to ' + the_word + '?'
     else:
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\synonyms.json") as f:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/synonyms.json") as f:
             ant_dict = json.load(f)
             entry_list = list(ant_dict.keys())
             the_word = random.choice(entry_list)
@@ -569,7 +569,7 @@ def thesaurus(request):
                                               'word3': word3, 'word4': word4, 'answer_letter': answer_letter})
 
 def show_sentencedata():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\sentencepos.json") as f:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/sentencepos.json") as f:
         sentence_dict = json.load(f)
     sentenceword = random.choice(list(sentence_dict))
     try:
@@ -629,8 +629,12 @@ def paragraph(request):
                                               'p_word3': p_word3, 'p_word4': p_word4, 'p_answer': p_answer})
 
 
+def about(request):
+    return render(request, 'about.html')
+
+
 def show_para():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\sentence.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/sentence.json") as file:
         sentence_dict = json.load(file)
         while True:
             i = random.randint(10001, 15957)
@@ -691,7 +695,7 @@ def hangman_junior(request):
                                                    'hang_count': hang_count, 'word_meaning': word_meaning, 'meaning': meaning})
 
 def hang_junior_func():
-    with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBjunior.json") as file:
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/PSBjunior.json") as file:
         junior_d = json.load(file)
         hang_j = random.choice(list(junior_d))
         hang_l = list(hang_j)
@@ -705,7 +709,7 @@ def hang_junior_func():
         hang_image_source = 'image0.jpeg'
         hang_count = "0"
         word_meaning = ""
-        with open(os.path.dirname(os.path.dirname(__file__)) + "\\static\\PSBjunior.json") as file:
+        with open(os.path.dirname(os.path.dirname(__file__)) + "/static/PSBjunior.json") as file:
             j_d = json.load(file)
         meaning = hang_j.capitalize() + " - " + j_d[hang_j]['definition'].lstrip().replace(' ', ' | ', 1) + '\n'
     return hang_cell, hang_answer, wrong_guess, hang_image_source, hang_count, word_meaning, meaning

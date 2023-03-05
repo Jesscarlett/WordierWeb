@@ -102,37 +102,7 @@
 </div>
 
 <script>
-<!--  window.onload = function() {-->
-<!--      var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;-->
-<!--      var isAndroid = /Android/.test(navigator.userAgent);-->
-<!--      var link = document.querySelector("a.w3-button");-->
 
-<!--      if (isIOS) {-->
-<!--        link.href = "https://apps.apple.com/us/app/wordier/id1600186527";-->
-<!--      } else if (isAndroid) {-->
-<!--        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp";-->
-<!--      }-->
-<!--  };-->
-
-window.onload = function() {
-    var userAgent = window.navigator.userAgent,
-        platform = window.navigator.platform,
-        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-        os = null;
-    var link = document.querySelector("a.w3-button");
-    console.log('link:', link)
-    if (iosPlatforms.indexOf(platform) !== -1) {
-        link.href = "https://apps.apple.com/us/app/wordier/id1600186527";
-        }
-    else if (/Android/.test(userAgent)) {
-        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp"
-        }
-    else if (windowsPlatforms.indexOf(platform) !== -1) {
-        link.href = "https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp"
-        }
-}
 
 </script>
 

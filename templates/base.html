@@ -84,7 +84,7 @@ img {margin-bottom: -7px}
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Close</a>
-    <a href="dictionary" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
+    <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
     <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
     <a href="/pswords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Junior Words</a>
     <a href="/seniorwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Senior Words</a>
@@ -95,12 +95,13 @@ img {margin-bottom: -7px}
     <a href="/thesaurus" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Synonyms Antonyms</a>
     <a href="/fill_sentence" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Fill in Blank</a>
     <a href="/paragraph" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Complete Sentence</a>
+<!--    <a href="{% url 'read' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Reading Comprehension</a>-->
     <a href="/about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">About</a>
 </nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-    <a href="dictionary" class="w3-left w3-padding" style="text-decoration: none;">WORDIER</a>
+    <a href="{% url 'home' %}" class="w3-left w3-padding" style="text-decoration: none;">WORDIER</a>
     <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
 

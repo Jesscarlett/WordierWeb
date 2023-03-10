@@ -3,11 +3,10 @@ from django.shortcuts import render
 import json
 import os
 import random
-# Create your views here.
 from django.templatetags.static import static
 
 
-def index(request):
+def home(request):
     quote = quote_func()
     joke = joke_func()
     w1, m1, w2, m2, w3, m3, w4, m4, w5, m5, w6, m6, w7, m7, w8, m8, w9, m9, w10, m10 = junior_random_func()

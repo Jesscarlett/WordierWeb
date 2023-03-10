@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+        <span class="w3-large"></span><br><br>
+        <span class="w3-xxlarge w3-hide-small">Reading comprehesion with classic.</span><br>
+        <span class="w3-xlarge w3-hide-large w3-hide-medium">Reading comprehesion with classic.</span><br>
+        <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+        <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+        <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+        <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    </div>
+</header>
+
+<!-- Alice Section -->
+<div class="w3-row-padding" style="padding:30px 25px">
+    <div class="w3-half w3-margin-bottom">
+          <img class="w3-image w3-round-large" src="/static/alice1.png" alt="quotes" style="width:100%;">
+          <div class="w3-container w3-white">
+            <p style="padding-left: 48px;">
+                <a href="{% url 'alice_one' %}">CHAPTER I. Down the Rabbit-Hole</a><br>
+                <a href="#about">CHAPTER II. The Pool of Tears</a><br>
+                <a href="#about">CHAPTER III. A Caucus-Race and a Long Tale</a><br>
+                <a href="#about">CHAPTER IV. The Rabbit Sends in a Little Bill</a><br>
+                <a href="#about">CHAPTER V. Advice from a Caterpillar</a><br>
+                <a href="#about">CHAPTER VI. Pig and Pepper</a><br>
+                <a href="#about">CHAPTER VII. A Mad Tea-Party</a><br>
+                <a href="#about">CHAPTER VIII. The Queen’s Croquet-Ground</a><br>
+                <a href="#about">CHAPTER IX. The Mock Turtle’s Story</a><br>
+                <a href="#about">CHAPTER X. The Lobster Quadrille</a><br>
+                <a href="#about">CHAPTER XI. Who Stole the Tarts?</a><br>
+                <a href="#about">CHAPTER XII. Alice’s Evidence</a><br>
+            </p>
+            <a href="/quotes" class="w3-button w3-light-grey w3-block">Start Now</a>
+          </div>
+    </div>
+    <div class="w3-half w3-margin-bottom">
+          <img class="w3-image w3-round-large" src="/static/alice2.png" alt="conversation" style="width:100%;">
+          <div class="w3-container w3-white" >
+            <p style="padding-left: 48px;">
+                <a href="#about">CHAPTER I. Looking-Glass house</a><br>
+                <a href="#about">CHAPTER II. The Garden of Live Flowers</a><br>
+                <a href="#about">CHAPTER III. Looking-Glass Insects</a><br>
+                <a href="#about">CHAPTER IV. Tweedledum And Tweedledee</a><br>
+                <a href="#about">CHAPTER V. Wool and Water</a><br>
+                <a href="#about">CHAPTER VI. Humpty Dumpty</a><br>
+                <a href="#about">CHAPTER VII. The Lion and the Unicorn</a><br>
+                <a href="#about">CHAPTER VIII. 'It's my own Invention'</a><br>
+                <a href="#about">CHAPTER IX. Queen Alice</a><br>
+                <a href="#about">CHAPTER X. Shaking</a><br>
+                <a href="#about">CHAPTER XI. Waking</a>
+            </p>
+            <a href="/conversations" class="w3-button w3-light-grey w3-block">Start Now</a>
+          </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block content1 %}
+
+
+
+
+
+<script>
+
+
+</script>
+
+
+{% endblock %}

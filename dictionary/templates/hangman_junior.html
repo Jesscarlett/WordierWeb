@@ -48,6 +48,7 @@
         <button class="w3-button w3-large" onclick="compare_letter('Y')">Y</button>
         <button class="w3-button w3-large" onclick="compare_letter('Z')">Z</button><br>
         <p class="w3-large" id="congrats" style="display: none"><strong>"Bingo!"</strong></p>
+        <p class="w3-large" id="guess-letter"></p>
         <p class="w3-medium" id="result-message"><strong></strong></p>
         <p id="meaning" style="display: none">{{ meaning }}</p>
         <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>
@@ -61,6 +62,7 @@
 
 <div class="w3-row-padding" style="margin-top:15px">
     <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>
+    <p class="w3-tiny w3-text-white" id="guess" style="font-size: 1px">{{ wrong_guess }}</p>
 </div>
 
 <script>
@@ -68,6 +70,7 @@
 function compare_letter(letter) {
     var hang_answer = document.getElementById("answer").textContent.toLowerCase();
     var hang_cell = document.getElementById("hang_cell").textContent;
+    var wrong_guess = document.getElementById("guess").textContent;
     letter = letter.toLowerCase();
     console.log("hang_answer: " + hang_answer);
     console.log("hang_cell: " + hang_cell);
@@ -96,6 +99,13 @@ function compare_letter(letter) {
         // construct the new image src attribute
         var newImageSrc = '/static/image' + nextImageIndex + '.jpeg';
         console.log("newImageSrc: " + newImageSrc);
+
+        // display guess letters
+
+        wrong_guess = wrong_guess + "   " + letter
+        document.querySelector('#guess').textContent = wrong_guess;
+        document.querySelector('#guess-letter').textContent = wrong_guess;
+
         // update the image src attribute
         img.src = newImageSrc;
         if (nextImageIndex >= 9) {

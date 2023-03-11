@@ -11,3 +11,7 @@ def read(request):
 
 def alice_one(request):
     return render(request, 'alice_one.html')
+
+
+def alice_two(request):
+    return render(request, 'alice_two.html')

@@ -22,11 +22,11 @@
     <div class="w3-half w3-margin-bottom">
           <img class="w3-image w3-round-large" src="/static/alice1.png" alt="quotes" style="width:100%;">
           <div class="w3-container w3-white">
-            <p style="padding-left: 48px;">
+            <p style="padding-left: 24px;">
                 <a href="{% url 'alice_one' %}">CHAPTER I. Down the Rabbit-Hole</a><br>
                 <a href="{% url 'alice_two' %}">CHAPTER II. The Pool of Tears</a><br>
-                <a href="#about">CHAPTER III. A Caucus-Race and a Long Tale</a><br>
-                <a href="#about">CHAPTER IV. The Rabbit Sends in a Little Bill</a><br>
+                <a href="{% url 'alice_three' %}">CHAPTER III. A Caucus-Race and a Long Tale</a><br>
+                <a href="{% url 'alice_four' %}">CHAPTER IV. The Rabbit Sends in a Little Bill</a><br>
                 <a href="#about">CHAPTER V. Advice from a Caterpillar</a><br>
                 <a href="#about">CHAPTER VI. Pig and Pepper</a><br>
                 <a href="#about">CHAPTER VII. A Mad Tea-Party</a><br>
@@ -36,13 +36,13 @@
                 <a href="#about">CHAPTER XI. Who Stole the Tarts?</a><br>
                 <a href="#about">CHAPTER XII. Alice’s Evidence</a><br>
             </p>
-            <a href="/quotes" class="w3-button w3-light-grey w3-block">Start Now</a>
+            <a a href="{% url 'alice_one' %}" class="w3-button w3-light-grey w3-block">Start Now</a>
           </div>
     </div>
     <div class="w3-half w3-margin-bottom">
           <img class="w3-image w3-round-large" src="/static/alice2.png" alt="conversation" style="width:100%;">
           <div class="w3-container w3-white" >
-            <p style="padding-left: 48px;">
+            <p style="padding-left: 24px;">
                 <a href="#about">CHAPTER I. Looking-Glass house</a><br>
                 <a href="#about">CHAPTER II. The Garden of Live Flowers</a><br>
                 <a href="#about">CHAPTER III. Looking-Glass Insects</a><br>

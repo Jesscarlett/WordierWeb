@@ -15,3 +15,11 @@ def alice_one(request):
 
 def alice_two(request):
     return render(request, 'alice_two.html')
+
+
+def alice_three(request):
+    return render(request, 'alice_three.html')
+
+
+def alice_four(request):
+    return render(request, 'alice_four.html')

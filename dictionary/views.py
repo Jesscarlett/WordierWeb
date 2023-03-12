@@ -632,6 +632,10 @@ def about(request):
     return render(request, 'about.html')
 
 
+def privacy(request):
+    return render(request, 'privacy.html')
+
+
 def show_para():
     with open(os.path.dirname(os.path.dirname(__file__)) + "/static/sentence.json") as file:
         sentence_dict = json.load(file)

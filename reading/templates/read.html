@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<header class="bgimg-2 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
         <span class="w3-large"></span><br><br>
         <span class="w3-xxlarge w3-hide-small">Reading comprehesion with classic.</span><br>
@@ -27,14 +27,14 @@
                 <a href="{% url 'alice_two' %}">CHAPTER II. The Pool of Tears</a><br>
                 <a href="{% url 'alice_three' %}">CHAPTER III. A Caucus-Race and a Long Tale</a><br>
                 <a href="{% url 'alice_four' %}">CHAPTER IV. The Rabbit Sends in a Little Bill</a><br>
-                <a href="#about">CHAPTER V. Advice from a Caterpillar</a><br>
-                <a href="#about">CHAPTER VI. Pig and Pepper</a><br>
-                <a href="#about">CHAPTER VII. A Mad Tea-Party</a><br>
-                <a href="#about">CHAPTER VIII. The Queen’s Croquet-Ground</a><br>
-                <a href="#about">CHAPTER IX. The Mock Turtle’s Story</a><br>
-                <a href="#about">CHAPTER X. The Lobster Quadrille</a><br>
-                <a href="#about">CHAPTER XI. Who Stole the Tarts?</a><br>
-                <a href="#about">CHAPTER XII. Alice’s Evidence</a><br>
+                <a href="{% url 'alice_five' %}">CHAPTER V. Advice from a Caterpillar</a><br>
+                <a href="{% url 'alice_six' %}">CHAPTER VI. Pig and Pepper</a><br>
+                <a href="{% url 'alice_seven' %}">CHAPTER VII. A Mad Tea-Party</a><br>
+                <a href="{% url 'alice_eight' %}">CHAPTER VIII. The Queen’s Croquet-Ground</a><br>
+                <a href="{% url 'alice_nine' %}">CHAPTER IX. The Mock Turtle’s Story</a><br>
+                <a href="{% url 'alice_ten' %}">CHAPTER X. The Lobster Quadrille</a><br>
+                <a href="{% url 'alice_eleven' %}">CHAPTER XI. Who Stole the Tarts?</a><br>
+                <a href="{% url 'alice_twelve' %}">CHAPTER XII. Alice’s Evidence</a><br>
             </p>
             <a a href="{% url 'alice_one' %}" class="w3-button w3-light-grey w3-block">Start Now</a>
           </div>
@@ -43,19 +43,19 @@
           <img class="w3-image w3-round-large" src="/static/alice2.png" alt="conversation" style="width:100%;">
           <div class="w3-container w3-white" >
             <p style="padding-left: 24px;">
-                <a href="#about">CHAPTER I. Looking-Glass house</a><br>
-                <a href="#about">CHAPTER II. The Garden of Live Flowers</a><br>
-                <a href="#about">CHAPTER III. Looking-Glass Insects</a><br>
-                <a href="#about">CHAPTER IV. Tweedledum And Tweedledee</a><br>
-                <a href="#about">CHAPTER V. Wool and Water</a><br>
-                <a href="#about">CHAPTER VI. Humpty Dumpty</a><br>
-                <a href="#about">CHAPTER VII. The Lion and the Unicorn</a><br>
-                <a href="#about">CHAPTER VIII. 'It's my own Invention'</a><br>
-                <a href="#about">CHAPTER IX. Queen Alice</a><br>
-                <a href="#about">CHAPTER X. Shaking</a><br>
-                <a href="#about">CHAPTER XI. Waking</a>
+                <a href="{% url 'glass_one' %}">CHAPTER I. Looking-Glass house</a><br>
+                <a href="{% url 'glass_two' %}">CHAPTER II. The Garden of Live Flowers</a><br>
+                <a href="{% url 'glass_three' %}">CHAPTER III. Looking-Glass Insects</a><br>
+                <a href="{% url 'glass_four' %}">CHAPTER IV. Tweedledum And Tweedledee</a><br>
+                <a href="{% url 'glass_five' %}">CHAPTER V. Wool and Water</a><br>
+                <a href="{% url 'glass_six' %}">CHAPTER VI. Humpty Dumpty</a><br>
+                <a href="{% url 'glass_seven' %}">CHAPTER VII. The Lion and the Unicorn</a><br>
+                <a href="{% url 'glass_eight' %}">CHAPTER VIII. 'It's my own Invention'</a><br>
+                <a href="{% url 'glass_nine' %}">CHAPTER IX. Queen Alice</a><br>
+                <a href="{% url 'glass_ten' %}">CHAPTER X. Shaking</a><br>
+                <a href="{% url 'glass_ten' %} ">CHAPTER XI. Waking</a>
             </p>
-            <a href="/conversations" class="w3-button w3-light-grey w3-block">Start Now</a>
+            <a href="{% url 'glass_one' %}" class="w3-button w3-light-grey w3-block">Start Now</a>
           </div>
     </div>
 </div>

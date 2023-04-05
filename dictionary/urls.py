@@ -16,6 +16,7 @@ urlpatterns = [
     path('paragraph', views.paragraph, name='paragraph'),
     path('hangman_junior', views.hangman_junior, name='hangman_junior'),
     path('about', views.about, name='about'),
-    path('privacy', views.privacy, name='privacy')
+    path('privacy', views.privacy, name='privacy'),
+    path('aboutai', views.aboutai, name='aboutai')
 ]
 

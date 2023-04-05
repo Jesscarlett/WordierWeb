@@ -635,6 +635,8 @@ def about(request):
 def privacy(request):
     return render(request, 'privacy.html')
 
+def aboutai(request):
+    return render(request, 'aboutai.html')
 
 def show_para():
     with open(os.path.dirname(os.path.dirname(__file__)) + "/static/sentence.json") as file:

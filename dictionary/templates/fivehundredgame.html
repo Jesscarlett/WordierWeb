@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+    <span class="w3-large"></span><br><br>
+    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+    <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+    <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+  </div>
+</header>
+
+<section id="500-words"></section>
+<!-- game Section -->
+<div class="w3-row-padding w3-center" style="margin-top:10px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-xxlarge" id="fh_gameword"><strong>{{ fh_gameword }}</strong></p>
+        <p class="w3-xxlarge" id="fh_word_cell"><strong>{{ fh_word_cell }}</strong></p>
+        <p class="w3-xlarge" id="fh_keysentence" style="display: none">{{ fh_keysentence }}</p>
+        <button class="w3-button w3-large" onclick="compare_letter('A')">A</button>
+        <button class="w3-button w3-large" onclick="compare_letter('B')">B</button>
+        <button class="w3-button w3-large" onclick="compare_letter('C')">C</button>
+        <button class="w3-button w3-large" onclick="compare_letter('D')">D</button>
+        <button class="w3-button w3-large" onclick="compare_letter('E')">E</button>
+        <button class="w3-button w3-large" onclick="compare_letter('F')">F</button>
+        <button class="w3-button w3-large" onclick="compare_letter('G')">G</button>
+        <button class="w3-button w3-large" onclick="compare_letter('H')">H</button>
+        <button class="w3-button w3-large" onclick="compare_letter('I')">I</button>
+        <button class="w3-button w3-large" onclick="compare_letter('J')">J</button>
+        <button class="w3-button w3-large" onclick="compare_letter('K')">K</button>
+        <button class="w3-button w3-large" onclick="compare_letter('L')">L</button>
+        <button class="w3-button w3-large" onclick="compare_letter('M')">M</button>
+        <button class="w3-button w3-large" onclick="compare_letter('N')">N</button><br>
+        <button class="w3-button w3-large" onclick="compare_letter('O')">O</button>
+        <button class="w3-button w3-large" onclick="compare_letter('P')">P</button>
+        <button class="w3-button w3-large" onclick="compare_letter('Q')">Q</button>
+        <button class="w3-button w3-large" onclick="compare_letter('R')">R</button>
+        <button class="w3-button w3-large" onclick="compare_letter('S')">S</button>
+        <button class="w3-button w3-large" onclick="compare_letter('T')">T</button>
+        <button class="w3-button w3-large" onclick="compare_letter('U')">U</button>
+        <button class="w3-button w3-large" onclick="compare_letter('V')">V</button>
+        <button class="w3-button w3-large" onclick="compare_letter('W')">W</button>
+        <button class="w3-button w3-large" onclick="compare_letter('X')">X</button>
+        <button class="w3-button w3-large" onclick="compare_letter('Y')">Y</button>
+        <button class="w3-button w3-large" onclick="compare_letter('Z')">Z</button><br>
+        <p class="w3-xlarge" id="congrats" style="display: none"><strong>"Bingo!"</strong></p>
+        <p class="w3-large" id="guess-letter"></p>
+        <p class="w3-medium" id="result-message"><strong></strong></p>
+<!--        <p id="meaning" style="display: none">{{ meaning }}</p>-->
+<!--        <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>-->
+    </div>
+    <p><a href="#500-words" onclick="compare_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-arrow-up"></i> Submit</a></p>
+    <p><a href="#500-words" onclick="location.reload();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-refresh"> </i> Next</a></p>
+</div>
+
+<div class="w3-row-padding" style="margin-top:15px">
+    <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ fh_keyword }}</p>
+    <p class="w3-tiny w3-text-white" id="guess" style="font-size: 1px">{{ wrong_guess }}</p>
+</div>
+
+<script>
+
+function compare_letter(letter) {
+    var word_answer = document.getElementById("fh_gameword").textContent.toLowerCase();
+    var word_cell = document.getElementById("fh_word_cell").textContent;
+    var wrong_guess = document.getElementById("guess").textContent;
+    letter = letter.toLowerCase();
+    let index = word_cell.indexOf("__");
+    if (index !== -1) {
+        word_cell = word_cell.slice(0, index) + letter + word_cell.slice(index + 2);
+        document.getElementById("fh_word_cell").textContent = word_cell;
+    } else {
+    }
+
+}
+
+function compare_word() {
+    var word_cell1 = document.getElementById("fh_word_cell").textContent;
+    var word_answer = document.getElementById("answer").textContent.toLowerCase();
+    answer = word_answer.replace(/\s/g, '');
+    if (word_cell1.replace(/\s/g, '') === answer) {
+          document.getElementById("congrats").style.color = "green";
+          document.querySelector('#congrats').style.display = "block";
+    } else {
+      word_cell1 = ""
+      for (let i = 0; i < answer.length; i++) {
+          word_cell1 += "__ ";
+        }
+      document.getElementById("fh_word_cell").textContent = word_cell1;
+        }
+}
+</script>
+{% endblock %}

@@ -103,6 +103,7 @@ img {margin-bottom: -7px}
     <a href="/thesaurus" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Synonyms Antonyms</a>
     <a href="/fill_sentence" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Fill in Blank</a>
     <a href="/paragraph" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Complete Sentence</a>
+    <a href="/fivehundredwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">500 Elementary Words</a>
     <a href="{% url 'read' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Reading Comprehension</a>
     <a href="/about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">About</a>
 </nav>
@@ -137,14 +138,14 @@ img {margin-bottom: -7px}
           <p>Multiple choice thesaurus exercise among 3000 adjectives.</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#9C59B5"></i>
-          <a href = "/paragraph">
-              <p class="w3-large">Fill in Blank</p>
+          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#78DE78"></i>
+          <a href = "/fivehundredwords">
+              <p class="w3-large">500 Elementary</p>
           </a>
-          <p>Arrange the right sequence of words in a complex sentence.</p>
+          <p>500 primary words and sentences for early learners, 20 modules, 25 words each.</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" style="color:#1ABD9C" ></i>
+          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" style="color:#9C59B5" ></i>
           <a href = "/fill_sentence">
               <p class="w3-large">Complete Sentence</p>
           </a>
@@ -215,16 +216,16 @@ function w3_close() {
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+<!--// When the user scrolls down 20px from the top of the document, show the button-->
+<!--window.onscroll = function() {scrollFunction()};-->
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+<!--function scrollFunction() {-->
+<!--  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {-->
+<!--    mybutton.style.display = "block";-->
+<!--  } else {-->
+<!--    mybutton.style.display = "none";-->
+<!--  }-->
+<!--}-->
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -233,23 +234,23 @@ function topFunction() {
 }
 
 // Slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
+<!--var slideIndex = 1;-->
+<!--showDivs(slideIndex);-->
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+<!--function plusDivs(n) {-->
+<!--  showDivs(slideIndex += n);-->
+<!--}-->
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
+<!--function showDivs(n) {-->
+<!--  var i;-->
+<!--  var x = document.getElementsByClassName("mySlides");-->
+<!--  if (n > x.length) {slideIndex = 1}-->
+<!--  if (n < 1) {slideIndex = x.length}-->
+<!--  for (i = 0; i < x.length; i++) {-->
+<!--    x[i].style.display = "none";-->
+<!--  }-->
+<!--  x[slideIndex-1].style.display = "block";-->
+<!--}-->
 </script>
 
 </body>

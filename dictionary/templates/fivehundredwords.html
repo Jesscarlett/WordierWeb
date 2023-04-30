@@ -656,11 +656,9 @@ function show_module(selected_module) {
     var i = selected_module;
     var fh_word_number = (i - 1) * 25 + 1;
     var fh_module = "Module " + i + " - Word " + fh_word_number;
-    console.log("fh_module: " + fh_module);
     document.querySelector('#fh_module strong').textContent = fh_module;
     var fh_word = fh_word_dict[fh_word_number];
     document.querySelector('#fh_word').textContent = fh_word;
-    console.log("fh_word: " + fh_word);
     }
 
 function last_word() {
@@ -873,11 +871,9 @@ function next_word() {
         var fh_module_number = i;
         }
     var fh_module = "Module " + fh_module_number.toString() + " - Word " + fh_word_number.toString();
-    console.log("fh_module: " + fh_module);
     document.querySelector('#fh_module strong').textContent = fh_module;
     var fh_word = fh_word_dict[fh_word_number];
     document.querySelector('#fh_word').textContent = fh_word;
-    console.log("fh_word: " + fh_word);
     document.querySelector('#fh_sentence').style.display = "none";
     }
 

@@ -19,6 +19,8 @@ urlpatterns = [
     path('privacy', views.privacy, name='privacy'),
     path('aboutai', views.aboutai, name='aboutai'),
     path('fivehundredwords', views.fivehundredwords, name='fivehundredwords'),
-    path('fivehundredgame', views.fivehundredgame, name='fivehundredgame')
+    path('fivehundredgame', views.fivehundredgame, name='fivehundredgame'),
+    path('sixhundredwords', views.sixhundredwords, name='sixhundredwords'),
+    path('sixhundredgame', views.sixhundredgame, name='sixhundredgame')
 ]
 

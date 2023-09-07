@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+    <span class="w3-large"></span><br><br>
+    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+    <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+    <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+  </div>
+</header>
+
+
+<!-- Module Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-xlarge"><strong>700 Stage 2 Words In 28 Modules</strong></p>
+        <button class="w3-button w3-large" onclick="show_module('1')">Module 1</button>
+        <button class="w3-button w3-large" onclick="show_module('2')">Module 2</button>
+        <button class="w3-button w3-large" onclick="show_module('3')">Module 3</button>
+        <button class="w3-button w3-large" onclick="show_module('4')">Module 4</button>
+        <button class="w3-button w3-large" onclick="show_module('5')">Module 5</button>
+        <button class="w3-button w3-large" onclick="show_module('6')">Module 6</button>
+        <button class="w3-button w3-large" onclick="show_module('7')">Module 7</button>
+        <button class="w3-button w3-large" onclick="show_module('8')">Module 8</button>
+        <button class="w3-button w3-large" onclick="show_module('9')">Module 9</button>
+        <button class="w3-button w3-large" onclick="show_module('10')">Module 10</button>
+        <button class="w3-button w3-large" onclick="show_module('11')">Module 11</button>
+        <button class="w3-button w3-large" onclick="show_module('12')">Module 12</button>
+        <button class="w3-button w3-large" onclick="show_module('13')">Module 13</button>
+        <button class="w3-button w3-large" onclick="show_module('14')">Module 14</button>
+        <button class="w3-button w3-large" onclick="show_module('15')">Module 15</button>
+        <button class="w3-button w3-large" onclick="show_module('16')">Module 16</button>
+        <button class="w3-button w3-large" onclick="show_module('17')">Module 17</button>
+        <button class="w3-button w3-large" onclick="show_module('18')">Module 18</button>
+        <button class="w3-button w3-large" onclick="show_module('19')">Module 19</button>
+        <button class="w3-button w3-large" onclick="show_module('20')">Module 20</button>
+        <button class="w3-button w3-large" onclick="show_module('21')">Module 21</button>
+        <button class="w3-button w3-large" onclick="show_module('22')">Module 22</button>
+        <button class="w3-button w3-large" onclick="show_module('23')">Module 23</button>
+        <button class="w3-button w3-large" onclick="show_module('24')">Module 24</button>
+        <button class="w3-button w3-large" onclick="show_module('25')">Module 25</button>
+        <button class="w3-button w3-large" onclick="show_module('26')">Module 26</button>
+        <button class="w3-button w3-large" onclick="show_module('27')">Module 27</button>
+        <button class="w3-button w3-large" onclick="show_module('28')">Module 28</button>
+
+    </div>
+</div>
+
+<section id="700-words"></section>
+
+<!-- 700 Word Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <p class="w3-xlarge" id="fh_module" style="color:#ED2B2A"><strong>{{ fh_module }}</strong></p>
+    <p class="w3-xxxlarge" id="fh_word">{{ fh_word }}</p>
+    <p class="w3-large" id="fh_mean" style="color:w3-dark-gray; display: none">{{ fh_mean }}</p>
+    <p class="w3-large" id="fh_sentence" style="color:w3-dark-gray; display: none">{{ fh_sentence }}</p>
+    <div style="display: flex; justify-content: center;">
+        <div class="w3-row-padding w3-center" style="margin-top:15px; display: flex;">
+            <p style="margin: 30;"><a href="#700-words" onclick="last_word()"><i class="fa fa-arrow-circle-left" style="font-size: 30px; color:#ED2B2A"></i></a></p>
+            <p style="margin: 30;"><a href="#700-words" onclick="next_word()"><i class="fa fa-arrow-circle-right" style="font-size: 30px; color:#ED2B2A"></i></a></p>
+        </div>
+    </div>
+    <p><a href="#700-words" onclick="show_sentence();" class="w3-button w3-center w3-light-grey" style="width: 200px">Sentence & Meaning</a></p>
+    <p><a href="/sevenhundredgame" onclick="#" class="w3-button w3-center w3-light-grey" style="width: 200px ">Word Game</a></p>
+</div>
+
+<script>
+function show_module(selected_module) {
+    const jsonUrl = '/static/700words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var i = selected_module;
+            var fh_word_number = (i - 1) * 25 + 1;
+            var fh_module = "Module " + i + " - Word " + fh_word_number;
+            document.querySelector('#fh_module strong').textContent = fh_module;
+            var fh_word = sev_dict[fh_word_number]['word'];
+            document.querySelector('#fh_word').textContent = fh_word;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function last_word() {
+    const jsonUrl = '/static/700words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("fh_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var module_num = parseInt(current_module.match(/\d+/)[0], 10);
+            var i = module_num;
+            var fh_word_number = word_num - 1
+            if (fh_word_number == 0) {
+                fh_word_number = 700
+                i = 29
+                }
+            if (fh_word_number % 25 !== 0) {
+                var fh_module_number = i;
+                } else {
+                var fh_module_number = i - 1;
+                }
+            var fh_module = "Module " + fh_module_number.toString() + " - Word " + fh_word_number.toString();
+            console.log("fh_module: " + fh_module);
+            document.querySelector('#fh_module strong').textContent = fh_module;
+            var fh_word = sev_dict[fh_word_number]['word'];
+            document.querySelector('#fh_word').textContent = fh_word;
+            console.log("fh_word: " + fh_word);
+            document.querySelector('#fh_sentence').style.display = "none";
+            document.querySelector('#fh_mean').style.display = "none";
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function next_word() {
+    const jsonUrl = '/static/700words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("fh_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var module_num = parseInt(current_module.match(/\d+/)[0], 10);
+            var i = module_num;
+            var fh_word_number = word_num + 1
+            if (fh_word_number == 701) {
+                fh_word_number = 1
+                i = 0
+                }
+            if (fh_word_number % 25 === 1) {
+                var fh_module_number = i + 1;
+                } else {
+                var fh_module_number = i;
+                }
+            var fh_module = "Module " + fh_module_number.toString() + " - Word " + fh_word_number.toString();
+            document.querySelector('#fh_module strong').textContent = fh_module;
+            var fh_word = sev_dict[fh_word_number]['word'];
+            document.querySelector('#fh_word').textContent = fh_word;
+            document.querySelector('#fh_sentence').style.display = "none";
+            document.querySelector('#fh_mean').style.display = "none";
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function show_sentence() {
+    const jsonUrl = '/static/700words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("fh_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var fh_word = document.getElementById("fh_word").textContent;
+            var fh_sentence = sev_dict[word_num]['sen'];
+            var fh_mean = sev_dict[word_num]['mean'];
+            document.getElementById("fh_sentence").textContent = "Sample sentence: " + fh_sentence;
+            document.querySelector('#fh_sentence').style.display = "block";
+            document.getElementById("fh_mean").textContent = "Definition: " + fh_mean;
+            document.querySelector('#fh_mean').style.display = "block";
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+</script>
+{% endblock %}

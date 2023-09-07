@@ -24,6 +24,7 @@
         <p class="w3-xxlarge" id="fh_gameword"><strong>{{ fh_gameword }}</strong></p>
         <p class="w3-xxlarge" id="fh_word_cell" style="color:#9C59B5"><strong>{{ fh_word_cell }}</strong></p>
         <p class="w3-xlarge" id="fh_keysentence" style="display: none">{{ fh_keysentence }}</p>
+        <p class="w3-large" id="fh_answer" style="display: none">{{ fh_gameword }}</p>
         <button class="w3-button w3-large" onclick="compare_letter('A')">A</button>
         <button class="w3-button w3-large" onclick="compare_letter('B')">B</button>
         <button class="w3-button w3-large" onclick="compare_letter('C')">C</button>
@@ -57,6 +58,8 @@
     </div>
     <p><a href="#500-words" onclick="compare_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-arrow-up"></i> Submit</a></p>
     <p><a href="#500-words" onclick="location.reload();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-refresh"> </i> Next</a></p>
+    <p><a href="#700-words" onclick="clear_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-eraser"> </i> Clear</a></p>
+    <p><a href="#700-words" onclick="answer_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-eye"> </i> Answer</a></p>
 </div>
 
 <div class="w3-row-padding" style="margin-top:15px">
@@ -94,6 +97,22 @@ function compare_word() {
         }
       document.getElementById("fh_word_cell").textContent = word_cell1;
         }
+}
+
+function clear_word() {
+    var word_answer = document.getElementById("answer").textContent.toLowerCase();
+    answer = word_answer.replace(/\s/g, '');
+    var word_cell1 = ""
+    for (let i = 0; i < answer.length; i++) {
+          word_cell1 += "__ ";
+        }
+    document.getElementById("fh_word_cell").textContent = word_cell1;
+}
+
+function answer_word() {
+    var word_answer = document.getElementById("answer").textContent.toLowerCase();
+    document.getElementById("fh_answer").textContent = word_answer;
+    document.querySelector('#fh_answer').style.display = "block";
 }
 </script>
 {% endblock %}

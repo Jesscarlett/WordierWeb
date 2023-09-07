@@ -17,13 +17,14 @@
   </div>
 </header>
 
-<section id="500-words"></section>
+<section id="700-words"></section>
 <!-- game Section -->
 <div class="w3-row-padding w3-center" style="margin-top:10px">
     <div class="w3-row-padding" style="margin-top:15px">
         <p class="w3-xxlarge" id="fh_gameword"><strong>{{ fh_gameword }}</strong></p>
-        <p class="w3-xxlarge" id="fh_word_cell" style="color:#78DE78"><strong>{{ fh_word_cell }}</strong></p>
-        <p class="w3-xlarge" id="fh_keysentence" style="display: none">{{ fh_keysentence }}</p>
+        <p class="w3-xxlarge" id="fh_word_cell" style="color:#ED2B2A"><strong>{{ fh_word_cell }}</strong></p>
+        <p class="w3-large" id="fh_keymeaning">{{ fh_keymeaning }}</p>
+        <p class="w3-large" id="fh_keysentence" style="display: none">{{ fh_keysentence }}</p>
         <p class="w3-large" id="fh_answer" style="display: none">{{ fh_gameword }}</p>
         <button class="w3-button w3-large" onclick="compare_letter('A')">A</button>
         <button class="w3-button w3-large" onclick="compare_letter('B')">B</button>
@@ -54,11 +55,10 @@
         <p class="w3-xlarge" id="congrats" style="display: none"><strong>"Bingo!"</strong></p>
         <p class="w3-large" id="guess-letter"></p>
         <p class="w3-medium" id="result-message"><strong></strong></p>
-<!--        <p id="meaning" style="display: none">{{ meaning }}</p>-->
-<!--        <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px">{{ hang_answer }}</p>-->
+
     </div>
-    <p><a href="#500-words" onclick="compare_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-arrow-up"></i> Submit</a></p>
-    <p><a href="#500-words" onclick="location.reload();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-refresh"> </i> Next</a></p>
+    <p><a href="#700-words" onclick="compare_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-arrow-up"></i> Submit</a></p>
+    <p><a href="#700-words" onclick="location.reload();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-refresh"> </i> Next</a></p>
     <p><a href="#700-words" onclick="clear_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-eraser"> </i> Clear</a></p>
     <p><a href="#700-words" onclick="answer_word();" class="w3-button w3-center w3-light-grey" style="width: 110px"><i class="fa fa-eye"> </i> Answer</a></p>
 </div>
@@ -91,6 +91,7 @@ function compare_word() {
     if (word_cell1.replace(/\s/g, '') === answer) {
           document.getElementById("congrats").style.color = "green";
           document.querySelector('#congrats').style.display = "block";
+          document.querySelector('#fh_keysentence').style.display = "block";
     } else {
       word_cell1 = ""
       for (let i = 0; i < answer.length; i++) {

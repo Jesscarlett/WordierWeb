@@ -98,6 +98,8 @@ img {margin-bottom: -7px}
     <a href="/fivehundredgame" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">500 Word Scramble</a>
     <a href="/sixhundredwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">600 Junior Words</a>
     <a href="/sixhundredgame" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">600 Word Scramble</a>
+    <a href="/sevenhundredwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">700 Stage 2 Words</a>
+    <a href="/sevenhundredgame" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">700 Word Game</a>
     <a href="{% url 'read' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Reading Comprehension</a>
     <a href="/pswords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Junior Words</a>
     <a href="/seniorwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Senior Words</a>
@@ -134,25 +136,25 @@ img {margin-bottom: -7px}
           <p>Play hangman before? You have 9 chances to guess the word before explosion!</p>
         </div>
         <div class="w3-quarter">
+          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#78DE78"></i>
+          <a href = "/fivehundredwords">
+              <p class="w3-large">500 Elementary</p>
+          </a>
+          <p>500 primary words and sentences for early learners, and <a href="/fivehundredgame">word scramble games</a>.</p>
+        </div>
+        <div class="w3-quarter">
+          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" style="color:#9C59B5" ></i>
+          <a href = "/sixhundredwords">
+              <p class="w3-large">600 Juinor Words</p>
+          </a>
+          <p>600 junior words for stage 1, <a href="/sixhundredgame">word scramble games</a>, and <a href="/sevenhundredwords">700 stage 2 words</a>.</p>
+        </div>
+        <div class="w3-quarter">
           <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" style="color:#F29C12" ></i>
           <a href = "/thesaurus">
             <p class="w3-large">Synonyms Antonyms</p>
           </a>
           <p>Multiple choice thesaurus exercise among 3000 adjectives.</p>
-        </div>
-        <div class="w3-quarter">
-          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#78DE78"></i>
-          <a href = "/fivehundredwords">
-              <p class="w3-large">500 Elementary</p>
-          </a>
-          <p>500 primary words and sentences for early learners, 20 modules, 25 words each.</p>
-        </div>
-        <div class="w3-quarter">
-          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" style="color:#9C59B5" ></i>
-          <a href = "/fill_sentence">
-              <p class="w3-large">Complete Sentence</p>
-          </a>
-          <p>Choose your words from a choice of five to complete a simple sentence.</p>
         </div>
     </div>
 </div>

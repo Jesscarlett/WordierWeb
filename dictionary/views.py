@@ -787,6 +787,49 @@ def load_six_game_word_func():
     keysentence = sh_dict[keyword]
     return keyword, gameword, keysentence, word_cell
 
+def sevenhundredwords(request):
+    fh_module, fh_word, fh_sentence, fh_mean = load_sevhw_num_func()
+    return render(request, 'sevenhundredwords.html', {'fh_module': fh_module, 'fh_word': fh_word, 'fh_sentence': fh_sentence,
+                                                      'fh_mean': fh_mean})
+
+def load_sevhw_num_func():
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/700words.json") as file:
+        seven_d = json.load(file)
+        i = random.randrange(1,29)
+        order = (i - 1) * 25 + 1
+        fh_word_counter = str(order)
+        key = seven_d[str(order)]['word']
+        fh_module = "Module " + str(i) + " - Word " + str(order)
+        fh_word = key
+        fh_mean = ""
+        fh_sentence = ""
+    return fh_module, fh_word, fh_sentence, fh_mean
+
+def sevenhundredgame(request):
+    fh_keyword, fh_gameword, fh_keysentence, fh_word_cell, fh_keymeaning = load_seven_game_word_func()
+    return render(request, 'sevenhundredgame.html', {'fh_keyword': fh_keyword, 'fh_gameword': fh_gameword, 'fh_keysentence': fh_keysentence,
+                                                     'fh_word_cell': fh_word_cell, 'fh_keymeaning': fh_keymeaning})
+
+
+def load_seven_game_word_func():
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/700words.json") as file:
+        seven_d = json.load(file)
+        i = random.randint(1, 701)
+        keyword = seven_d[str(i)]['word']
+        print(keyword)
+        game_word_list = list(keyword)
+        new_game_word_list = game_word_list.copy()
+        while new_game_word_list == game_word_list:
+            random.shuffle(new_game_word_list)
+        gameword = "  ".join(str(item) for item in new_game_word_list)
+        fill = ""
+        for e in game_word_list:
+            fill += "__ "
+        word_cell = fill
+        keysentence = seven_d[str(i)]['sen']
+        keymeaning = seven_d[str(i)]['mean']
+    return keyword, gameword, keysentence, word_cell, keymeaning
+
 word_list = [
     "abandon",
     "ability",

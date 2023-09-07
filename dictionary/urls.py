@@ -21,6 +21,8 @@ urlpatterns = [
     path('fivehundredwords', views.fivehundredwords, name='fivehundredwords'),
     path('fivehundredgame', views.fivehundredgame, name='fivehundredgame'),
     path('sixhundredwords', views.sixhundredwords, name='sixhundredwords'),
-    path('sixhundredgame', views.sixhundredgame, name='sixhundredgame')
+    path('sixhundredgame', views.sixhundredgame, name='sixhundredgame'),
+    path('sevenhundredwords', views.sevenhundredwords, name='sevenhundredwords'),
+    path('sevenhundredgame', views.sevenhundredgame, name='sevenhundredgame')
 ]
 

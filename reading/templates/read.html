@@ -60,7 +60,37 @@
     </div>
 </div>
 
-
+<!-- Treasure Island Section -->
+<div class="w3-row-padding" style="padding:30px 25px">
+    <div class="w3-half w3-margin-bottom">
+          <img class="w3-image w3-round-large" src="/static/treasure.png" alt="quotes" style="width:100%;">
+          <div class="w3-container w3-white">
+            <p style="padding-left: 24px;">
+                <a href="{% url 'treasure_one' %}">Part I. The Old Buccaneer</a><br>
+                <a href="{% url 'treasure_two' %}">Part II. The Sea Cook</a><br>
+                <a href="{% url 'treasure_three' %}">Part III. My Shore Adventure</a><br>
+                <a href="{% url 'treasure_four' %}">Part IV. The Stockade</a><br>
+                <a href="{% url 'treasure_five' %}">Part V. My Sea Adventure</a><br>
+                <a href="{% url 'treasure_six' %}">Part VI. Captain Silver</a><br>
+            </p>
+            <a a href="{% url 'treasure_one' %}" class="w3-button w3-light-grey w3-block">Start Now</a>
+          </div>
+    </div>
+    <div class="w3-half w3-margin-bottom">
+          <img class="w3-image w3-round-large" src="/static/pan.png" alt="conversation" style="width:100%;">
+          <div class="w3-container w3-white" >
+            <p style="padding-left: 24px;">
+                <a href="{% url 'peter_one' %}">Chapter 1 Peter Breaks Through, Chapter 2, 3</a><br>
+                <a href="{% url 'peter_two' %}">Chapter 4 The Flight, Chapter 5, 6</a><br>
+                <a href="{% url 'peter_three' %}">Chapter 7 The Home Under The Ground, Chapter 8, 9</a><br>
+                <a href="{% url 'peter_four' %}">Chapter 10 The Happy Home, Chapter 11, 12</a><br>
+                <a href="{% url 'peter_five' %}">Chapter 13 Do you Believe in Fairies, Chapter 14, 15</a><br>
+                <a href="{% url 'peter_six' %}">Chapter 16 The Return Home, Chapter 17</a><br>
+            </p>
+            <a href="{% url 'peter_one' %}" class="w3-button w3-light-grey w3-block">Start Now</a>
+          </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block content1 %}

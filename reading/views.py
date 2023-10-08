@@ -81,3 +81,39 @@ def glass_ten(request):
 
 def glass_eleven(request):
     return render(request, 'glass_eleven.html')
+
+def treasure_one(request):
+    return render(request, 'treasure_one.html')
+
+def treasure_two(request):
+    return render(request, 'treasure_two.html')
+
+def treasure_three(request):
+    return render(request, 'treasure_three.html')
+
+def treasure_four(request):
+    return render(request, 'treasure_four.html')
+
+def treasure_five(request):
+    return render(request, 'treasure_five.html')
+
+def treasure_six(request):
+    return render(request, 'treasure_six.html')
+
+def peter_one(request):
+    return render(request, 'peter_one.html')
+
+def peter_two(request):
+    return render(request, 'peter_two.html')
+
+def peter_three(request):
+    return render(request, 'peter_three.html')
+
+def peter_four(request):
+    return render(request, 'peter_four.html')
+
+def peter_five(request):
+    return render(request, 'peter_five.html')
+
+def peter_six(request):
+    return render(request, 'peter_six.html')

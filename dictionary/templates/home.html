@@ -34,10 +34,26 @@
 
 {% block content1 %}
 
-
+<!-- Reading Section -->
+<div class="w3-container w3-light-grey" style="padding:30px 25px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <div class="w3-col m6" style="padding: 0px 10px">
+            <img class="w3-image w3-round-large" src="/static/classic.png" alt="jokes" width="1000" height="394">
+        </div>
+        <div class="w3-col m6" style="padding: 0px 10px">
+            <p class="w3-large"><strong>"If you don't know where you are going, any road can take you there."</strong></p>
+            <p class="w3-large"> - Alice's Advantures in Wonderland</p>
+            <p><strong>Alice's Advantures in Wonderland</strong>    by Lewis Carroll</p>
+            <p><strong>Through The Looking-Glass</strong>    by Lewis Carroll</p>
+            <p><strong>Treasure Island</strong>    by Robert Louis Stevenson</p>
+            <p><strong>Peter Pan</strong>    by J M Barrie</p>
+            <p><a href="{% url 'read' %}" class="w3-button w3-black"><i class="fa fa-th"> </i> Read The Classics</a></p>
+        </div>
+    </div>
+</div>
 
 <!-- Primary Words Section -->
-<div class="w3-container w3-light-grey" style="padding:30px 25px">
+<div class="w3-container" style="padding:30px 25px">
   <div class="w3-row-padding" style="margin-top:15px">
     <div class="w3-col m6">
         <p><strong>{{ w1 }}</strong></p>
@@ -54,7 +70,7 @@
 </div>
 
 <!-- Jokes Section -->
-<div class="w3-container" style="padding:30px 25px">
+<div class="w3-container w3-light-grey" style="padding:30px 25px">
     <div class="w3-row-padding" style="margin-top:15px">
         <div class="w3-col m6" style="padding: 0px 10px">
             <img class="w3-image w3-round-large" src="/static/jokes.png" alt="jokes" width="1000" height="394">
@@ -70,10 +86,10 @@
     </div>
 </div>
 
-<!-- Choice Section -->
-<div class="w3-container w3-center w3-light-grey" style="padding:20px 25px">
-    <a href = "{% url 'read' %}"><p class="w3-large" style="color:indigo"><i class="fa fa-star"> </i>Reading Comprehension, down the rabbit hole with Alice in Wonderland! <i class="fa fa-star"> </i> </p></a>
-</div>
+<!--&lt;!&ndash; Choice Section &ndash;&gt;-->
+<!--<div class="w3-container w3-center w3-light-grey" style="padding:20px 25px">-->
+<!--    <a href = "{% url 'read' %}"><p class="w3-large" style="color:indigo"><i class="fa fa-star"> </i>Reading Comprehension, down the rabbit hole with Alice in Wonderland! <i class="fa fa-star"> </i> </p></a>-->
+<!--</div>-->
 
 <!-- Quotes and Conversations -->
 <div class="w3-row-padding" style="padding:30px 25px">

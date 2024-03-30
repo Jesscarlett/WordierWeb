@@ -23,6 +23,7 @@ urlpatterns = [
     path('sixhundredwords', views.sixhundredwords, name='sixhundredwords'),
     path('sixhundredgame', views.sixhundredgame, name='sixhundredgame'),
     path('sevenhundredwords', views.sevenhundredwords, name='sevenhundredwords'),
-    path('sevenhundredgame', views.sevenhundredgame, name='sevenhundredgame')
+    path('sevenhundredgame', views.sevenhundredgame, name='sevenhundredgame'),
+    path('onethousandadj', views.onethousandadj, name='onethousandadj')
 ]
 

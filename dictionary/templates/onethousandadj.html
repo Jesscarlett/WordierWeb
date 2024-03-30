@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+    <span class="w3-large"></span><br><br>
+    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+    <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+    <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+  </div>
+</header>
+
+
+<!-- Module Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-xlarge"><strong>1000 Adjectives In 23 Modules</strong></p>
+        <button class="w3-button w3-large" onclick="show_module('1')">Module 1</button>
+        <button class="w3-button w3-large" onclick="show_module('2')">Module 2</button>
+        <button class="w3-button w3-large" onclick="show_module('3')">Module 3</button>
+        <button class="w3-button w3-large" onclick="show_module('4')">Module 4</button>
+        <button class="w3-button w3-large" onclick="show_module('5')">Module 5</button>
+        <button class="w3-button w3-large" onclick="show_module('6')">Module 6</button>
+        <button class="w3-button w3-large" onclick="show_module('7')">Module 7</button>
+        <button class="w3-button w3-large" onclick="show_module('8')">Module 8</button>
+        <button class="w3-button w3-large" onclick="show_module('9')">Module 9</button>
+        <button class="w3-button w3-large" onclick="show_module('10')">Module 10</button>
+        <button class="w3-button w3-large" onclick="show_module('11')">Module 11</button>
+        <button class="w3-button w3-large" onclick="show_module('12')">Module 12</button>
+        <button class="w3-button w3-large" onclick="show_module('13')">Module 13</button>
+        <button class="w3-button w3-large" onclick="show_module('14')">Module 14</button>
+        <button class="w3-button w3-large" onclick="show_module('15')">Module 15</button>
+        <button class="w3-button w3-large" onclick="show_module('16')">Module 16</button>
+        <button class="w3-button w3-large" onclick="show_module('17')">Module 17</button>
+        <button class="w3-button w3-large" onclick="show_module('18')">Module 18</button>
+        <button class="w3-button w3-large" onclick="show_module('19')">Module 19</button>
+        <button class="w3-button w3-large" onclick="show_module('20')">Module 20</button>
+        <button class="w3-button w3-large" onclick="show_module('21')">Module 21</button>
+        <button class="w3-button w3-large" onclick="show_module('22')">Module 22</button>
+        <button class="w3-button w3-large" onclick="show_module('23')">Module 23</button>
+    </div>
+</div>
+
+<section id="1000-adjs"></section>
+
+<!-- 1000 Adjs Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <p class="w3-xlarge" id="adj_module" style="color:#183EFA"><strong>{{ adj_module }}</strong></p>
+    <div class="w3-row-padding w3-center" style="margin-top:15px">
+        <p id="adj_word1" class="bold">{{ adj_word1 }}</p>
+        <p id="adj_1">{{ adj_1 }}</p>
+        <p id="adj_word2" class="bold">{{ adj_word2 }}</strong></p>
+        <p id="adj_2">{{ adj_2 }}</p>
+        <p id="adj_word3" class="bold">{{ adj_word3 }}</strong></p>
+        <p id="adj_3">{{ adj_3 }}</p>
+        <p id="adj_word4" class="bold">{{ adj_word4 }}</strong></p>
+        <p id="adj_4">{{ adj_4 }}</p>
+        <p id="adj_word5" class="bold">{{ adj_word5 }}</strong></p>
+        <p id="adj_5">{{ adj_5 }}</p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div class="w3-row-padding w3-center" style="margin-top:15px; display: flex;">
+            <p style="margin: 30;"><a href="#1000-adjs" onclick="last_word()"><i class="fa fa-arrow-circle-left" style="font-size: 30px; color:#183EFA"></i></a></p>
+            <p style="margin: 30;"><a href="#1000-adjs" onclick="next_word()"><i class="fa fa-arrow-circle-right" style="font-size: 30px; color:#183EFA"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+function show_module(selected_module) {
+    const jsonUrl = '/static/1000adjectives.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var i = selected_module;
+            var adj_word_number1 = (i - 1) * 50 + 1;
+            var adj_word_number2 = adj_word_number1 + 1;
+            var adj_word_number3 = adj_word_number1 + 2;
+            var adj_word_number4 = adj_word_number1 + 3;
+            var adj_word_number5 = adj_word_number1 + 4;
+            var adj_module = "Module " + i + " - Word " + adj_word_number1;
+            document.querySelector('#adj_module strong').textContent = adj_module;
+            var adj_word1 = sev_dict[adj_word_number1]['word'];
+            var adj_word2 = sev_dict[adj_word_number2]['word'];
+            var adj_word3 = sev_dict[adj_word_number3]['word'];
+            var adj_word4 = sev_dict[adj_word_number4]['word'];
+            var adj_word5 = sev_dict[adj_word_number5]['word'];
+            document.querySelector('#adj_word1').textContent = adj_word1;
+            document.querySelector('#adj_word2').textContent = adj_word2;
+            document.querySelector('#adj_word3').textContent = adj_word3;
+            document.querySelector('#adj_word4').textContent = adj_word4;
+            document.querySelector('#adj_word5').textContent = adj_word5;
+            var adj_mean1 = sev_dict[adj_word_number1]['mean'];
+            var adj_mean2 = sev_dict[adj_word_number2]['mean'];
+            var adj_mean3 = sev_dict[adj_word_number3]['mean'];
+            var adj_mean4 = sev_dict[adj_word_number4]['mean'];
+            var adj_mean5 = sev_dict[adj_word_number5]['mean'];
+            var adj_sentence1 = sev_dict[adj_word_number1]['sen'];
+            var adj_sentence2 = sev_dict[adj_word_number2]['sen'];
+            var adj_sentence3 = sev_dict[adj_word_number3]['sen'];
+            var adj_sentence4 = sev_dict[adj_word_number4]['sen'];
+            var adj_sentence5 = sev_dict[adj_word_number5]['sen'];
+            var adj_1 = adj_mean1 + " | " + adj_sentence1;
+            var adj_2 = adj_mean2 + " | " + adj_sentence2;
+            var adj_3 = adj_mean3 + " | " + adj_sentence3;
+            var adj_4 = adj_mean4 + " | " + adj_sentence4;
+            var adj_5 = adj_mean5 + " | " + adj_sentence5;
+            document.querySelector('#adj_1').textContent = adj_1;
+            document.querySelector('#adj_2').textContent = adj_2;
+            document.querySelector('#adj_3').textContent = adj_3;
+            document.querySelector('#adj_4').textContent = adj_4;
+            document.querySelector('#adj_5').textContent = adj_5;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function last_word() {
+    const jsonUrl = '/static/1000adjectives.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("adj_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var module_num = parseInt(current_module.match(/\d+/)[0], 10);
+            var i = module_num;
+            var adj_word_number = word_num - 5
+            if (adj_word_number == -4) {
+                adj_word_number = 1146
+                i = 24
+                }
+            if (adj_word_number % 50 !== 46) {
+                var adj_module_number = i;
+                } else {
+                var adj_module_number = i - 1;
+                }
+            var adj_module = "Module " + adj_module_number.toString() + " - Word " + adj_word_number.toString();
+            document.querySelector('#adj_module strong').textContent = adj_module;
+            var adj_word_number1 = adj_word_number;
+            var adj_word_number2 = adj_word_number1 + 1;
+            var adj_word_number3 = adj_word_number1 + 2;
+            var adj_word_number4 = adj_word_number1 + 3;
+            var adj_word_number5 = adj_word_number1 + 4;
+            var adj_word1 = sev_dict[adj_word_number1]['word'];
+            var adj_word2 = sev_dict[adj_word_number2]['word'];
+            var adj_word3 = sev_dict[adj_word_number3]['word'];
+            var adj_word4 = sev_dict[adj_word_number4]['word'];
+            var adj_word5 = sev_dict[adj_word_number5]['word'];
+            document.querySelector('#adj_word1').textContent = adj_word1;
+            document.querySelector('#adj_word2').textContent = adj_word2;
+            document.querySelector('#adj_word3').textContent = adj_word3;
+            document.querySelector('#adj_word4').textContent = adj_word4;
+            document.querySelector('#adj_word5').textContent = adj_word5;
+            var adj_mean1 = sev_dict[adj_word_number1]['mean'];
+            var adj_mean2 = sev_dict[adj_word_number2]['mean'];
+            var adj_mean3 = sev_dict[adj_word_number3]['mean'];
+            var adj_mean4 = sev_dict[adj_word_number4]['mean'];
+            var adj_mean5 = sev_dict[adj_word_number5]['mean'];
+            var adj_sentence1 = sev_dict[adj_word_number1]['sen'];
+            var adj_sentence2 = sev_dict[adj_word_number2]['sen'];
+            var adj_sentence3 = sev_dict[adj_word_number3]['sen'];
+            var adj_sentence4 = sev_dict[adj_word_number4]['sen'];
+            var adj_sentence5 = sev_dict[adj_word_number5]['sen'];
+            var adj_1 = adj_mean1 + " | " + adj_sentence1;
+            var adj_2 = adj_mean2 + " | " + adj_sentence2;
+            var adj_3 = adj_mean3 + " | " + adj_sentence3;
+            var adj_4 = adj_mean4 + " | " + adj_sentence4;
+            var adj_5 = adj_mean5 + " | " + adj_sentence5;
+            document.querySelector('#adj_1').textContent = adj_1;
+            document.querySelector('#adj_2').textContent = adj_2;
+            document.querySelector('#adj_3').textContent = adj_3;
+            document.querySelector('#adj_4').textContent = adj_4;
+            document.querySelector('#adj_5').textContent = adj_5;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function next_word() {
+    const jsonUrl = '/static/1000adjectives.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("adj_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var module_num = parseInt(current_module.match(/\d+/)[0], 10);
+            var i = module_num;
+            var adj_word_number = word_num + 5
+            if (adj_word_number == 1151) {
+                adj_word_number = 1
+                i = 0
+                }
+            if (adj_word_number % 50 === 1) {
+                var adj_module_number = i + 1;
+                } else {
+                var adj_module_number = i;
+                }
+            var adj_module = "Module " + adj_module_number.toString() + " - Word " + adj_word_number.toString();
+            document.querySelector('#adj_module strong').textContent = adj_module;
+            var adj_word_number1 = adj_word_number;
+            var adj_word_number2 = adj_word_number1 + 1;
+            var adj_word_number3 = adj_word_number1 + 2;
+            var adj_word_number4 = adj_word_number1 + 3;
+            var adj_word_number5 = adj_word_number1 + 4;
+            var adj_word1 = sev_dict[adj_word_number1]['word'];
+            var adj_word2 = sev_dict[adj_word_number2]['word'];
+            var adj_word3 = sev_dict[adj_word_number3]['word'];
+            var adj_word4 = sev_dict[adj_word_number4]['word'];
+            var adj_word5 = sev_dict[adj_word_number5]['word'];
+            document.querySelector('#adj_word1').textContent = adj_word1;
+            document.querySelector('#adj_word2').textContent = adj_word2;
+            document.querySelector('#adj_word3').textContent = adj_word3;
+            document.querySelector('#adj_word4').textContent = adj_word4;
+            document.querySelector('#adj_word5').textContent = adj_word5;
+            var adj_mean1 = sev_dict[adj_word_number1]['mean'];
+            var adj_mean2 = sev_dict[adj_word_number2]['mean'];
+            var adj_mean3 = sev_dict[adj_word_number3]['mean'];
+            var adj_mean4 = sev_dict[adj_word_number4]['mean'];
+            var adj_mean5 = sev_dict[adj_word_number5]['mean'];
+            var adj_sentence1 = sev_dict[adj_word_number1]['sen'];
+            var adj_sentence2 = sev_dict[adj_word_number2]['sen'];
+            var adj_sentence3 = sev_dict[adj_word_number3]['sen'];
+            var adj_sentence4 = sev_dict[adj_word_number4]['sen'];
+            var adj_sentence5 = sev_dict[adj_word_number5]['sen'];
+            var adj_1 = adj_mean1 + " | " + adj_sentence1;
+            var adj_2 = adj_mean2 + " | " + adj_sentence2;
+            var adj_3 = adj_mean3 + " | " + adj_sentence3;
+            var adj_4 = adj_mean4 + " | " + adj_sentence4;
+            var adj_5 = adj_mean5 + " | " + adj_sentence5;
+            document.querySelector('#adj_1').textContent = adj_1;
+            document.querySelector('#adj_2').textContent = adj_2;
+            document.querySelector('#adj_3').textContent = adj_3;
+            document.querySelector('#adj_4').textContent = adj_4;
+            document.querySelector('#adj_5').textContent = adj_5;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function show_sentence() {
+    const jsonUrl = '/static/700words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("fh_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var fh_word = document.getElementById("fh_word").textContent;
+            var fh_sentence = sev_dict[word_num]['sen'];
+            var fh_mean = sev_dict[word_num]['mean'];
+            document.getElementById("fh_sentence").textContent = "Sample sentence: " + fh_sentence;
+            document.querySelector('#fh_sentence').style.display = "block";
+            document.getElementById("fh_mean").textContent = "Definition: " + fh_mean;
+            document.querySelector('#fh_mean').style.display = "block";
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+</script>
+{% endblock %}

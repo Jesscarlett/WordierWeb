@@ -830,6 +830,38 @@ def load_seven_game_word_func():
         keymeaning = seven_d[str(i)]['mean']
     return keyword, gameword, keysentence, word_cell, keymeaning
 
+
+def onethousandadj(request):
+    adj_module, adj_word1, adj_word2, adj_word3, adj_word4, adj_word5, adj_1,  adj_2,  adj_3,  adj_4,  adj_5 = load_adj_func()
+    return render(request, 'onethousandadj.html', {'adj_module': adj_module, 'adj_word1': adj_word1, 'adj_word2': adj_word2,
+                                                   'adj_word3': adj_word3, 'adj_word4': adj_word4, 'adj_word5': adj_word5,
+                                                   'adj_1': adj_1, 'adj_2': adj_2, 'adj_3': adj_3, 'adj_4': adj_4, 'adj_5': adj_5})
+
+def load_adj_func():
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/1000adjectives.json") as file:
+        onethousand_adj = json.load(file)
+        i = random.randrange(1,24)
+        order = (i - 1) * 50 + 1
+        adj_word_counter = str(order)
+        key1 = onethousand_adj[str(order)]['word']
+        key2 = onethousand_adj[str(order + 1)]['word']
+        key3 = onethousand_adj[str(order + 2)]['word']
+        key4 = onethousand_adj[str(order + 3)]['word']
+        key5 = onethousand_adj[str(order + 4)]['word']
+        adj_module = "Module " + str(i) + " - Word " + str(order)
+        adj_word1 = key1
+        adj_word2 = key2
+        adj_word3 = key3
+        adj_word4 = key4
+        adj_word5 = key5
+        adj_1 = onethousand_adj[str(order)]['mean'] + " | " + onethousand_adj[str(order)]['sen']
+        adj_2 = onethousand_adj[str(order + 1)]['mean'] + " | " + onethousand_adj[str(order + 1)]['sen']
+        adj_3 = onethousand_adj[str(order + 2)]['mean'] + " | " + onethousand_adj[str(order + 2)]['sen']
+        adj_4 = onethousand_adj[str(order + 3)]['mean'] + " | " + onethousand_adj[str(order + 3)]['sen']
+        adj_5 = onethousand_adj[str(order + 4)]['mean'] + " | " + onethousand_adj[str(order + 4)]['sen']
+    return adj_module, adj_word1, adj_word2, adj_word3, adj_word4, adj_word5, adj_1,  adj_2,  adj_3,  adj_4,  adj_5
+
+
 word_list = [
     "abandon",
     "ability",

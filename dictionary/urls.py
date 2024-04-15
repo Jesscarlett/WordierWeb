@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+from .views import get_next_word
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -24,6 +24,8 @@ urlpatterns = [
     path('sixhundredgame', views.sixhundredgame, name='sixhundredgame'),
     path('sevenhundredwords', views.sevenhundredwords, name='sevenhundredwords'),
     path('sevenhundredgame', views.sevenhundredgame, name='sevenhundredgame'),
-    path('onethousandadj', views.onethousandadj, name='onethousandadj')
+    path('onethousandadj', views.onethousandadj, name='onethousandadj'),
+    path('match', views.match, name='match'),
+    path('get_next_word/', get_next_word, name='get_next_word')
 ]
 

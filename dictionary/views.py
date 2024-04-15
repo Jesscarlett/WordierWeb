@@ -4,7 +4,8 @@ import json
 import os
 import random
 from django.templatetags.static import static
-
+from collections import Counter
+from django.http import JsonResponse
 
 def home(request):
     quote = quote_func()
@@ -860,6 +861,57 @@ def load_adj_func():
         adj_4 = onethousand_adj[str(order + 3)]['mean'] + " | " + onethousand_adj[str(order + 3)]['sen']
         adj_5 = onethousand_adj[str(order + 4)]['mean'] + " | " + onethousand_adj[str(order + 4)]['sen']
     return adj_module, adj_word1, adj_word2, adj_word3, adj_word4, adj_word5, adj_1,  adj_2,  adj_3,  adj_4,  adj_5
+
+def match(request):
+    match_cell, match_answer, wrong_guess, match_image_source, meaning, letters = match_func()
+    return render(request, 'match.html', {'match_cell': match_cell, 'match_answer': match_answer,
+                                                   'wrong_guess': wrong_guess, 'match_image_source': match_image_source,
+                                                   'meaning': meaning, 'letters': letters})
+
+def match_func():
+    # no in use
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/2048.json") as file:
+        match_d = json.load(file)
+        random_key = random.choice(list(match_d.keys()))
+        match_j = match_d[random_key]['word']
+        meaning = match_d[random_key]['mean']
+        match_l = list(match_j)
+        fill = ""
+        for i in match_l:
+            fill += "__ "
+        match_cell = fill
+        match_answer = match_j
+        wrong_guess = ""
+        match_image_source = 'image9.jpeg'
+        letters = []
+        letter_counts = Counter(match_answer)
+        for letter, count in letter_counts.items():
+            for _ in range(count):
+                letters.append(letter)
+        random.shuffle(letters)
+    return match_cell, match_answer, wrong_guess, match_image_source, meaning, letters
+
+def get_next_word(request):
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/2048.json") as file:
+        match_d = json.load(file)
+        random_key = random.choice(list(match_d.keys()))
+        match_j = match_d[random_key]['word']
+        meaning = match_d[random_key]['mean']
+        match_answer = match_j
+        letters = []
+        letter_counts = Counter(match_answer)
+        for letter, count in letter_counts.items():
+            for _ in range(count):
+                letters.append(letter)
+        random.shuffle(letters)
+
+    response_data = {
+        'match_cell': '__ ' * len(match_answer),
+        'match_answer': match_answer,
+        'meaning': meaning,
+        'letters': letters
+    }
+    return JsonResponse(response_data)
 
 
 word_list = [

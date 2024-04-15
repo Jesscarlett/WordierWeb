@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+    <span class="w3-large"></span><br><br>
+    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+    <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+    <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+  </div>
+</header>
+
+<!-- Matching Section -->
+<div class="w3-row-padding w3-center" style="margin-top:10px">
+
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-xxlarge" id="match_cell"><strong></strong></p>
+        <div id="letters-container"></div>
+<!--        {% for letter in letters %}-->
+<!--            <button class="w3-button w3-large" onclick="compare_letter('{{ letter }}')">{{ letter }}</button>-->
+<!--        {% endfor %}<br>-->
+        <p class="w3-large" id="meaning"></p>
+        <p class="w3-xlarge" id="congrats" style="display: none"><strong>Bingo!</strong></p>
+        <p class="w3-xlarge" id="wrong" style="display: none"><strong>Try Again</strong></p>
+        <p class="w3-xlarge" id="gameover" style="color:#D20062; display: none;"><strong>Game Over</strong></p>
+<!--        <p class="w3-large" id="guess-letter"></p>-->
+        <p class="w3-large" id="score" style="color:#D20062"></p>
+        <p class="w3-xlarge" id="lives" style="color:#D20062"></p>
+        <p class="w3-xlarge" id="gameover" style="color:#D20062; display: none;">Game Over</p>
+        <p class="w3-medium" id="result-message"><strong></strong></p>
+<!--        <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px"></p>-->
+    </div>
+    <div class="button-container">
+        <p><a href="#" onclick="clear_answer();" class="w3-button w3-light-grey"><i class="fa fa-reply"></i> Clear Word</a></p>
+        <p><a href="#" onclick="next_word();" class="w3-button w3-light-grey"><i class="fa fa-arrow-circle-right"></i> Next Word</a></p>
+    </div>
+    <p><a href="#" onclick="location.reload();" class="w3-button w3-center w3-light-grey"><i class="fa fa-dot-circle-o"> </i> New Game</a></p>
+</div>
+
+<div class="w3-row-padding" style="margin-top:15px">
+    <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px"></p>
+    <p class="w3-tiny w3-text-white" id="guess" style="font-size: 1px">{{ wrong_guess }}</p>
+</div>
+
+<!-- Audio Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <a href="https://amzn.to/3vJuQpJ" target="_blank">
+        <img class="w3-image w3-large" src="/static/audio.png" alt="children">
+    </a>
+</div>
+
+<script>
+
+function compare_letter(letter) {
+    var match_answer = document.getElementById("answer").textContent.toLowerCase();
+    var match_cell = document.getElementById("match_cell").textContent;
+    var wrong_guess = document.getElementById("guess").textContent;
+    var score = document.getElementById("score").textContent;
+    var parts = score.split(" - ");
+    var numbers = parts[1].split(" out of ");
+    var x = parseInt(numbers[0]); // Convert the first number to an integer
+    var y = parseInt(numbers[1]); // Convert the second number to an integer
+    letter = letter.toLowerCase();
+    console.log("match_answer: " + match_answer);
+    console.log("match_cell: " + match_cell);
+    var i;
+    var letterFound = false;
+    var meaning = document.getElementById("meaning").textContent;
+    console.log("meaning: " + meaning);
+    var index = match_cell.indexOf("__");
+    if (index !== -1) {
+        var match_cell = match_cell.substr(0, index) + letter + "  " + match_cell.substr(index + 3);
+        } else {
+        }
+
+    document.getElementById("match_cell").textContent = match_cell;
+    if (match_cell.indexOf("_") < 0 ) {
+        if (match_cell.replace(/\s/g, '') === match_answer) {
+            document.getElementById("congrats").style.color = "green";
+            document.querySelector('#congrats').style.display = "block";
+            x = x + 1;
+            y = y + 1;
+            document.getElementById("score").textContent = "Score - " + x + " out of " + y
+        } else {
+            document.getElementById("wrong").style.color = "#D20062"
+            document.querySelector('#wrong').style.display = "block";
+            y = y + 1;
+            document.getElementById("score").textContent = "Score - " + x + " out of " + y
+            var index = document.getElementById("lives").textContent.indexOf(" ♥ ");
+            // If " ♥ " is found, remove it
+            if (index !== -1) {
+                var newText = document.getElementById("lives").textContent.substring(0, index) +
+                              document.getElementById("lives").textContent.substring(index + 3);
+                document.getElementById("lives").textContent = newText;
+                console.log(newText)
+                }
+            }
+        }
+    if (document.getElementById("lives").textContent === ""){
+       document.getElementById("gameover").style.display = "block"
+       document.querySelector('#wrong').style.display = "none"
+    }
+}
+
+function clear_answer() {
+    var match_answer = document.getElementById("answer").textContent.toLowerCase();
+    var match_cell = "";
+        // Loop through each character in match_answer
+    for (var i = 0; i < match_answer.length; i++) {
+            match_cell += "__ ";
+        }
+    document.getElementById("match_cell").textContent = match_cell;
+    document.querySelector('#wrong').style.display = "none";
+    document.querySelector('#congrats').style.display = "none";
+}
+
+function next_word(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "{% url 'get_next_word' %}", true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            document.getElementById("match_cell").textContent = response.match_cell;
+            console.log(response.match_answer)
+            document.getElementById("answer").textContent = response.match_answer
+            document.getElementById("meaning").textContent = response.meaning;
+            document.getElementById("letters-container").innerHTML = ""; // Clear existing letters
+            response.letters.forEach(function(letter) {
+                var button = document.createElement("button");
+                button.className = "w3-button w3-large";
+                button.textContent = letter;
+                button.onclick = function() { compare_letter(letter); };
+                document.getElementById("letters-container").appendChild(button);
+            });
+        }
+    };
+    document.querySelector('#wrong').style.display = "none";
+    document.querySelector('#congrats').style.display = "none";
+    document.querySelector('#gameover').style.display = "none";
+    xhr.send();
+}
+
+window.onload = function() {
+    next_word();
+    document.getElementById("score").textContent = "Score - 0 out of 0"
+    document.getElementById("lives").textContent = " ♥ " + " ♥ " + " ♥ " + " ♥ " + " ♥ "
+};
+</script>
+{% endblock %}
+

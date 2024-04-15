@@ -33,7 +33,7 @@ img {margin-bottom: -7px}
   background-position: center;
   background-size: cover;
   background-image: url("{% static 'tools.png' %}");
-  min-height: 45%;
+  min-height: 30%;
 }
 
 /* reding image header */
@@ -41,7 +41,7 @@ img {margin-bottom: -7px}
   background-position: center;
   background-size: cover;
   background-image: url("{% static 'read.png' %}");
-  min-height: 45%;
+  min-height: 30%;
 }
 
 /* Full height image header */
@@ -49,7 +49,7 @@ img {margin-bottom: -7px}
   background-position: center;
   background-size: cover;
   background-image:  url("{% static 'tools.png' %}");
-  min-height: 60%;
+  min-height: 40%;
 }
 
 #myBtn {
@@ -92,6 +92,16 @@ img {margin-bottom: -7px}
     font-weight: bold;
 }
 
+.button-container {
+    text-align: center; /* Center-align the content */
+}
+
+.button-container p {
+    display: inline-block; /* Make the paragraphs inline-block to align them horizontally */
+    margin: 0 10px; /* Add some margin between the buttons */
+}
+
+
 </style>
 </head>
 <body>
@@ -101,6 +111,7 @@ img {margin-bottom: -7px}
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Close</a>
     <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
     <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
+    <a href="/match" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">2048 Word Quest</a>
     <a href="/fivehundredwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">500 Elementary Words</a>
     <a href="/fivehundredgame" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">500 Word Scramble</a>
     <a href="/sixhundredwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">600 Junior Words</a>
@@ -122,7 +133,7 @@ img {margin-bottom: -7px}
 </nav>
 
 <!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-white w3-xlarge w3-padding-small">
+<header class="w3-container w3-top w3-white w3-large w3-padding-small">
     <a href="{% url 'home' %}" class="w3-left w3-padding" style="text-decoration: none;">WORDIER</a>
     <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
@@ -137,32 +148,40 @@ img {margin-bottom: -7px}
 <div class="w3-content" style="max-width:1500px">
     <div class="w3-row-padding w3-center" style="margin-top:30px; margin-bottom:30px;">
         <div class="w3-quarter">
-          <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" style="color:#ED8C82"></i>
-          <a href = "/hangman_junior">
-            <p class="w3-large">Hangman Game</p>
-          </a>
-          <p>Play hangman before? You have 9 chances to guess the word before explosion!</p>
+            <a href = "/hangman_junior">
+                <i class="fa fa-hourglass-2 w3-margin-bottom w3-jumbo w3-center" style="color:#940B92"></i>
+            </a>
+            <a href = "/hangman_junior">
+                <p class="w3-large">Hangman Game</p>
+            </a>
+            <p>Play hangman before? You have 9 chances to guess the word before explosion!</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#78DE78"></i>
-          <a href = "/fivehundredwords">
-              <p class="w3-large">500 Elementary</p>
-          </a>
-          <p>500 primary words and sentences for early learners, and <a href="/fivehundredgame">word scramble games</a>.</p>
+            <a href = "/match">
+                <i class="fa fa-rocket w3-margin-bottom w3-jumbo" style="color:#D20062" ></i>
+            </a>
+            <a href = "/match">
+                <p class="w3-large">Word Quest Game</p>
+            </a>
+            <p>Guess words from meaning, challenge your friends, see who spells the most words right!</p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-sort-alpha-asc w3-margin-bottom w3-jumbo" style="color:#9C59B5" ></i>
-          <a href = "/sixhundredwords">
-              <p class="w3-large">600 Junior Words</p> 
-          </a>
-          <p>600 junior words for stage 1, <a href="/sixhundredgame">word scramble games</a>, and <a href="/sevenhundredwords">700 stage 2 words</a>.</p>
+            <a href="/fivehundredwords">
+                <i class="fa fa-spinner w3-margin-bottom w3-jumbo" style="color:#78DE78"></i>
+            </a>
+            <a href = "/fivehundredwords">
+                <p class="w3-large">500 Elementary</p>
+            </a>
+            <p>500 words & sentences for early learners, <a href="/sixhundredwords">600 words for stage 1</a>, and <a href="/sevenhundredwords">700 words for stage 2</a></p>
         </div>
         <div class="w3-quarter">
-          <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" style="color:#F29C12" ></i>
-          <a href = "/onethousandadj">
-            <p class="w3-large">1000 Adjectives</p>
-          </a>
-          <p>23 modules of over 1000 adjectives. Improve your descriptive writing.</p>
+            <a href = "/onethousandadj">
+                <i class="fa fa-window-restore w3-margin-bottom w3-jumbo" style="color:#F29C12" ></i>
+            </a>
+            <a href = "/onethousandadj">
+                <p class="w3-large">1000 Adjectives</p>
+            </a>
+            <p>23 modules of over 1000 adjectives. Improve your descriptive writing.</p>
         </div>
     </div>
 </div>
@@ -174,15 +193,17 @@ img {margin-bottom: -7px}
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-xlarge" style="margin-top:128px">
     <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
     <a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
     <a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
     <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-<!--  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>-->
+    <p class="w3-small" style="color: #333333 !important;">Disclaimer: Wordier may contain affiliate links, which means that we may receive a commission if you make a purchase using these links in Amazon.</p>
+    <p class="w3-small" style="color: #333333 !important;">As an Amazon Associate, we earn from qualifying purchases.</p>
 </footer>
+
 
 <script>
 // Toggle grid padding

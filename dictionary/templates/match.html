@@ -22,20 +22,15 @@
 
     <div class="w3-row-padding" style="margin-top:15px">
         <p class="w3-xxlarge" id="match_cell"><strong></strong></p>
-        <div id="letters-container"></div>
-<!--        {% for letter in letters %}-->
-<!--            <button class="w3-button w3-large" onclick="compare_letter('{{ letter }}')">{{ letter }}</button>-->
-<!--        {% endfor %}<br>-->
+        <div id="letters-container" class="w3-xlarge !important"></div>
         <p class="w3-large" id="meaning"></p>
         <p class="w3-xlarge" id="congrats" style="display: none"><strong>Bingo!</strong></p>
         <p class="w3-xlarge" id="wrong" style="display: none"><strong>Try Again</strong></p>
         <p class="w3-xlarge" id="gameover" style="color:#D20062; display: none;"><strong>Game Over</strong></p>
-<!--        <p class="w3-large" id="guess-letter"></p>-->
         <p class="w3-large" id="score" style="color:#D20062"></p>
         <p class="w3-xlarge" id="lives" style="color:#D20062"></p>
         <p class="w3-xlarge" id="gameover" style="color:#D20062; display: none;">Game Over</p>
         <p class="w3-medium" id="result-message"><strong></strong></p>
-<!--        <p class="w3-tiny w3-text-white" id="answer" style="font-size: 1px"></p>-->
     </div>
     <div class="button-container">
         <p><a href="#" onclick="clear_answer();" class="w3-button w3-light-grey"><i class="fa fa-reply"></i> Clear Word</a></p>
@@ -52,7 +47,8 @@
 <!-- Audio Section -->
 <div class="w3-row-padding w3-center" style="margin-top:30px">
     <a href="https://amzn.to/3vJuQpJ" target="_blank">
-        <img class="w3-image w3-large" src="/static/audio.png" alt="children">
+        <img class="w3-image w3-large w3-hide-small" src="/static/audio.png" alt="audio">
+        <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/audio-s.png" alt="audio-s">
     </a>
 </div>
 

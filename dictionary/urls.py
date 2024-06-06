@@ -1,6 +1,12 @@
 from django.urls import path
 from . import views
 from .views import get_next_word
+from dictionary.sitemaps import StaticViewSitemap
+from django.contrib.sitemaps.views import sitemap
+
+sitemaps = {
+    'static': StaticViewSitemap
+}
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -26,6 +32,7 @@ urlpatterns = [
     path('sevenhundredgame', views.sevenhundredgame, name='sevenhundredgame'),
     path('onethousandadj', views.onethousandadj, name='onethousandadj'),
     path('match', views.match, name='match'),
-    path('get_next_word/', get_next_word, name='get_next_word')
+    path('get_next_word/', get_next_word, name='get_next_word'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 ]
 

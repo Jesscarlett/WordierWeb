@@ -8,21 +8,21 @@
     @media (max-width: 600px) {
         .responsive-textarea {
             width: 100%;
-            height: 100px;
+            height: 80px;
         }
     }
 
     @media (min-width: 601px) and (max-width: 992px) {
         .responsive-textarea {
             width: 80%;
-            height: 100px;
+            height: 80px;
         }
     }
 
     @media (min-width: 993px) {
         .responsive-textarea {
             width: 60%;
-            height: 120px;
+            height: 100px;
         }
     }
 </style>
@@ -31,8 +31,8 @@
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
     <span class="w3-large"></span><br><br>
-    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
-    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xxlarge w3-hide-small">WordierAI Opens for Testing.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">WordierAI Opens for Testing.</span><br>
     <span class="w3-xlarge w3-hide-small">Download in app store today </span>
     <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
     <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
@@ -103,7 +103,7 @@ function setLabelType(type) {
                 </div>
             </div>
             <br>
-            <label id="prompt_label" for="user_prompt"><b>Your message:</b></label><br><br>
+            <label id="prompt_label" for="user_prompt"><b>Select an engine above, key in your message:</b></label><br><br>
             <textarea id="user_prompt" name="user_prompt" class="responsive-textarea">{{ user_input }}</textarea><br><br>
             <!-- Hidden input to store the selected instruction type -->
             <input type="hidden" id="instruction_type" name="instruction_type" value="1">

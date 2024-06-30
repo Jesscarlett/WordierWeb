@@ -57,19 +57,16 @@ function setLabelType(type) {
 
         switch(type) {
             case 1:
-                message = '<b>Explainer:</b> ask me a what, why, or how question, such as <br>What do astronauts do in space? <br>Why do leaves change color in the fall? <br>How does a magnet work?';
+                message = '<b>Explainer:</b> ask me a question, such as <br>How does DNA replication occur? <br>Can you explain the concept of opportunity cost in economics? <br>What are the main causes and effects of global warming?';
                 break;
             case 2:
-                message = '<b>Writer:</b> I can tell you an exciting story! Give me an idea, <br>you can say, Tell me a story about a brave little mouse who saves the day.<br>I want to hear a story about a magical adventure in a candy kingdom.';
+                message = '<b>Writer:</b> I can write a story, a descriptive text or a persuasive argument! <br>Give me a hint on what you want to write. <br>you can say, describe a chill winter morning in New York city. <br>Why is biodiversity important.';
                 break;
             case 3:
-                message = '<b>Researcher:</b> I am your research assistant. Give me a topic, such as <br>Tell me about the planets in our solar system. <br>Give me some interesting facts about ancient Egypt. <br>The history of the Olympic Games.';
+                message = '<b>Researcher:</b> I am your research assistant. Give me a topic, I can tell you facts, events, viewpoints, timeline, causes and effects.';
                 break;
             case 4:
-                message = '<b>Tasker:</b> Struggle with a task? Let me break down to steps for you. <br>What are the steps to plant a flower? <br>How do I clean my room? <br>Tell me the steps to bake cookies?';
-                break;
-            case 5:
-                message = '<b>Definer:</b> I am a dictionary, give me a word. I can help with your learning';
+                message = '<b>Tasker:</b> Try to do something you have never done? Let me break down to steps for you. <br>You can ask, what are the steps to grow strawberries? <br>Tell me how to bake a cheesecake?';
                 break;
             default:
                 message = 'Your message:';
@@ -87,23 +84,21 @@ function setLabelType(type) {
             {% csrf_token %}
             <!-- Filter Buttons -->
             <div class="w3-hide-small w3-hide-medium">
-                <a href="#ai" class="w3-button w3-green" type="button" onclick="setInstructionType(1); setLabelType(1)"><i class="fa fa-comments-o"> </i> Explainer</a>
-                <a href="#ai" class="w3-button w3-green" type="button" onclick="setInstructionType(2); setLabelType(2)"><i class="fa fa-book"> </i> Writer</a>
-                <a href="#ai" class="w3-button w3-green" type="button" onclick="setInstructionType(3); setLabelType(3)"><i class="fa fa fa-graduation-cap"> </i> Researcher</a>
-                <a href="#ai"class="w3-button w3-green" type="button" onclick="setInstructionType(4); setLabelType(4)"><i class="fa fa-list-ul"> </i> Tasker</a>
-                <a href="#ai" class="w3-button w3-green" type="button" onclick="setInstructionType(5); setLabelType(5)"><i class="fa fa-search"> </i> Definer</a>
+                <a href="#ai" class="w3-button w3-purple" type="button" onclick="setInstructionType(1); setLabelType(1)"><i class="fa fa-comments-o"> </i> Explainer</a>
+                <a href="#ai" class="w3-button w3-purple" type="button" onclick="setInstructionType(2); setLabelType(2)"><i class="fa fa-book"> </i> Writer</a>
+                <a href="#ai" class="w3-button w3-purple" type="button" onclick="setInstructionType(3); setLabelType(3)"><i class="fa fa fa-graduation-cap"> </i> Researcher</a>
+                <a href="#ai" class="w3-button w3-purple" type="button" onclick="setInstructionType(4); setLabelType(4)"><i class="fa fa-list-ul"> </i> Tasker</a>
             </div>
             <div class="w3-hide-large">
                 <div>
-                    <a href="#ai" class="w3-button w3-green" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(1); setLabelType(1)"><i class="fa fa-comments-o"> </i> Explainer</a>
-                    <a href="#ai" class="w3-button w3-green" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(2); setLabelType(2)"><i class="fa fa-book"> </i> Writer</a>
-                    <a href="#ai" class="w3-button w3-green" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(3); setLabelType(3)"><i class="fa fa fa-graduation-cap"> </i> Researcher</a>
-                    <a href="#ai" class="w3-button w3-green" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(4); setLabelType(4)"><i class="fa fa-list-ul"> </i> Tasker</a>
-                    <a href="#ai" class="w3-button w3-green" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(5); setLabelType(5)"><i class="fa fa-search"> </i> Definer</a>
+                    <a href="#ai" class="w3-button w3-purple" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(1); setLabelType(1)"><i class="fa fa-comments-o"> </i> Explainer</a>
+                    <a href="#ai" class="w3-button w3-purple" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(2); setLabelType(2)"><i class="fa fa-book"> </i> Writer</a>
+                    <a href="#ai" class="w3-button w3-purple" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(3); setLabelType(3)"><i class="fa fa fa-graduation-cap"> </i> Researcher</a>
+                    <a href="#ai" class="w3-button w3-purple" style="margin-bottom: 5px; display: block;" type="button" onclick="setInstructionType(4); setLabelType(4)"><i class="fa fa-list-ul"> </i> Tasker</a>
                 </div>
             </div>
             <br>
-            <label id="prompt_label" for="user_prompt"><b>Your message:</b></label><br><br>
+            <label id="prompt_label" for="user_prompt"><b>Your message (high school reading level):</b></label><br><br>
             <textarea id="user_prompt" name="user_prompt" class="responsive-textarea">{{ user_input }}</textarea><br><br>
             <!-- Hidden input to store the selected instruction type -->
             <input type="hidden" id="instruction_type" name="instruction_type" value="1">

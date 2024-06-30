@@ -35,6 +35,7 @@ urlpatterns = [
     path('get_next_word/', get_next_word, name='get_next_word'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('chat', views.chat, name='chat'),
+    path('hchat', views.hchat, name='hchat'),
 
 ]
 

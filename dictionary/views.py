@@ -960,6 +960,36 @@ def chat(request):
 
     return render(request, 'chat.html', {'user_input': user_input, 'generated_text': generated_text})
 
+def hchat(request):
+    if request.method == 'POST':
+        user_input = request.POST.get('user_prompt')  # Get user input from form
+        instruction_type = request.POST.get('instruction_type')  # Get instruction type from form
+
+        model_name = "gemini-1.5-flash"  # Replace with your desired model name
+
+        # Add instruction to use simple language
+        instructions = {
+        "1": "Based on the user's input, provide an appropriate and engaging answer, explanation, or description for a high school student (ages 12-16). Ideally provide some web source links. User's input:",
+        "2": "Based on the user's input, write a fictional story or descriptive text or persuasive article suitable for a high school student (ages 12-16). The text should be writting in beautiful words and sentences with plot and structure, which can serve as an example. User's input:",
+        "3": "Based on the user's topic, help a high school student (ages 12-16) research about the topic. Provide facts, important events, stories, viewpoints, causes and effects or timeline. Stucture your answer to make the topic informative and educational. Ideally provide some web source links. User's topic:",
+        "4": "Based on the user's task, provide a breakdown of the steps involved, suitable for a high school student (ages 12-16). The steps should be detail and easy to follow. Include any tips or tricks that might help the student complete the task effectively. User's input:",
+        }
+
+        # Select instruction based on user choice
+        instruction = instructions.get(instruction_type, "1")
+        user_input_with_instruction = instruction + user_input
+
+        # Create the GenerativeModel object with application default credentials
+        model = genai.GenerativeModel(model_name=model_name, generation_config=generation_config)
+        generated_text = model.generate_content(user_input_with_instruction).text
+        generated_text = generated_text.replace('## ', '**').replace('# ', '*')
+        generated_text = mark_safe(markdown.markdown(generated_text))
+
+    else:
+        user_input = ""
+        generated_text = ""
+
+    return render(request, 'hchat.html', {'user_input': user_input, 'generated_text': generated_text})
 
 word_list = [
     "abandon",

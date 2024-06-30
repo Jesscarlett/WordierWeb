@@ -6,6 +6,20 @@ import random
 from django.templatetags.static import static
 from collections import Counter
 from django.http import JsonResponse
+import google.generativeai as genai
+import markdown
+from django.utils.safestring import mark_safe
+from .config import KEY
+
+
+genai.configure(api_key=KEY)
+generation_config = {
+  "temperature": 2,
+  "top_p": 0.95,
+  "top_k": 64,
+  "max_output_tokens": 8192,
+  "response_mime_type": "text/plain",
+}
 
 def home(request):
     quote = quote_func()
@@ -912,6 +926,39 @@ def get_next_word(request):
         'letters': letters
     }
     return JsonResponse(response_data)
+
+
+def chat(request):
+    if request.method == 'POST':
+        user_input = request.POST.get('user_prompt')  # Get user input from form
+        instruction_type = request.POST.get('instruction_type')  # Get instruction type from form
+
+        model_name = "gemini-1.5-flash"  # Replace with your desired model name
+
+        # Add instruction to use simple language
+        instructions = {
+        "1": "Based on the user's input, provide a simple and engaging answer, explanation, or description that suitable for a primary school student (ages 7-11). Avoid complex terms and keep the answer interesting. User's input:",
+        "2": "Based on the user's input, write an interesting and exciting story suitable for a primary school student (ages 7-11). The story should be engaging, use simple language, and include fun and imaginative elements that capture a child's interest, such as talking animals, magical adventures, or heroic deeds. User's input:",
+        "3": "Based on the user's topic, provide a clear, simple, and informative facts and event about the topic suitable for a primary school student (ages 7-11) to help with their research. The answer should be engaging and use simple language. Avoid complex terms. Provide key points and interesting facts to make the topic enjoyable and educational. User's topic:",
+        "4": "Based on the user's task, provide a clear and simple breakdown of the steps involved, suitable for a primary school student (ages 7-11). The steps should be easy to follow, use simple language, and make the task manageable and fun. Include any tips or tricks that might help the child complete the task effectively. User's input:",
+        "5": "Based on the user's input, provide a simple and engaging answer, consisting of definition, example sentence, synonyms, and antonyms suitable for a primary school student (ages 7-11). User's input:",
+        }
+
+        # Select instruction based on user choice
+        instruction = instructions.get(instruction_type, "1")
+        user_input_with_instruction = instruction + user_input
+
+        # Create the GenerativeModel object with application default credentials
+        model = genai.GenerativeModel(model_name=model_name, generation_config=generation_config)
+        generated_text = model.generate_content(user_input_with_instruction).text
+        generated_text = generated_text.replace('## ', '**').replace('# ', '*')
+        generated_text = mark_safe(markdown.markdown(generated_text))
+
+    else:
+        user_input = ""
+        generated_text = ""
+
+    return render(request, 'chat.html', {'user_input': user_input, 'generated_text': generated_text})
 
 
 word_list = [

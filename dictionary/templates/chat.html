@@ -25,6 +25,7 @@
             height: 100px;
         }
     }
+
 </style>
 
 <!-- Header with full-height image -->
@@ -137,8 +138,6 @@ function setLabelType(type) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-
-
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -179,4 +178,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+function showLoading() {
+    document.getElementById("loading").style.display = "inline";
+}
 </script>

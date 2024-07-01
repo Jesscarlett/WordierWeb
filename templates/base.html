@@ -2,106 +2,106 @@
 
 <html>
 <head>
-<title>Wordier</title>
-<link rel="icon" type="image/png" sizes="32x32" href="/static/Appicon-web32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/static/Appicon-web.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/static/Appicon-web16.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Noto Serif SC'>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-<style>
-body,h1,h2,h3,h4,h5 {
-  height: 100%;
-  font-family: "Montserrat", sans-serif
-}
+    <title>Learn English & Build Vocabulary with Wordier (AI-Powered!)</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/Appicon-web32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/static/Appicon-web.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/Appicon-web16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Noto Serif SC'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body,h1,h2,h3,h4,h5 {
+          height: 100%;
+          font-family: "Montserrat", sans-serif
+        }
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
 
-img {margin-bottom: -7px}
-.w3-row-padding img {margin-bottom: 12px}
-.w3-noto-serif {font-family: 'Noto Serif SC';font-size: 16px;}
+        img {margin-bottom: -7px}
+        .w3-row-padding img {margin-bottom: 12px}
+        .w3-noto-serif {font-family: 'Noto Serif SC';font-size: 16px;}
 
-/* half height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("{% static 'tools.png' %}");
-  min-height: 40%;
-}
+        /* half height image header */
+        .bgimg-1 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("{% static 'tools.png' %}");
+          min-height: 50%;
+        }
 
-/* reding image header */
-.bgimg-2 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("{% static 'read.png' %}");
-  min-height: 40%;
-}
+        /* reding image header */
+        .bgimg-2 {
+          background-position: center;
+          background-size: cover;
+          background-image: url("{% static 'read.png' %}");
+          min-height: 50%;
+        }
 
-/* Full height image header */
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image:  url("{% static 'tools.png' %}");
-  min-height: 50%;
-}
+        /* Full height image header */
+        .bgimg {
+          background-position: center;
+          background-size: cover;
+          background-image:  url("{% static 'tools.png' %}");
+          min-height: 70%;
+        }
 
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 14px;
-  z-index: 99;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 4px;
-}
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 14px;
+          z-index: 99;
+          font-size: 16px;
+          border: none;
+          outline: none;
+          background-color: red;
+          color: white;
+          cursor: pointer;
+          padding: 10px;
+          border-radius: 4px;
+        }
 
-#user_input {
-    width: 200px;
-}
+        #user_input {
+            width: 200px;
+        }
 
-#myBtn:hover {
-  background-color: #555;
-}
-.mySlides {display: none;}
+        #myBtn:hover {
+          background-color: #555;
+        }
+        .mySlides {display: none;}
 
-.menu {
-  display: none;
-}
+        .menu {
+          display: none;
+        }
 
-.dict_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+        .dict_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-.bold {
-    font-weight: bold;
-}
+        .bold {
+            font-weight: bold;
+        }
 
-.button-container {
-    text-align: center; /* Center-align the content */
-}
+        .button-container {
+            text-align: center; /* Center-align the content */
+        }
 
-.button-container p {
-    display: inline-block; /* Make the paragraphs inline-block to align them horizontally */
-    margin: 0 10px; /* Add some margin between the buttons */
-}
+        .button-container p {
+            display: inline-block; /* Make the paragraphs inline-block to align them horizontally */
+            margin: 0 10px; /* Add some margin between the buttons */
+        }
 
-</style>
+    </style>
 </head>
 <body>
 
@@ -109,6 +109,8 @@ img {margin-bottom: -7px}
 <nav class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-right w3-top w3-text-light-grey" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">Close</a>
     <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
+    <a href="/chat" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">WordierAI</a>
+    <a href="/hchat" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">WordierAI+</a>
     <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
     <a href="/match" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">2048 Word Quest</a>
     <a href="/fivehundredwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">500 Elementary Words</a>

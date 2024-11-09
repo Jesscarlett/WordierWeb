@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'dictionary.apps.DictionaryConfig',
-    'reading.apps.ReadingConfig'
+    'reading.apps.ReadingConfig',
+    'rest_framework',
+    'gai',
 ]
 
 MIDDLEWARE = [

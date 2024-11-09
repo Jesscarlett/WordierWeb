@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('dictionary.urls')),
     path('dictionary/', include('dictionary.urls')),
-    path('reading/', include('reading.urls'))
+    path('reading/', include('reading.urls')),
+    path('', include('gai.urls'))
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -991,6 +991,23 @@ def hchat(request):
 
     return render(request, 'hchat.html', {'user_input': user_input, 'generated_text': generated_text})
 
+
+def alpha(request):
+    alpha_letter = 'a'
+    return render(request, 'alpha.html', {'alpha_letter': alpha_letter})
+
+def firstwords(request):
+    words = ['cup', 'book', 'doll', 'hot', 'bike', 'strawberry', 'snow', 'table', 'in', 'door', 'soap', 'sand', 'sock',
+             'block', 'out', 'bus', 'house', 'cheese', 'flower', 'paper', 'plane', 'plate', 'bear', 'milk', 'hand', 'spoon',
+             'chair', 'jump', 'ring', 'stop', 'left', 'rain', 'ball', 'right', 'park', 'juice', 'train', 'sleep', 'home',
+             'sheep', 'stick', 'eat', 'brush', 'light', 'boat', 'run', 'cookie', 'blanket', 'pants', 'bye', 'pillow', 'leaf',
+             'pig', 'frog', 'toy', 'mum', 'small', 'big', 'box', 'tree', 'rock', 'dad', 'bird', 'Cloud', 'bath', 'fork',
+             'water', 'slow', 'apple', 'banana', 'bread', 'dog', 'duck', 'walk', 'fast', 'coat', 'cold', 'shirt', 'bowl',
+             'cow', 'car', 'foot', 'shoe', 'crayon', 'orange', 'fish', 'down', 'horse', 'star', 'yes', 'sun', 'up', 'no',
+             'hat', 'cat', 'go', 'key', 'moon', 'sky', 'bed']
+    word = random.choice(words)
+    return render(request, 'firstwords.html', {'word': word})
+
 word_list = [
     "abandon",
     "ability",

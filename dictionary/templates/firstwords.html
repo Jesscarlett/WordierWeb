@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+    <span class="w3-large"></span><br><br>
+    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+    <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+    <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+  </div>
+</header>
+
+<section id="word"></section>
+
+<!-- alpha Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <p class="w3-xxxlarge" id="first-word" style="color: #5e17eb;">{{ word|lower }}</p>
+    <p class="w3-xlarge" id="word_pic">
+        <img class="w3-hide-small" id="word_img" src="/static/{{ word }}.jpg" style="width: 40%;">
+        <img class="w3-hide-large w3-hide-medium" id="word_img_mobile" src="/static/{{ word }}.jpg" style="width: 90%;">
+    </p>
+    <div style="display: flex; justify-content: center;">
+        <div class="w3-row-padding w3-center" style="margin-top:15px; display: flex;">
+            <p style="margin: 30;"><a href="#word" onclick="last_word()"><i class="fa fa-arrow-circle-left" style="font-size: 30px; color:#5e17eb"></i></a></p>
+            <p style="margin: 30;"><a href="#word" onclick="next_word()"><i class="fa fa-arrow-circle-right" style="font-size: 30px; color:#5e17eb"></i></a></p>
+        </div>
+    </div>
+    <p><a href="/alpha" onclick="#" class="w3-button w3-center w3-light-grey" style="width: 150px ">Alphabets</a></p>
+</div>
+
+
+<!-- Children Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <a href="https://amzn.to/48KnlO0" target="_blank">
+        <img class="w3-image w3-large w3-hide-small" src="/static/children.png" alt="children">
+        <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/children-s.png" alt="children-s">
+    </a>
+</div>
+
+<script>
+
+function last_word() {
+    var words = ['cup', 'book', 'doll', 'hot', 'bike', 'strawberry', 'snow', 'table', 'in', 'door', 'soap', 'sand',
+    'sock', 'block', 'out', 'bus', 'house', 'cheese', 'flower', 'paper', 'plane', 'plate', 'bear', 'milk', 'hand',
+    'spoon', 'chair', 'jump', 'ring', 'stop', 'left', 'rain', 'ball', 'right', 'park', 'juice', 'train', 'sleep', 'home',
+    'sheep', 'stick', 'eat', 'brush', 'light', 'boat', 'run', 'cookie', 'blanket', 'pants', 'bye', 'pillow', 'leaf', 'pig',
+    'frog', 'toy', 'mum', 'small', 'big', 'box', 'tree', 'rock', 'dad', 'bird', 'Cloud', 'bath', 'fork', 'water', 'slow',
+    'apple', 'banana', 'bread', 'dog', 'duck', 'walk', 'fast', 'coat', 'cold', 'shirt', 'bowl', 'cow', 'car', 'foot',
+    'shoe', 'crayon', 'orange', 'fish', 'down', 'horse', 'star', 'yes', 'sun', 'up', 'no', 'hat', 'cat', 'go', 'key',
+    'moon', 'sky', 'bed'];
+    var current_word = document.getElementById("first-word").textContent.trim().toLowerCase();
+    var index = words.indexOf(current_word);
+
+    var prev_word = (index === 0) ? words[words.length - 1] : words[index - 1];
+    console.log("prev_word: " + prev_word);
+
+    // Update the word display
+    document.getElementById("first-word").textContent = prev_word;
+
+    // Update the image source for both large and mobile views
+    document.getElementById("word_img").src = `/static/${prev_word}.jpg`;
+    document.getElementById("word_img_mobile").src = `/static/${prev_word}.jpg`;
+}
+
+function next_word() {
+     var words = ['cup', 'book', 'doll', 'hot', 'bike', 'strawberry', 'snow', 'table', 'in', 'door', 'soap', 'sand',
+    'sock', 'block', 'out', 'bus', 'house', 'cheese', 'flower', 'paper', 'plane', 'plate', 'bear', 'milk', 'hand',
+    'spoon', 'chair', 'jump', 'ring', 'stop', 'left', 'rain', 'ball', 'right', 'park', 'juice', 'train', 'sleep', 'home',
+    'sheep', 'stick', 'eat', 'brush', 'light', 'boat', 'run', 'cookie', 'blanket', 'pants', 'bye', 'pillow', 'leaf', 'pig',
+    'frog', 'toy', 'mum', 'small', 'big', 'box', 'tree', 'rock', 'dad', 'bird', 'Cloud', 'bath', 'fork', 'water', 'slow',
+    'apple', 'banana', 'bread', 'dog', 'duck', 'walk', 'fast', 'coat', 'cold', 'shirt', 'bowl', 'cow', 'car', 'foot',
+    'shoe', 'crayon', 'orange', 'fish', 'down', 'horse', 'star', 'yes', 'sun', 'up', 'no', 'hat', 'cat', 'go', 'key',
+    'moon', 'sky', 'bed'];
+    var current_word = document.getElementById("first-word").textContent.trim().toLowerCase();
+    var index = words.indexOf(current_word);
+
+    // Determine the next word, or wrap to the first word if the current word is the last one
+    var next_word = (index === words.length - 1) ? words[0] : words[index + 1];
+    console.log("next_word: " + next_word);
+
+    // Update the word display
+    document.getElementById("first-word").textContent = next_word;
+
+    // Update the image source for both large and mobile views
+    document.getElementById("word_img").src = `/static/${next_word}.jpg`;
+    document.getElementById("word_img_mobile").src = `/static/${next_word}.jpg`;
+}
+</script>
+
+{% endblock %}

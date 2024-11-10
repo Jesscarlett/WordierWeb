@@ -36,6 +36,8 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
     path('chat', views.chat, name='chat'),
     path('hchat', views.hchat, name='hchat'),
+    path('alpha', views.alpha, name='alpha'),
+    path('firstwords', views.firstwords, name='firstwords'),
 
 ]
 

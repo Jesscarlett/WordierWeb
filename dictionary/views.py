@@ -829,7 +829,7 @@ def sevenhundredgame(request):
 def load_seven_game_word_func():
     with open(os.path.dirname(os.path.dirname(__file__)) + "/static/700words.json") as file:
         seven_d = json.load(file)
-        i = random.randint(1, 701)
+        i = random.randint(1, 700)
         keyword = seven_d[str(i)]['word']
         print(keyword)
         game_word_list = list(keyword)

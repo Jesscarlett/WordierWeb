@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+
+<!-- Audio Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <a href="https://amzn.to/48PuyN6" target="_blank">
+        <img class="w3-image w3-large w3-hide-small" src="/static/audio.png" alt="audio">
+        <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/audio-s.png" alt="audio-s">
+    </a>
+</div>
+
+<!-- Book Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+    <p class="w3-xlarge"><strong>Personal Development and Self-Help<br></strong></p>
+    <ul>
+        <li><a href="{% url 'atomic_habits' %}">Day 1: Atomic Habits by James Clear</a></li>
+        <li><a href="{% url 'the_power_of_now' %}">Day 2: The Power of Now by Eckhart Tolle</a></li>
+        <li><a href="{% url 'think_and_grow_rich' %}">Day 3: Think and Grow Rich by Napoleon Hill</a></li>
+        <li><a href="{% url 'the_7_habits_of_highly_effective_people' %}">Day 4: The 7 Habits of Highly Effective People by Stephen Covey</a></li>
+        <li><a href="{% url 'how_to_win_friends_and_influence_people' %}">Day 5: How to Win Friends and Influence People by Dale Carnegie</a></li>
+        <li><a href="{% url 'you_are_a_badass' %}">Day 6: You Are a Badass by Jen Sincero</a></li>
+        <li><a href="{% url 'the_four_agreements' %}">Day 7: The Four Agreements by Don Miguel Ruiz</a></li>
+        <li><a href="{% url 'daring_greatly' %}">Day 8: Daring Greatly by Brené Brown</a></li>
+        <li><a href="{% url 'mans_search_for_meaning' %}">Day 9: Man’s Search for Meaning by Viktor E. Frankl</a></li>
+        <li><a href="{% url 'the_miracle_morning' %}">Day 10: The Miracle Morning by Hal Elrod</a></li>
+        <li><a href="{% url 'deep_work' %}">Day 11: Deep Work by Cal Newport</a></li>
+        <li><a href="{% url 'grit' %}">Day 12: Grit by Angela Duckworth</a></li>
+        <li><a href="{% url 'the_subtle_art_of_not_giving_a_fck' %}">Day 13: The Subtle Art of Not Giving a Fck by Mark Manson</a></li>
+        <li><a href="{% url 'cant_hurt_me' %}">Day 14: Can't Hurt Me by David Goggins</a></li>
+        <li><a href="{% url 'mindset' %}">Day 15: Mindset by Carol S. Dweck</a></li>
+        <li><a href="{% url 'ikigai' %}">Day 16: Ikigai: The Japanese Secret to a Long and Happy Life by Hector Garcia & Francesc Miralles</a></li>
+        <li><a href="{% url 'make_your_bed' %}">Day 17: Make Your Bed by Admiral William H. McRaven</a></li>
+        <li><a href="{% url 'the_alchemist' %}">Day 18: The Alchemist by Paulo Coelho</a></li>
+        <li><a href="{% url 'the_untethered_soul' %}">Day 19: The Untethered Soul by Michael A. Singer</a></li>
+        <li><a href="{% url 'big_magic' %}">Day 20: Big Magic by Elizabeth Gilbert</a></li>
+        <li><a href="{% url 'essentialism' %}">Day 21: Essentialism by Greg McKeown</a></li>
+        <li><a href="{% url 'the_slight_edge' %}">Day 22: The Slight Edge by Jeff Olson</a></li>
+        <li><a href="{% url 'no_excuses' %}">Day 23: No Excuses! by Brian Tracy</a></li>
+        <li><a href="{% url 'the_art_of_happiness' %}">Day 24: The Art of Happiness by Dalai Lama</a></li>
+        <li><a href="{% url 'as_a_man_thinketh' %}">Day 25: As a Man Thinketh by James Allen</a></li>
+        <li><a href="{% url 'the_success_principles' %}">Day 26: The Success Principles by Jack Canfield</a></li>
+        <li><a href="{% url 'start_with_why' %}">Day 27: Start with Why by Simon Sinek</a></li>
+        <li><a href="{% url 'who_moved_my_cheese' %}">Day 28: Who Moved My Cheese? by Spencer Johnson</a></li>
+        <li><a href="{% url 'the_war_of_art' %}">Day 29: The War of Art by Steven Pressfield</a></li>
+        <li><a href="{% url 'tools_of_titans' %}">Day 30: Tools of Titans by Tim Ferriss</a></li>
+    </ul>
+        <p class="w3-xlarge"><strong>Business and Leadership<br></strong></p>
+    <ul>
+        <li><a href="{% url 'good_to_great' %}">Day 31: Good to Great by Jim Collins</a></li>
+        <li><a href="{% url 'the_lean_startup' %}">Day 32: The Lean Startup by Eric Ries</a></li>
+        <li><a href="{% url 'blue_ocean_strategy' %}">Day 33: Blue Ocean Strategy by W. Chan Kim & Renée Mauborgne</a></li>
+        <li><a href="{% url 'leaders_eat_last' %}">Day 34: Leaders Eat Last by Simon Sinek</a></li>
+        <li><a href="{% url 'principles_life_and_work' %}">Day 35: Principles: Life and Work by Ray Dalio</a></li>
+        <li><a href="{% url 'the_hard_thing_about_hard_things' %}">Day 36: The Hard Thing About Hard Things by Ben Horowitz</a></li>
+        <li><a href="{% url 'measure_what_matters' %}">Day 37: Measure What Matters by John Doerr</a></li>
+        <li><a href="{% url 'dare_to_lead' %}">Day 38: Dare to Lead by Brené Brown</a></li>
+        <li><a href="{% url 'the_innovators_dilemma' %}">Day 39: The Innovator’s Dilemma by Clayton Christensen</a></li>
+        <li><a href="{% url 'start_something_that_matters' %}">Day 40: Start Something That Matters by Blake Mycoskie</a></li>
+        <li><a href="{% url 'extreme_ownership' %}">Day 41: Extreme Ownership by Jocko Willink & Leif Babin</a></li>
+        <li><a href="{% url 'e_myth_revisited' %}">Day 42: E-Myth Revisited by Michael E. Gerber</a></li>
+        <li><a href="{% url 'the_art_of_war' %}">Day 43: The Art of War by Sun Tzu</a></li>
+        <li><a href="{% url 'crushing_it' %}">Day 44: Crushing It! by Gary Vaynerchuk</a></li>
+        <li><a href="{% url 'delivering_happiness' %}">Day 45: Delivering Happiness by Tony Hsieh</a></li>
+        <li><a href="{% url 'the_infinite_game' %}">Day 46: The Infinite Game by Simon Sinek</a></li>
+        <li><a href="{% url 'built_to_last' %}">Day 47: Built to Last by Jim Collins</a></li>
+        <li><a href="{% url 'zero_to_one' %}">Day 48: Zero to One by Peter Thiel</a></li>
+        <li><a href="{% url 'the_100_startup' %}">Day 49: The $100 Startup by Chris Guillebeau</a></li>
+        <li><a href="{% url 'rich_dad_poor_dad' %}">Day 50: Rich Dad Poor Dad by Robert Kiyosaki</a></li>
+        <li><a href="{% url 'profit_first' %}">Day 51: Profit First by Mike Michalowicz</a></li>
+        <li><a href="{% url 'the_personal_mba' %}">Day 52: The Personal MBA by Josh Kaufman</a></li>
+        <li><a href="{% url 'what_got_you_here_wont_get_you_there' %}">Day 53: What Got You Here Won't Get You There by Marshall Goldsmith</a></li>
+        <li><a href="{% url 'the_goal' %}">Day 54: The Goal by Eliyahu M. Goldratt</a></li>
+        <li><a href="{% url 'disrupt_you' %}">Day 55: Disrupt You! by Jay Samit</a></li>
+        <li><a href="{% url 'rework' %}">Day 56: Rework by Jason Fried & David Heinemeier Hansson</a></li>
+        <li><a href="{% url 'made_to_stick' %}">Day 57: Made to Stick by Chip Heath & Dan Heath</a></li>
+        <li><a href="{% url 'purple_cow' %}">Day 58: Purple Cow by Seth Godin</a></li>
+        <li><a href="{% url 'linchpin' %}">Day 59: Linchpin by Seth Godin</a></li>
+        <li><a href="{% url 'tribes' %}">Day 60: Tribes by Seth Godin</a></li>
+    </ul>
+        <p class="w3-xlarge"><strong>Psychology and Human Behaviour<br></strong></p>
+    <ul>
+        <li><a href="{% url 'thinking_fast_and_slow' %}">Day 61: Thinking, Fast and Slow by Daniel Kahneman</a></li>
+        <li><a href="{% url 'the_paradox_of_choice' %}">Day 62: The Paradox of Choice by Barry Schwartz</a></li>
+        <li><a href="{% url 'influence_psychology_of_persuasion' %}">Day 63: Influence: The Psychology of Persuasion by Robert B. Cialdini</a></li>
+        <li><a href="{% url 'blink' %}">Day 64: Blink by Malcolm Gladwell</a></li>
+        <li><a href="{% url 'the_tipping_point' %}">Day 65: The Tipping Point by Malcolm Gladwell</a></li>
+        <li><a href="{% url 'outliers' %}">Day 66: Outliers by Malcolm Gladwell</a></li>
+        <li><a href="{% url 'david_and_goliath' %}">Day 67: David and Goliath by Malcolm Gladwell</a></li>
+        <li><a href="{% url 'predictably_irrational' %}">Day 68: Predictably Irrational by Dan Ariely</a></li>
+        <li><a href="{% url 'drive' %}">Day 69: Drive by Daniel H. Pink</a></li>
+        <li><a href="{% url 'the_social_animal' %}">Day 70: The Social Animal by Elliot Aronson</a></li>
+        <li><a href="{% url 'nudge' %}">Day 71: Nudge by Richard H. Thaler & Cass R. Sunstein</a></li>
+        <li><a href="{% url 'the_art_of_choosing' %}">Day 72: The Art of Choosing by Sheena Iyengar</a></li>
+        <li><a href="{% url 'scarcity' %}">Day 73: Scarcity: Why Having Too Little Means So Much by Sendhil Mullainathan & Eldar Shafir</a></li>
+        <li><a href="{% url 'mistakes_were_made' %}">Day 74: Mistakes Were Made (But Not by Me) by Carol Tavris & Elliot Aronson</a></li>
+        <li><a href="{% url 'the_happiness_hypothesis' %}">Day 75: The Happiness Hypothesis by Jonathan Haidt</a></li>
+        <li><a href="{% url 'switch' %}">Day 76: Switch by Chip Heath & Dan Heath</a></li>
+        <li><a href="{% url 'sway' %}">Day 77: Sway by Ori and Rom Brafman</a></li>
+        <li><a href="{% url 'mindwise' %}">Day 78: Mindwise by Nicholas Epley</a></li>
+        <li><a href="{% url 'born_to_be_good' %}">Day 79: Born to Be Good by Dacher Keltner</a></li>
+        <li><a href="{% url 'emotional_intelligence_2_0' %}">Day 80: Emotional Intelligence 2.0 by Travis Bradberry & Jean Greaves</a></li>
+    </ul>
+
+</div>
+
+{% endblock %}
+
+{% block content1 %}
+
+
+
+
+
+<script>
+
+
+</script>
+
+
+{% endblock %}

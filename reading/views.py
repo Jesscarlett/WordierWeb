@@ -424,3 +424,63 @@ def born_to_be_good(request):
 
 def emotional_intelligence_2_0(request):
     return render(request, 'emotional_intelligence_2_0.html')
+
+def sapiens(request):
+    return render(request, 'sapiens.html')
+
+def homo_deus(request):
+    return render(request, 'homo_deus.html')
+
+def a_brief_history_of_time(request):
+    return render(request, 'a_brief_history_of_time.html')
+
+def the_selfish_gene(request):
+    return render(request, 'the_selfish_gene.html')
+
+def the_immortal_life_of_henrietta_lacks(request):
+    return render(request, 'the_immortal_life_of_henrietta_lacks.html')
+
+def the_gene(request):
+    return render(request, 'the_gene.html')
+
+def the_emperor_of_all_maladies(request):
+    return render(request, 'the_emperor_of_all_maladies.html')
+
+def astrophysics_for_people_in_a_hurry(request):
+    return render(request, 'astrophysics_for_people_in_a_hurry.html')
+
+def cosmos(request):
+    return render(request, 'cosmos.html')
+
+def the_greatest_show_on_earth(request):
+    return render(request, 'the_greatest_show_on_earth.html')
+
+def the_sixth_extinction(request):
+    return render(request, 'the_sixth_extinction.html')
+
+def why_evolution_is_true(request):
+    return render(request, 'why_evolution_is_true.html')
+
+def the_hidden_life_of_trees(request):
+    return render(request, 'the_hidden_life_of_trees.html')
+
+def entangled_life(request):
+    return render(request, 'entangled_life.html')
+
+def what_if(request):
+    return render(request, 'what_if.html')
+
+def the_body(request):
+    return render(request, 'the_body.html')
+
+def a_short_history_of_nearly_everything(request):
+    return render(request, 'a_short_history_of_nearly_everything.html')
+
+def life_on_the_edge(request):
+    return render(request, 'life_on_the_edge.html')
+
+def the_order_of_time(request):
+    return render(request, 'the_order_of_time.html')
+
+def reality_is_not_what_it_seems(request):
+    return render(request, 'reality_is_not_what_it_seems.html')

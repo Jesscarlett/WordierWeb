@@ -88,6 +88,15 @@
     <p class="w3-large">Supercharge your vocabulary, reading and writing with <b>Wordier (AI-powered)</b>! Play engaging word games, chat with our AI, explore classic literature, develop conversation skills and laugh with jokes & quotes. Learn & improve – it's fun & easy!</p>
 </div>
 
+<!-- Prime Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <a href="{% url 'book' %}" target="_blank">
+        <img class="w3-image w3-large w3-hide-small" src="/static/bookbanner-home.png" alt="prime">
+        <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/bookbanner-home-s.png" alt="prime-s">
+    </a>
+</div>
+
+
 {% endblock %}
 
 {% block content1 %}
@@ -97,18 +106,15 @@
 <div class="w3-container w3-light-grey" style="padding:30px 25px">
     <div class="w3-row-padding" style="margin-top:15px">
         <div class="w3-col m6" style="padding: 0px 10px">
-            <img class="w3-image w3-round-large" src="/static/classic.png" alt="jokes" width="1000" height="394">
+            <img class="w3-image w3-round-large" src="/static/classic1.png" alt="book" width="1000" height="394">
         </div>
         <div class="w3-col m6" style="padding: 0px 10px">
+            <p class="w3-large"><strong>100 non fiction books' summary, start your 100 days micro-learning!</strong></p>
+            <p class="w3-large">Atomic Habits, Make Your Bed, Thinking, Fast and Slow, and more </p>
+            <p><a href="{% url 'book' %}" class="w3-button w3-black"><i class="fa fa-th"> </i> Start with Day 1 Book</a></p><br>
             <p class="w3-large"><strong>"If you don't know where you are going, any road can take you there."</strong></p>
             <p class="w3-large"> - Alice's Adventures in Wonderland</p>
-            <p><strong>Alice's Adventures in Wonderland</strong>    by Lewis Carroll</p>
-            <p><strong>Through The Looking-Glass</strong>    by Lewis Carroll</p>
-            <p><strong>Treasure Island</strong>    by Robert Louis Stevenson</p>
-            <p><strong>Peter Pan</strong>    by J M Barrie</p>
-            <p><strong>Black Beauty</strong>    by Anna Sewell</p>
-            <p><strong>Andersens Fairy Tales</strong>    by H C Andersen</p>
-            <p><a href="{% url 'read' %}" class="w3-button w3-black"><i class="fa fa-th"> </i> Read The Classics</a></p>
+            <p><a href="{% url 'read' %}" class="w3-button w3-black"><i class="fa fa-th"> </i> Read The Children Classics</a></p>
         </div>
     </div>
 </div>

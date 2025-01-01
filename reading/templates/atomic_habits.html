@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 1: Atomic Habits by James Clear</strong></p>
+        <audio controls>
+            <source src="{% static 'atomic_habits.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>Atomic Habits</strong> by James Clear is a groundbreaking book in the personal development genre. The book provides a comprehensive guide to understanding and changing habits, emphasizing small changes that lead to remarkable results. It is significant for its practical approach, actionable strategies, and scientific basis, making it a must-read for anyone looking to improve their personal or professional life.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p><strong>Atomic Habits</strong> is divided into four laws of behavior change, each providing insights and actionable strategies to build good habits and break bad ones:</p>
+        <ul>
+            <li><strong>Law 1: Make It Obvious</strong> – Clear explains the importance of awareness in habit formation. He introduces techniques like habit stacking and creating a habit scorecard to identify and establish habits effectively.</li>
+            <li><strong>Law 2: Make It Attractive</strong> – This section discusses the role of motivation and how to make habits appealing. Clear uses examples and research to show how habits can be tied to intrinsic desires.</li>
+            <li><strong>Law 3: Make It Easy</strong> – Here, the focus is on reducing friction and lowering barriers to habit adoption. Strategies like the two-minute rule help make habits simpler to start and maintain.</li>
+            <li><strong>Law 4: Make It Satisfying</strong> – The final law highlights the importance of reward and reinforcement in solidifying habits. Clear discusses tracking progress and celebrating small wins.</li>
+        </ul>
+        <p>The book integrates stories of Olympic athletes, CEOs, and everyday individuals, demonstrating how tiny changes can lead to extraordinary outcomes.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>The Power of Tiny Changes:</strong> Small habits, when consistently applied, compound into significant outcomes over time.</li>
+            <li><strong>The Habit Loop:</strong> Habits are formed through a cycle of cue, craving, response, and reward. Understanding this loop is essential for habit modification.</li>
+            <li><strong>Identity-Based Habits:</strong> Focusing on becoming the type of person who embodies the habit (e.g., "I am a healthy person" instead of "I want to lose weight") drives lasting change.</li>
+            <li><strong>Environment Design:</strong> Structuring your surroundings to make good habits easier and bad habits harder is a key factor in success.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>1% Better Every Day:</strong> Improving by just 1% daily leads to exponential growth. Clear illustrates this concept with graphs and examples.</li>
+            <li><strong>The Plateau of Latent Potential:</strong> Progress often feels slow initially, but persistence leads to breakthroughs.</li>
+            <li><strong>Four Laws of Behavior Change:</strong> These laws provide a practical framework for habit building and breaking.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <ul>
+            <li>"You do not rise to the level of your goals. You fall to the level of your systems."</li>
+            <li>"Every action you take is a vote for the type of person you wish to become."</li>
+            <li>"Success is the product of daily habits—not once-in-a-lifetime transformations."</li>
+        </ul>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>The book’s title, "Atomic Habits," reflects the dual meaning of the word "atomic"—tiny and powerful. It underscores how small actions can generate remarkable outcomes when compounded over time.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>The concepts in <strong>Atomic Habits</strong> can be applied to various aspects of life. For instance:</p>
+        <ul>
+            <li><strong>Personal Development:</strong> Build a reading habit by starting with one page a day.</li>
+            <li><strong>Health:</strong> Incorporate daily exercise by doing a two-minute workout to start.</li>
+            <li><strong>Professional Growth:</strong> Improve productivity by designing your workspace to minimize distractions.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>The Power of Habit</strong> by Charles Duhigg – Explores the science of habit formation and change.</li>
+            <li><strong>Deep Work</strong> by Cal Newport – Focuses on cultivating the ability to focus deeply in a distracted world.</li>
+        </ul>
+    </div>
+</div>
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

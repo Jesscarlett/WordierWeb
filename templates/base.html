@@ -5,12 +5,12 @@
 <title>Learn English & Build Vocabulary with Wordier (AI-Powered!)</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="Improve English vocabulary with AI, learn new words with games, vocabulary, vocab, words, word, English vocabulary, AI, joke, jokes, quote, quotes, word game, read, reading, wordier, spelling">
+<meta name="keywords" content="Improve English vocabulary with AI, learn new words with games, vocabulary, vocab, words, word, English vocabulary, AI, joke, jokes, quote, quotes, book, audio book, word game, read, reading, wordier, spelling">
 <meta name="description" content="Improve vocabulary, reading & writing with wordier.com.au (AI-powered)! Play word games, chat with AI, & laugh while you learn.">
 <meta property="og:title" content="Learn new words in Wordier.com.au (AI-Powered!)">
 <meta property="og:site_name" content="wordier.com.au">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://www.wordier.com.au/static/primary.png">
+<meta property="og:image" content="https://www.wordier.com.au/static/primary1.png">
 <meta property="og:description" content="Improve vocabulary, reading & writing with wordier.com.au (AI-powered)! Play word games, chat with AI, & laugh while you learn.">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -126,6 +126,7 @@
     <a href="{% url 'home' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Home</a>
     <a href="/chat" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">WordierAI</a>
     <a href="/hchat" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">WordierAI+</a>
+    <a href="{% url 'book' %}" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">100 Non-Fictions</a>
     <a href="/alpha" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Alphabets</a>
     <a href="/firstwords" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">First Words</a>
     <a href="/hangman_junior" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-8">Hangman</a>
@@ -161,6 +162,12 @@
 
 {% block content %}
 {% endblock %}
+</div>
+
+<div class="w3-content" style="max-width:1500px">
+{% block content1 %}
+{% endblock %}
+    <!-- End Page Content -->
 </div>
 
 <div class="w3-content" style="max-width:1500px">
@@ -204,11 +211,7 @@
     </div>
 </div>
 
-<div class="w3-content" style="max-width:1500px">
-{% block content1 %}
-{% endblock %}
-    <!-- End Page Content -->
-</div>
+
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-xlarge" style="margin-top:128px">

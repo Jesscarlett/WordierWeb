@@ -253,8 +253,8 @@ def the_slight_edge(request):
 def no_excuses(request):
     return render(request, 'no_excuses.html')
 
-def the_art_of_happiness(request):
-    return render(request, 'the_art_of_happiness.html')
+def the_4_hour_workweek(request):
+    return render(request, 'the_4_hour_workweek.html')
 
 def as_a_man_thinketh(request):
     return render(request, 'as_a_man_thinketh.html')

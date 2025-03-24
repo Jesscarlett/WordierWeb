@@ -876,6 +876,67 @@ def load_adj_func():
         adj_5 = onethousand_adj[str(order + 4)]['mean'] + " | " + onethousand_adj[str(order + 4)]['sen']
     return adj_module, adj_word1, adj_word2, adj_word3, adj_word4, adj_word5, adj_1,  adj_2,  adj_3,  adj_4,  adj_5
 
+def primary500(request):
+    p500_module, p500_word1, p500_word2, p500_word3, p500_word4, p500_word5, p500_1,  p500_2,  p500_3,  p500_4,  p500_5 = load_p500_func()
+    return render(request, 'primary500.html', {'p500_module': p500_module, 'p500_word1': p500_word1, 'p500_word2': p500_word2,
+                                                   'p500_word3': p500_word3, 'p500_word4': p500_word4, 'p500_word5': p500_word5,
+                                                   'p500_1': p500_1, 'p500_2': p500_2, 'p500_3': p500_3, 'p500_4': p500_4, 'p500_5': p500_5})
+
+def load_p500_func():
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/ps_words.json") as file:
+        dict_p500 = json.load(file)
+        i = random.randrange(1,20)
+        order = (i - 1) * 25 + 1
+        p500_word_counter = str(order)
+        key1 = dict_p500[str(order)]['word']
+        key2 = dict_p500[str(order + 1)]['word']
+        key3 = dict_p500[str(order + 2)]['word']
+        key4 = dict_p500[str(order + 3)]['word']
+        key5 = dict_p500[str(order + 4)]['word']
+        p500_module = "Module " + str(i) + " - Word " + str(order)
+        p500_word1 = key1
+        p500_word2 = key2
+        p500_word3 = key3
+        p500_word4 = key4
+        p500_word5 = key5
+        p500_1 = dict_p500[str(order)]['mean'] + " | " + dict_p500[str(order)]['sen']
+        p500_2 = dict_p500[str(order + 1)]['mean'] + " | " + dict_p500[str(order + 1)]['sen']
+        p500_3 = dict_p500[str(order + 2)]['mean'] + " | " + dict_p500[str(order + 2)]['sen']
+        p500_4 = dict_p500[str(order + 3)]['mean'] + " | " + dict_p500[str(order + 3)]['sen']
+        p500_5 = dict_p500[str(order + 4)]['mean'] + " | " + dict_p500[str(order + 4)]['sen']
+    return p500_module, p500_word1, p500_word2, p500_word3, p500_word4, p500_word5, p500_1, p500_2, p500_3, p500_4, p500_5
+
+
+def high600(request):
+    h600_module, h600_word1, h600_word2, h600_word3, h600_word4, h600_word5, h600_1, h600_2, h600_3, h600_4, h600_5 = load_h600_func()
+    return render(request, 'high600.html', {'h600_module': h600_module, 'h600_word1': h600_word1, 'h600_word2': h600_word2,
+                                            'h600_word3': h600_word3, 'h600_word4': h600_word4, 'h600_word5': h600_word5,
+                                            'h600_1': h600_1, 'h600_2': h600_2, 'h600_3': h600_3, 'h600_4': h600_4, 'h600_5': h600_5})
+
+def load_h600_func():
+    with open(os.path.dirname(os.path.dirname(__file__)) + "/static/hs_words.json") as file:
+        dict_h600 = json.load(file)
+        i = random.randrange(1, 24)
+        order = (i - 1) * 25 + 1
+        h600_word_counter = str(order)
+        key1 = dict_h600[str(order)]['word']
+        key2 = dict_h600[str(order + 1)]['word']
+        key3 = dict_h600[str(order + 2)]['word']
+        key4 = dict_h600[str(order + 3)]['word']
+        key5 = dict_h600[str(order + 4)]['word']
+        h600_module = "Module " + str(i) + " - Word " + str(order)
+        h600_word1 = key1
+        h600_word2 = key2
+        h600_word3 = key3
+        h600_word4 = key4
+        h600_word5 = key5
+        h600_1 = dict_h600[str(order)]['mean'] + " | " + dict_h600[str(order)]['sen']
+        h600_2 = dict_h600[str(order + 1)]['mean'] + " | " + dict_h600[str(order + 1)]['sen']
+        h600_3 = dict_h600[str(order + 2)]['mean'] + " | " + dict_h600[str(order + 2)]['sen']
+        h600_4 = dict_h600[str(order + 3)]['mean'] + " | " + dict_h600[str(order + 3)]['sen']
+        h600_5 = dict_h600[str(order + 4)]['mean'] + " | " + dict_h600[str(order + 4)]['sen']
+    return h600_module, h600_word1, h600_word2, h600_word3, h600_word4, h600_word5, h600_1, h600_2, h600_3, h600_4, h600_5
+
 def match(request):
     match_cell, match_answer, wrong_guess, match_image_source, meaning, letters = match_func()
     return render(request, 'match.html', {'match_cell': match_cell, 'match_answer': match_answer,

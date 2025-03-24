@@ -484,3 +484,231 @@ def the_order_of_time(request):
 
 def reality_is_not_what_it_seems(request):
     return render(request, 'reality_is_not_what_it_seems.html')
+
+def the_elegant_universe(request):
+    return render(request, 'the_elegant_universe.html')
+
+def the_fabric_of_the_cosmos(request):
+    return render(request, 'the_fabric_of_the_cosmos.html')
+
+def until_the_end_of_time(request):
+    return render(request, 'until_the_end_of_time.html')
+
+def being_mortal(request):
+    return render(request, 'being_mortal.html')
+
+def complications(request):
+    return render(request, 'complications.html')
+
+def better(request):
+    return render(request, 'better.html')
+
+def the_checklist_manifesto(request):
+    return render(request, 'the_checklist_manifesto.html')
+
+def silent_spring(request):
+    return render(request, 'silent_spring.html')
+
+def guns_germs_and_steel(request):
+    return render(request, 'guns_germs_and_steel.html')
+
+def collapse(request):
+    return render(request, 'collapse.html')
+
+def the_uninhabitable_earth(request):
+    return render(request, 'the_uninhabitable_earth.html')
+
+def braiding_sweetgrass(request):
+    return render(request, 'braiding_sweetgrass.html')
+
+def we_are_the_weather(request):
+    return render(request, 'we_are_the_weather.html')
+
+def on_the_origin_of_species(request):
+    return render(request, 'on_the_origin_of_species.html')
+
+def the_disordered_cosmos(request):
+    return render(request, 'the_disordered_cosmos.html')
+
+def lifes_edge(request):
+    return render(request, 'lifes_edge.html')
+
+def the_tangled_tree(request):
+    return render(request, 'the_tangled_tree.html')
+
+def i_contain_multitudes(request):
+    return render(request, 'i_contain_multitudes.html')
+
+def an_immense_world(request):
+    return render(request, 'an_immense_world.html')
+
+def the_infinite_machine(request):
+    return render(request, 'the_infinite_machine.html')
+
+def when_breath_becomes_air(request):
+    return render(request, 'when_breath_becomes_air.html')
+
+def do_no_harm(request):
+    return render(request, 'do_no_harm.html')
+
+def why_we_get_sick(request):
+    return render(request, 'why_we_get_sick.html')
+
+def the_omnivores_dilemma(request):
+    return render(request, 'the_omnivores_dilemma.html')
+
+def in_defense_of_food(request):
+    return render(request, 'in_defense_of_food.html')
+
+def cooked(request):
+    return render(request, 'cooked.html')
+
+def this_is_your_mind_on_plants(request):
+    return render(request, 'this_is_your_mind_on_plants.html')
+
+def how_to_change_your_mind(request):
+    return render(request, 'how_to_change_your_mind.html')
+
+def inconvenient_truth(request):
+    return render(request, 'inconvenient_truth.html')
+
+def the_climate_book(request):
+    return render(request, 'the_climate_book.html')
+
+def a_peoples_history_of_the_united_states(request):
+    return render(request, 'a_peoples_history_of_the_united_states.html')
+
+def the_silk_roads(request):
+    return render(request, 'the_silk_roads.html')
+
+def the_wright_brothers(request):
+    return render(request, 'the_wright_brothers.html')
+
+def team_of_rivals(request):
+    return render(request, 'team_of_rivals.html')
+
+def alexander_hamilton(request):
+    return render(request, 'alexander_hamilton.html')
+
+def the_lessons_of_history(request):
+    return render(request, 'the_lessons_of_history.html')
+
+def historical_1776(request):
+    return render(request, '1776.html')
+
+def the_warmth_of_other_suns(request):
+    return render(request, 'the_warmth_of_other_suns.html')
+
+def caste(request):
+    return render(request, 'caste.html')
+
+def the_dawn_of_everything(request):
+    return render(request, 'the_dawn_of_everything.html')
+
+def the_splendid_and_the_vile(request):
+    return render(request, 'the_splendid_and_the_vile.html')
+
+def dead_wake(request):
+    return render(request, 'dead_wake.html')
+
+def in_the_garden_of_beasts(request):
+    return render(request, 'in_the_garden_of_beasts.html')
+
+def devil_in_the_white_city(request):
+    return render(request, 'devil_in_the_white_city.html')
+
+def the_diary_of_a_young_girl(request):
+    return render(request, 'the_diary_of_a_young_girl.html')
+
+def night(request):
+    return render(request, 'night.html')
+
+def the_rise_and_fall_of_the_third_reich(request):
+    return render(request, 'the_rise_and_fall_of_the_third_reich.html')
+
+def the_great_influenza(request):
+    return render(request, 'the_great_influenza.html')
+
+def a_distant_mirror(request):
+    return render(request, 'a_distant_mirror.html')
+
+def the_guns_of_august(request):
+    return render(request, 'the_guns_of_august.html')
+
+def stalingrad(request):
+    return render(request, 'stalingrad.html')
+
+def berlin_the_downfall(request):
+    return render(request, 'berlin_the_downfall.html')
+
+def the_second_world_war(request):
+    return render(request, 'the_second_world_war.html')
+
+def the_first_world_war(request):
+    return render(request, 'the_first_world_war.html')
+
+def a_world_undone(request):
+    return render(request, 'a_world_undone.html')
+
+def the_history_of_the_ancient_world(request):
+    return render(request, 'the_history_of_the_ancient_world.html')
+
+def the_making_of_the_atomic_bomb(request):
+    return render(request, 'the_making_of_the_atomic_bomb.html')
+
+def the_pioneers(request):
+    return render(request, 'the_pioneers.html')
+
+def the_path_between_the_seas(request):
+    return render(request, 'the_path_between_the_seas.html')
+
+def over_the_edge_of_the_world(request):
+    return render(request, 'over_the_edge_of_the_world.html')
+
+def the_immortal_irishman(request):
+    return render(request, 'the_immortal_irishman.html')
+
+def killers_of_the_flower_moon(request):
+    return render(request, 'killers_of_the_flower_moon.html')
+
+def empire_of_pain(request):
+    return render(request, 'empire_of_pain.html')
+
+def say_nothing(request):
+    return render(request, 'say_nothing.html')
+
+def the_code_breaker(request):
+    return render(request, 'the_code_breaker.html')
+
+def einstein_his_life_and_universe(request):
+    return render(request, 'einstein_his_life_and_universe.html')
+
+def leonardo_da_vinci(request):
+    return render(request, 'leonardo_da_vinci.html')
+
+def steve_jobs(request):
+    return render(request, 'steve_jobs.html')
+
+def benjamin_franklin(request):
+    return render(request, 'benjamin_franklin.html')
+
+def the_innovators(request):
+    return render(request, 'the_innovators.html')
+
+def born_a_crime(request):
+    return render(request, 'born_a_crime.html')
+
+def long_walk_to_freedom(request):
+    return render(request, 'long_walk_to_freedom.html')
+
+def the_book_thief(request):
+    return render(request, 'the_book_thief.html')
+
+def band_of_brothers(request):
+    return render(request, 'band_of_brothers.html')
+
+def undaunted_courage(request):
+    return render(request, 'undaunted_courage.html')
+
+def no_ordinary_time(request):
+    return render(request, 'no_ordinary_time.html')

@@ -1,0 +1,272 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:20px 20px 20px 48px">
+    <span class="w3-large"></span><br><br>
+    <span class="w3-xxlarge w3-hide-small">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-large w3-hide-medium">Learn in games and laughter.</span><br>
+    <span class="w3-xlarge w3-hide-small">Download in app store today </span>
+    <span class="w3-large w3-hide-large w3-hide-medium">Download in app store today </span><br>
+    <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+    <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+  </div>
+</header>
+
+
+<!-- Module Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <div class="w3-row-padding" style="margin-top:15px">
+        <p class="w3-xlarge"><strong>250 Descriptive and 250 Persuasive in 20 Modules</strong></p>
+        <button class="w3-button w3-large" onclick="show_module('1')">Module 1</button>
+        <button class="w3-button w3-large" onclick="show_module('2')">Module 2</button>
+        <button class="w3-button w3-large" onclick="show_module('3')">Module 3</button>
+        <button class="w3-button w3-large" onclick="show_module('4')">Module 4</button>
+        <button class="w3-button w3-large" onclick="show_module('5')">Module 5</button>
+        <button class="w3-button w3-large" onclick="show_module('6')">Module 6</button>
+        <button class="w3-button w3-large" onclick="show_module('7')">Module 7</button>
+        <button class="w3-button w3-large" onclick="show_module('8')">Module 8</button>
+        <button class="w3-button w3-large" onclick="show_module('9')">Module 9</button>
+        <button class="w3-button w3-large" onclick="show_module('10')">Module 10</button>
+        <button class="w3-button w3-large" onclick="show_module('11')">Module 11</button>
+        <button class="w3-button w3-large" onclick="show_module('12')">Module 12</button>
+        <button class="w3-button w3-large" onclick="show_module('13')">Module 13</button>
+        <button class="w3-button w3-large" onclick="show_module('14')">Module 14</button>
+        <button class="w3-button w3-large" onclick="show_module('15')">Module 15</button>
+        <button class="w3-button w3-large" onclick="show_module('16')">Module 16</button>
+        <button class="w3-button w3-large" onclick="show_module('17')">Module 17</button>
+        <button class="w3-button w3-large" onclick="show_module('18')">Module 18</button>
+        <button class="w3-button w3-large" onclick="show_module('19')">Module 19</button>
+        <button class="w3-button w3-large" onclick="show_module('20')">Module 20</button>
+    </div>
+</div>
+
+<section id="p500s"></section>
+
+<!-- Primary 500 Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <p class="w3-xlarge" id="p500_module" style="color:#3A2020"><strong>{{ p500_module }}</strong></p>
+    <div class="w3-row-padding w3-center" style="margin-top:15px">
+        <p id="p500_word1" class="bold">{{ p500_word1 }}</p>
+        <p id="p500_1">{{ p500_1 }}</p>
+        <p id="p500_word2" class="bold">{{ p500_word2 }}</strong></p>
+        <p id="p500_2">{{ p500_2 }}</p>
+        <p id="p500_word3" class="bold">{{ p500_word3 }}</strong></p>
+        <p id="p500_3">{{ p500_3 }}</p>
+        <p id="p500_word4" class="bold">{{ p500_word4 }}</strong></p>
+        <p id="p500_4">{{ p500_4 }}</p>
+        <p id="p500_word5" class="bold">{{ p500_word5 }}</strong></p>
+        <p id="p500_5">{{ p500_5 }}</p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div class="w3-row-padding w3-center" style="margin-top:15px; display: flex;">
+            <p style="margin: 30;"><a href="#p500s" onclick="last_word()"><i class="fa fa-arrow-circle-left" style="font-size: 30px; color:#3A2020"></i></a></p>
+            <p style="margin: 30;"><a href="#p500s" onclick="next_word()"><i class="fa fa-arrow-circle-right" style="font-size: 30px; color:#3A2020"></i></a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Audio Section -->
+<div class="w3-row-padding w3-center" style="margin-top:30px">
+    <a href="https://amzn.to/48PuyN6" target="_blank">
+        <img class="w3-image w3-large w3-hide-small" src="/static/audio.png" alt="audio">
+        <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/audio-s.png" alt="audio-s">
+    </a>
+</div>
+
+<script>
+function show_module(selected_module) {
+    const jsonUrl = '/static/ps_words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var i = selected_module;
+            var p500_word_number1 = (i - 1) * 25 + 1;
+            var p500_word_number2 = p500_word_number1 + 1;
+            var p500_word_number3 = p500_word_number1 + 2;
+            var p500_word_number4 = p500_word_number1 + 3;
+            var p500_word_number5 = p500_word_number1 + 4;
+            var p500_module = "Module " + i + " - Word " + p500_word_number1;
+            document.querySelector('#p500_module strong').textContent = p500_module;
+            var p500_word1 = sev_dict[p500_word_number1]['word'];
+            var p500_word2 = sev_dict[p500_word_number2]['word'];
+            var p500_word3 = sev_dict[p500_word_number3]['word'];
+            var p500_word4 = sev_dict[p500_word_number4]['word'];
+            var p500_word5 = sev_dict[p500_word_number5]['word'];
+            document.querySelector('#p500_word1').textContent = p500_word1;
+            document.querySelector('#p500_word2').textContent = p500_word2;
+            document.querySelector('#p500_word3').textContent = p500_word3;
+            document.querySelector('#p500_word4').textContent = p500_word4;
+            document.querySelector('#p500_word5').textContent = p500_word5;
+            var p500_mean1 = sev_dict[p500_word_number1]['mean'];
+            var p500_mean2 = sev_dict[p500_word_number2]['mean'];
+            var p500_mean3 = sev_dict[p500_word_number3]['mean'];
+            var p500_mean4 = sev_dict[p500_word_number4]['mean'];
+            var p500_mean5 = sev_dict[p500_word_number5]['mean'];
+            var p500_sentence1 = sev_dict[p500_word_number1]['sen'];
+            var p500_sentence2 = sev_dict[p500_word_number2]['sen'];
+            var p500_sentence3 = sev_dict[p500_word_number3]['sen'];
+            var p500_sentence4 = sev_dict[p500_word_number4]['sen'];
+            var p500_sentence5 = sev_dict[p500_word_number5]['sen'];
+            var p500_1 = p500_mean1 + " | " + p500_sentence1;
+            var p500_2 = p500_mean2 + " | " + p500_sentence2;
+            var p500_3 = p500_mean3 + " | " + p500_sentence3;
+            var p500_4 = p500_mean4 + " | " + p500_sentence4;
+            var p500_5 = p500_mean5 + " | " + p500_sentence5;
+            document.querySelector('#p500_1').textContent = p500_1;
+            document.querySelector('#p500_2').textContent = p500_2;
+            document.querySelector('#p500_3').textContent = p500_3;
+            document.querySelector('#p500_4').textContent = p500_4;
+            document.querySelector('#p500_5').textContent = p500_5;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function last_word() {
+    const jsonUrl = '/static/ps_words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("p500_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var module_num = parseInt(current_module.match(/\d+/)[0], 10);
+            var i = module_num;
+            var p500_word_number = word_num - 5
+            if (p500_word_number == -4) {
+                p500_word_number = 496
+                i = 21
+                }
+            if (p500_word_number % 25 !== 21) {
+                var p500_module_number = i;
+                } else {
+                var p500_module_number = i - 1;
+                }
+            var p500_module = "Module " + p500_module_number.toString() + " - Word " + p500_word_number.toString();
+            document.querySelector('#p500_module strong').textContent = p500_module;
+            var p500_word_number1 = p500_word_number;
+            var p500_word_number2 = p500_word_number1 + 1;
+            var p500_word_number3 = p500_word_number1 + 2;
+            var p500_word_number4 = p500_word_number1 + 3;
+            var p500_word_number5 = p500_word_number1 + 4;
+            var p500_word1 = sev_dict[p500_word_number1]['word'];
+            var p500_word2 = sev_dict[p500_word_number2]['word'];
+            var p500_word3 = sev_dict[p500_word_number3]['word'];
+            var p500_word4 = sev_dict[p500_word_number4]['word'];
+            var p500_word5 = sev_dict[p500_word_number5]['word'];
+            document.querySelector('#p500_word1').textContent = p500_word1;
+            document.querySelector('#p500_word2').textContent = p500_word2;
+            document.querySelector('#p500_word3').textContent = p500_word3;
+            document.querySelector('#p500_word4').textContent = p500_word4;
+            document.querySelector('#p500_word5').textContent = p500_word5;
+            var p500_mean1 = sev_dict[p500_word_number1]['mean'];
+            var p500_mean2 = sev_dict[p500_word_number2]['mean'];
+            var p500_mean3 = sev_dict[p500_word_number3]['mean'];
+            var p500_mean4 = sev_dict[p500_word_number4]['mean'];
+            var p500_mean5 = sev_dict[p500_word_number5]['mean'];
+            var p500_sentence1 = sev_dict[p500_word_number1]['sen'];
+            var p500_sentence2 = sev_dict[p500_word_number2]['sen'];
+            var p500_sentence3 = sev_dict[p500_word_number3]['sen'];
+            var p500_sentence4 = sev_dict[p500_word_number4]['sen'];
+            var p500_sentence5 = sev_dict[p500_word_number5]['sen'];
+            var p500_1 = p500_mean1 + " | " + p500_sentence1;
+            var p500_2 = p500_mean2 + " | " + p500_sentence2;
+            var p500_3 = p500_mean3 + " | " + p500_sentence3;
+            var p500_4 = p500_mean4 + " | " + p500_sentence4;
+            var p500_5 = p500_mean5 + " | " + p500_sentence5;
+            document.querySelector('#p500_1').textContent = p500_1;
+            document.querySelector('#p500_2').textContent = p500_2;
+            document.querySelector('#p500_3').textContent = p500_3;
+            document.querySelector('#p500_4').textContent = p500_4;
+            document.querySelector('#p500_5').textContent = p500_5;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function next_word() {
+    const jsonUrl = '/static/ps_words.json';
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(sev_dict => {
+            var current_module = document.getElementById("p500_module").textContent;
+            var word_num = parseInt(current_module.match(/\d+$/)[0], 10);
+            var module_num = parseInt(current_module.match(/\d+/)[0], 10);
+            var i = module_num;
+            var p500_word_number = word_num + 5
+            if (p500_word_number == 501) {
+                p500_word_number = 1
+                i = 0
+                }
+            if (p500_word_number % 25 === 1) {
+                var p500_module_number = i + 1;
+                } else {
+                var p500_module_number = i;
+                }
+            var p500_module = "Module " + p500_module_number.toString() + " - Word " + p500_word_number.toString();
+            document.querySelector('#p500_module strong').textContent = p500_module;
+            var p500_word_number1 = p500_word_number;
+            var p500_word_number2 = p500_word_number1 + 1;
+            var p500_word_number3 = p500_word_number1 + 2;
+            var p500_word_number4 = p500_word_number1 + 3;
+            var p500_word_number5 = p500_word_number1 + 4;
+            var p500_word1 = sev_dict[p500_word_number1]['word'];
+            var p500_word2 = sev_dict[p500_word_number2]['word'];
+            var p500_word3 = sev_dict[p500_word_number3]['word'];
+            var p500_word4 = sev_dict[p500_word_number4]['word'];
+            var p500_word5 = sev_dict[p500_word_number5]['word'];
+            document.querySelector('#p500_word1').textContent = p500_word1;
+            document.querySelector('#p500_word2').textContent = p500_word2;
+            document.querySelector('#p500_word3').textContent = p500_word3;
+            document.querySelector('#p500_word4').textContent = p500_word4;
+            document.querySelector('#p500_word5').textContent = p500_word5;
+            var p500_mean1 = sev_dict[p500_word_number1]['mean'];
+            var p500_mean2 = sev_dict[p500_word_number2]['mean'];
+            var p500_mean3 = sev_dict[p500_word_number3]['mean'];
+            var p500_mean4 = sev_dict[p500_word_number4]['mean'];
+            var p500_mean5 = sev_dict[p500_word_number5]['mean'];
+            var p500_sentence1 = sev_dict[p500_word_number1]['sen'];
+            var p500_sentence2 = sev_dict[p500_word_number2]['sen'];
+            var p500_sentence3 = sev_dict[p500_word_number3]['sen'];
+            var p500_sentence4 = sev_dict[p500_word_number4]['sen'];
+            var p500_sentence5 = sev_dict[p500_word_number5]['sen'];
+            var p500_1 = p500_mean1 + " | " + p500_sentence1;
+            var p500_2 = p500_mean2 + " | " + p500_sentence2;
+            var p500_3 = p500_mean3 + " | " + p500_sentence3;
+            var p500_4 = p500_mean4 + " | " + p500_sentence4;
+            var p500_5 = p500_mean5 + " | " + p500_sentence5;
+            document.querySelector('#p500_1').textContent = p500_1;
+            document.querySelector('#p500_2').textContent = p500_2;
+            document.querySelector('#p500_3').textContent = p500_3;
+            document.querySelector('#p500_4').textContent = p500_4;
+            document.querySelector('#p500_5').textContent = p500_5;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
+</script>
+{% endblock %}

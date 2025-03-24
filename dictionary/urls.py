@@ -38,6 +38,8 @@ urlpatterns = [
     path('hchat', views.hchat, name='hchat'),
     path('alpha', views.alpha, name='alpha'),
     path('firstwords', views.firstwords, name='firstwords'),
+    path('primary500', views.primary500, name='primary500'),
+    path('high600', views.high600, name='high600'),
 
 ]
 

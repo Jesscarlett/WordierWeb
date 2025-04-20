@@ -575,140 +575,152 @@ def inconvenient_truth(request):
 def the_climate_book(request):
     return render(request, 'the_climate_book.html')
 
-def a_peoples_history_of_the_united_states(request):
-    return render(request, 'a_peoples_history_of_the_united_states.html')
+def why_we_sleep(request):
+    return render(request, 'why_we_sleep.html')
 
-def the_silk_roads(request):
-    return render(request, 'the_silk_roads.html')
+def the_body_keeps_the_score(request):
+    return render(request, 'the_body_keeps_the_score.html')
 
-def the_wright_brothers(request):
-    return render(request, 'the_wright_brothers.html')
+def breath(request):
+    return render(request, 'breath.html')
 
-def team_of_rivals(request):
-    return render(request, 'team_of_rivals.html')
+def salt_sugar_fat(request):
+    return render(request, 'salt_sugar_fat.html')
 
-def alexander_hamilton(request):
-    return render(request, 'alexander_hamilton.html')
+def how_not_to_die(request):
+    return render(request, 'how_not_to_die.html')
 
-def the_lessons_of_history(request):
-    return render(request, 'the_lessons_of_history.html')
+def eat_to_beat_disease(request):
+    return render(request, 'eat_to_beat_disease.html')
 
-def historical_1776(request):
-    return render(request, '1776.html')
+def the_blue_zones(request):
+    return render(request, 'the_blue_zones.html')
 
-def the_warmth_of_other_suns(request):
-    return render(request, 'the_warmth_of_other_suns.html')
+def eat_to_live(request):
+    return render(request, 'eat_to_live.html')
 
-def caste(request):
-    return render(request, 'caste.html')
+def food_rules(request):
+    return render(request, 'food_rules.html')
 
-def the_dawn_of_everything(request):
-    return render(request, 'the_dawn_of_everything.html')
+def the_china_study(request):
+    return render(request, 'the_china_study.html')
 
-def the_splendid_and_the_vile(request):
-    return render(request, 'the_splendid_and_the_vile.html')
+def lifespan(request):
+    return render(request, 'lifespan.html')
 
-def dead_wake(request):
-    return render(request, 'dead_wake.html')
+def younger_next_year(request):
+    return render(request, 'younger_next_year.html')
 
-def in_the_garden_of_beasts(request):
-    return render(request, 'in_the_garden_of_beasts.html')
+def spark(request):
+    return render(request, 'spark.html')
 
-def devil_in_the_white_city(request):
-    return render(request, 'devil_in_the_white_city.html')
+def move_your_dna(request):
+    return render(request, 'move_your_dna.html')
 
-def the_diary_of_a_young_girl(request):
-    return render(request, 'the_diary_of_a_young_girl.html')
+def the_joy_of_movement(request):
+    return render(request, 'the_joy_of_movement.html')
 
-def night(request):
-    return render(request, 'night.html')
+def the_upside_of_stress(request):
+    return render(request, 'the_upside_of_stress.html')
 
-def the_rise_and_fall_of_the_third_reich(request):
-    return render(request, 'the_rise_and_fall_of_the_third_reich.html')
+def the_willpower_instinct(request):
+    return render(request, 'the_willpower_instinct.html')
 
-def the_great_influenza(request):
-    return render(request, 'the_great_influenza.html')
+def the_telomere_effect(request):
+    return render(request, 'the_telomere_effect.html')
 
-def a_distant_mirror(request):
-    return render(request, 'a_distant_mirror.html')
+def this_is_your_brain_on_food(request):
+    return render(request, 'this_is_your_brain_on_food.html')
 
-def the_guns_of_august(request):
-    return render(request, 'the_guns_of_august.html')
+def intuitive_eating(request):
+    return render(request, 'intuitive_eating.html')
 
-def stalingrad(request):
-    return render(request, 'stalingrad.html')
+def mindful_eating(request):
+    return render(request, 'mindful_eating.html')
 
-def berlin_the_downfall(request):
-    return render(request, 'berlin_the_downfall.html')
+def the_mind_gut_connection(request):
+    return render(request, 'the_mind_gut_connection.html')
 
-def the_second_world_war(request):
-    return render(request, 'the_second_world_war.html')
+def gut(request):
+    return render(request, 'gut.html')
 
-def the_first_world_war(request):
-    return render(request, 'the_first_world_war.html')
+def fiber_fueled(request):
+    return render(request, 'fiber_fueled.html')
 
-def a_world_undone(request):
-    return render(request, 'a_world_undone.html')
+def the_plant_paradox(request):
+    return render(request, 'the_plant_paradox.html')
 
-def the_history_of_the_ancient_world(request):
-    return render(request, 'the_history_of_the_ancient_world.html')
+def fast_feast_repeat(request):
+    return render(request, 'fast_feast_repeat.html')
 
-def the_making_of_the_atomic_bomb(request):
-    return render(request, 'the_making_of_the_atomic_bomb.html')
+def the_obesity_code(request):
+    return render(request, 'the_obesity_code.html')
 
-def the_pioneers(request):
-    return render(request, 'the_pioneers.html')
+def the_complete_guide_to_fasting(request):
+    return render(request, 'the_complete_guide_to_fasting.html')
 
-def the_path_between_the_seas(request):
-    return render(request, 'the_path_between_the_seas.html')
+def clean(request):
+    return render(request, 'clean.html')
 
-def over_the_edge_of_the_world(request):
-    return render(request, 'over_the_edge_of_the_world.html')
+def the_clean_plate(request):
+    return render(request, 'the_clean_plate.html')
 
-def the_immortal_irishman(request):
-    return render(request, 'the_immortal_irishman.html')
+def green_smoothie_cleanse(request):
+    return render(request, 'green_smoothie_cleanse.html')
 
-def killers_of_the_flower_moon(request):
-    return render(request, 'killers_of_the_flower_moon.html')
+def the_whole30(request):
+    return render(request, 'the_whole30.html')
 
-def empire_of_pain(request):
-    return render(request, 'empire_of_pain.html')
+def it_starts_with_food(request):
+    return render(request, 'it_starts_with_food.html')
 
-def say_nothing(request):
-    return render(request, 'say_nothing.html')
+def the_paleo_solution(request):
+    return render(request, 'the_paleo_solution.html')
 
-def the_code_breaker(request):
-    return render(request, 'the_code_breaker.html')
+def the_keto_reset_diet(request):
+    return render(request, 'the_keto_reset_diet.html')
 
-def einstein_his_life_and_universe(request):
-    return render(request, 'einstein_his_life_and_universe.html')
+def genius_foods(request):
+    return render(request, 'genius_foods.html')
 
-def leonardo_da_vinci(request):
-    return render(request, 'leonardo_da_vinci.html')
+def brain_maker(request):
+    return render(request, 'brain_maker.html')
 
-def steve_jobs(request):
-    return render(request, 'steve_jobs.html')
+def grain_brain(request):
+    return render(request, 'grain_brain.html')
 
-def benjamin_franklin(request):
-    return render(request, 'benjamin_franklin.html')
+def drop_acid(request):
+    return render(request, 'drop_acid.html')
 
-def the_innovators(request):
-    return render(request, 'the_innovators.html')
+def outlive(request):
+    return render(request, 'outlive.html')
 
-def born_a_crime(request):
-    return render(request, 'born_a_crime.html')
+def the_longevity_diet(request):
+    return render(request, 'the_longevity_diet.html')
 
-def long_walk_to_freedom(request):
-    return render(request, 'long_walk_to_freedom.html')
+def how_to_be_well(request):
+    return render(request, 'how_to_be_well.html')
 
-def the_book_thief(request):
-    return render(request, 'the_book_thief.html')
+def own_the_day_own_your_life(request):
+    return render(request, 'own_the_day_own_your_life.html')
 
-def band_of_brothers(request):
-    return render(request, 'band_of_brothers.html')
+def boundless(request):
+    return render(request, 'boundless.html')
 
-def undaunted_courage(request):
-    return render(request, 'undaunted_courage.html')
+def the_4_hour_body(request):
+    return render(request, 'the_4_hour_body.html')
 
-def no_ordinary_time(request):
-    return render(request, 'no_ordinary_time.html')
+def superlife(request):
+    return render(request, 'superlife.html')
+
+def the_power_of_now(request):
+    return render(request, 'the_power_of_now.html')
+
+def radical_acceptance(request):
+    return render(request, 'radical_acceptance.html')
+
+def wherever_you_go_there_you_are(request):
+    return render(request, 'wherever_you_go_there_you_are.html')
+
+def full_catastrophe_living(request):
+    return render(request, 'full_catastrophe_living.html')

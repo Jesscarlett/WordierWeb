@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 134: Salt, Sugar, Fat by Michael Moss</strong></p>
+        <audio controls>
+            <source src="{% static 'saltsugarfat.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p>What if the food industry's biggest goal wasn’t to nourish us—but to keep us addicted? In <em>Salt, Sugar, Fat: How the Food Giants Hooked Us</em>, Pulitzer Prize-winning investigative journalist <strong>Michael Moss</strong> uncovers how processed food companies have used these three ingredients to hijack our biology, manipulate our taste preferences, and supercharge their profits.</p>
+        <p>Published in 2013, this eye-opening exposé blends science, marketing analysis, and insider interviews to show how corporations like Kraft, Nestlé, Coca-Cola, and General Mills knowingly engineered food to exploit our most basic instincts. The book is a wake-up call that forces readers to question not just what we eat—but <em>why</em> we crave it.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>The book is built around the three “bliss point” ingredients: salt, sugar, and fat. Each section explores how the food industry mastered the art of using these to drive overconsumption.</p>
+        <ul>
+            <li><strong>Sugar:</strong> Moss explains the science behind the “bliss point,” the precise level of sweetness that makes a product most irresistible. He exposes how sugar is added to everything from sauces to bread—not just candy—leading to addiction-like behaviors in the brain. Interviews with food scientists show how they optimized sugar levels to hit the neurological sweet spot.</li>
+            <li><strong>Fat:</strong> Unlike sugar, fat doesn’t have a single bliss point—it’s enjoyable in almost any quantity. Moss reveals how companies use fat to enhance mouthfeel and texture. The combination of fat and sugar is particularly potent, triggering dopamine spikes and hedonic eating, often overriding the body's natural sense of fullness.</li>
+            <li><strong>Salt:</strong> Salt is used not just for flavor, but as a chemical fix to processed foods. Moss explains how it masks bad flavors in cheap ingredients, preserves shelf life, and makes even bland food taste satisfying. He also reveals how hard it is for food companies to reduce salt without sacrificing sales.</li>
+        </ul>
+        <p>Throughout the book, Moss details the psychology and tactics of food marketing—how colorful packaging, portion sizes, slogans, and brand loyalty have been meticulously tested to maximize consumption. He highlights internal industry memos showing that executives were aware of the health risks but prioritized profits.</p>
+
+        <p class="w3-large"><strong>Core Concept</strong></p>
+        <p>The key message of <em>Salt, Sugar, Fat</em> is this: <strong>the processed food industry has systematically manipulated our diets—and our bodies—for profit.</strong></p>
+        <p>Using cutting-edge food science, companies optimized formulas to tap into our brain’s reward systems, creating “hyper-palatable” foods that override hunger cues and encourage compulsive eating. Rather than feeding us, the goal has become keeping us coming back for more.</p>
+        <p>This strategy has contributed significantly to rising rates of obesity, diabetes, heart disease, and other chronic conditions. And despite mounting health concerns, regulation has been minimal—partly because of aggressive lobbying and marketing.</p>
+
+        <p class="w3-large"><strong>Key Insights and Strategies</strong></p>
+        <ul>
+            <li><strong>Bliss Point Engineering:</strong> Food scientists have fine-tuned the levels of salt, sugar, and fat in products to reach the “bliss point”—the level that makes consumers crave more, without becoming overwhelmed.</li>
+            <li><strong>Processed Foods Override Natural Hunger Cues:</strong> The combination of sugar and fat creates a hedonic loop, triggering pleasure centers in the brain and encouraging us to eat past the point of fullness.</li>
+            <li><strong>Marketing to Children Builds Lifelong Brand Loyalty:</strong> Companies target children early through mascots, cartoons, and school partnerships, shaping taste preferences before critical thinking develops.</li>
+            <li><strong>Salt as a Fix for Cheap Ingredients:</strong> Salt not only adds flavor but is used to cover up inferior raw materials, making low-cost, low-quality food more palatable and profitable.</li>
+            <li><strong>Industry Pushback Against Reform:</strong> When confronted with rising health concerns, food companies often shift blame to consumers (“eat in moderation”) rather than reformulating products or embracing transparency.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes to Remember</strong></p>
+        <blockquote>“What I found, over four years of research and reporting, was a conscious effort—taking place in labs and marketing meetings and grocery-store aisles—to get people hooked on foods that are convenient and inexpensive.”</blockquote>
+        <blockquote>“If you’re trying to eat healthily, the grocery store can feel like a minefield.”</blockquote>
+        <blockquote>“The greatest minds in food science are not working to make broccoli more appealing. They're working to make junk food irresistible.”</blockquote>
+
+        <p class="w3-large"><strong>Practical Application</strong></p>
+        <ul>
+            <li><strong>Read nutrition labels</strong> carefully—look for added sugars, sodium, and fats, especially in packaged foods.</li>
+            <li><strong>Cook more meals at home</strong>, using whole ingredients where you control salt, sugar, and fat content.</li>
+            <li><strong>Beware of health claims</strong>—“low-fat” often means added sugar; “reduced sodium” doesn’t mean low salt.</li>
+            <li><strong>Shop the perimeter</strong> of grocery stores where fresh foods are usually located, and avoid processed aisles when possible.</li>
+            <li><strong>Limit children’s exposure</strong> to processed foods and advertising. Encourage real food habits early.</li>
+        </ul>
+        <p>Understanding how you're being targeted by food design can give you back control. Awareness is the first step toward eating intentionally rather than reactively.</p>
+
+        <p class="w3-large"><strong>Impact and Reception</strong></p>
+        <p><em>Salt, Sugar, Fat</em> was a major bestseller and received widespread acclaim for its in-depth reporting and balanced tone. It was nominated for several awards and sparked conversations about food labeling, corporate responsibility, and dietary guidelines.</p>
+        <p>The book has influenced public awareness campaigns and helped bolster support for initiatives like soda taxes, clearer food labels, and restrictions on junk food advertising to children. It also played a role in encouraging a shift toward whole foods, home cooking, and plant-based eating.</p>
+        <p>While the industry continues to resist reform, <em>Salt, Sugar, Fat</em> helped millions of readers see processed food for what it really is: engineered addiction.</p>
+
+        <p class="w3-large"><strong>If You Liked This…</strong></p>
+        <ul>
+            <li><strong>The Omnivore’s Dilemma</strong> by Michael Pollan – Explores the industrial food chain and the ethics of modern eating.</li>
+            <li><strong>Hooked</strong> by Michael Moss – A follow-up to <em>Salt, Sugar, Fat</em>, diving deeper into the science of food addiction.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

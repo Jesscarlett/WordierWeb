@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 135: How Not to Die by Michael Greger</strong></p>
+        <audio controls>
+            <source src="{% static 'hownottodie.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p>Can a plant-based diet prevent, treat, and even reverse the leading causes of death? In <em>How Not to Die: Discover the Foods Scientifically Proven to Prevent and Reverse Disease</em>, physician and nutrition expert <strong>Dr. Michael Greger</strong> presents an evidence-based, nutrition-first approach to health that challenges the way we think about disease.</p>
+        <p>Published in 2015, the book is divided into two parts: the first focuses on the top 15 causes of death (from heart disease to diabetes to suicide), and how dietary and lifestyle changes can prevent or reduce risk. The second part introduces the “Daily Dozen”—12 food groups and habits Greger recommends incorporating into your routine for optimal health.</p>
+        <p>This is not a diet book—it’s a deep dive into nutritional science, public health, and practical steps for long-term vitality.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>Greger starts by examining how poor diet is a leading cause of premature death and suffering. Using peer-reviewed studies and clinical research, he walks readers through how food choices affect chronic diseases—from cardiovascular conditions and respiratory illness to liver disease, high blood pressure, and even depression.</p>
+        <p>He points out that many ailments considered inevitable parts of aging are, in fact, preventable or reversible. For instance, plant-based diets rich in fiber, antioxidants, and whole foods have been shown to reduce inflammation, lower cholesterol, improve insulin sensitivity, and support mental clarity.</p>
+        <p>In the second half of the book, Greger shifts gears from diagnosis to daily practice. He introduces the “Daily Dozen”—his checklist of foods and behaviors that promote long-term health. These include beans, berries, cruciferous vegetables, flaxseeds, nuts, turmeric, whole grains, and exercise.</p>
+        <p>Backed by hundreds of citations, <em>How Not to Die</em> promotes a lifestyle that minimizes reliance on pharmaceuticals and emphasizes prevention through plants.</p>
+
+        <p class="w3-large"><strong>Core Concept</strong></p>
+        <p>The central message is bold and empowering: <strong>you don’t have to wait for a diagnosis—what you eat today can determine whether or not you get sick tomorrow.</strong></p>
+        <p>Dr. Greger’s thesis is that the vast majority of chronic diseases are not inevitable—they’re lifestyle-related. Instead of waiting for illness to strike, we can use food as a daily defense mechanism. Not only is a plant-based diet effective at preventing disease, but in many cases, it can even reverse it.</p>
+        <p>The book also emphasizes the idea that nutrition should be driven by science—not industry or fad diets.</p>
+
+        <p class="w3-large"><strong>Key Insights and Strategies</strong></p>
+        <ul>
+            <li><strong>Most Chronic Diseases Are Preventable:</strong> Heart disease, the number one killer, has been shown to be reversible with a whole-food, plant-based diet—no drugs or surgery required.</li>
+            <li><strong>Nutrition Trumps Medication in the Long Run:</strong> Pills can treat symptoms, but food targets root causes. A healthy diet reduces dependency on prescriptions.</li>
+            <li><strong>The Daily Dozen Helps Simplify Healthy Eating:</strong> The checklist includes 12 food groups and habits to aim for daily—like 3 servings of beans, 1 tablespoon of flaxseeds, and 90 minutes of moderate exercise.</li>
+            <li><strong>Animal Products and Processed Foods Fuel Disease:</strong> Meat, dairy, and processed snacks contribute to inflammation, cancer risk, and cardiovascular issues due to saturated fats, cholesterol, and additives.</li>
+            <li><strong>Scientific Literacy is Key to Health:</strong> Greger teaches readers how to read scientific studies, recognize conflicts of interest, and distinguish between hype and evidence.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes to Remember</strong></p>
+        <blockquote>“The leading causes of death in the United States are, for the most part, preventable and related to nutrition.”</blockquote>
+        <blockquote>“We have a choice: We can eat ourselves into chronic disease, or we can eat ourselves into health.”</blockquote>
+        <blockquote>“It’s not about living forever. It’s about living well, for as long as possible.”</blockquote>
+
+        <p class="w3-large"><strong>Practical Application</strong></p>
+        <ul>
+            <li><strong>Follow the Daily Dozen</strong>—track your intake of whole plant foods, herbs, water, and physical activity each day.</li>
+            <li><strong>Reduce or eliminate animal products</strong>—substitute with legumes, tofu, plant-based milk, and vegetables.</li>
+            <li><strong>Read labels</strong>—avoid foods with added sugar, saturated fat, or sodium.</li>
+            <li><strong>Batch cook and prep</strong>—having healthy food ready reduces the temptation to fall back on convenience snacks.</li>
+            <li><strong>Make small changes first</strong>—add a fruit smoothie to your morning, or swap a meat-based dinner with a veggie stir-fry once a week.</li>
+        </ul>
+        <p>Consistency is key. You don’t have to be perfect—just intentional. Over time, even small changes in your diet can compound into life-saving benefits.</p>
+
+        <p class="w3-large"><strong>Interesting Facts and Stories</strong></p>
+        <ul>
+            <li><strong>Dr. Greger’s Grandmother Was His Inspiration:</strong> One of the book’s most personal stories is about Greger’s grandmother, Frances, who was diagnosed with end-stage heart disease in her 60s and sent home in a wheelchair to die. She instead joined a lifestyle program focused on diet and exercise—and lived another 30 years. That recovery inspired Greger to study lifestyle medicine.</li>
+            <li><strong>All Royalties Go to Charity:</strong> Dr. Greger donates 100% of his book profits to charity. He also runs NutritionFacts.org, a free, nonprofit site that summarizes the latest in nutritional science.</li>
+            <li><strong>The Book Is Fully Referenced:</strong> There are over 3,000 footnotes and references in the book. Every health claim is backed by peer-reviewed studies.</li>
+            <li><strong>The "Daily Dozen" Has an App:</strong> The Daily Dozen checklist is available as a free app to help people track their progress and build healthy habits without counting calories.</li>
+        </ul>
+
+        <p class="w3-large"><strong>If You Liked This…</strong></p>
+        <ul>
+            <li><strong>Eat to Live</strong> by Dr. Joel Fuhrman – Focuses on high-nutrient foods to reverse chronic illness.</li>
+            <li><strong>Fiber Fueled</strong> by Dr. Will Bulsiewicz – Explores the microbiome and gut health through a plant-based lens.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

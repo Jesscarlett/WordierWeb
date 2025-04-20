@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 129: An Inconvenient Truth by Al Gore</strong></p>
+        <audio controls>
+            <source src="{% static 'an_inconvenient_truth.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>An Inconvenient Truth: The Planetary Emergency of Global Warming and What We Can Do About It</strong> is Al Gore’s urgent call to action on climate change. Published in 2006 alongside the Oscar-winning documentary of the same name, the book uses striking visuals, personal anecdotes, and scientific evidence to outline the dangers of global warming and the necessity of human response.</p>
+        <p>What sets this book apart is its mix of <strong>scientific clarity and emotional resonance</strong>. Al Gore, former U.S. Vice President and long-time environmental advocate, combines data with moral urgency. Drawing from decades of research and public service, he demystifies the climate crisis for a general audience and connects it to everyday decisions, offering a hopeful message of empowerment.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>The book is structured around a compelling presentation that Al Gore had delivered over 1,000 times. It covers the science of climate change, the observable impacts, and possible solutions.</p>
+        <ul>
+            <li><strong>The Science is Clear</strong> – Gore outlines how human activities, especially the burning of fossil fuels, have significantly increased atmospheric CO₂, causing the Earth to warm. He explains the greenhouse effect, using simplified graphs and NASA data to illustrate rising temperatures and CO₂ levels.</li>
+            <li><strong>Visible Changes</strong> – He presents evidence of melting glaciers, stronger hurricanes, droughts, and disrupted weather patterns. The book includes dramatic images of shrinking ice sheets and vanishing lakes.</li>
+            <li><strong>Consequences of Inaction</strong> – Gore warns that rising sea levels could displace millions. He explores biodiversity loss, economic impacts, and increased health risks.</li>
+            <li><strong>Why We Ignore the Threat</strong> – He explores cognitive dissonance, media distortion, and political lobbying that obscure scientific consensus.</li>
+            <li><strong>A Moral Imperative</strong> – Gore ends by framing climate change as a moral issue, not just an environmental one. He calls for political courage and individual responsibility.</li>
+        </ul>
+        <p>The book concludes with specific actions we can take—from switching light bulbs to supporting clean energy policy.</p>
+
+        <p class="w3-large"><strong>Memorable Insight or Case Study</strong></p>
+        <p>One of the most powerful insights is Gore’s comparison between the Earth’s atmosphere and the thin layer of varnish on a globe. It’s a vivid metaphor that emphasizes how fragile our climate system is, despite the planet’s size. This simple image transforms climate change from an abstract idea into a personal, visible vulnerability.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>Human Activity Drives Global Warming</strong> – Fossil fuel use has dramatically increased CO₂ levels.</li>
+            <li><strong>Climate Change is Happening Now</strong> – Evidence includes melting glaciers, shifting seasons, and extreme weather.</li>
+            <li><strong>The Cost of Inaction is High</strong> – Sea level rise, disease spread, and ecosystem collapse are among the consequences.</li>
+            <li><strong>We Have the Tools to Respond</strong> – Renewable energy, conservation, and policy change offer real solutions.</li>
+            <li><strong>It’s a Moral and Generational Issue</strong> – The choices we make today will define the planet for future generations.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>Greenhouse Effect</strong> – CO₂ traps heat in the atmosphere.
+                <br><em>Explanation</em>: Without it, Earth would be too cold. But excess CO₂ overheats the planet.</li>
+            <li><strong>Carbon Footprint</strong> – A measure of how much CO₂ we emit through our actions.
+                <br><em>Application</em>: Driving less, eating sustainably, and using energy-efficient devices all reduce it.</li>
+            <li><strong>Tipping Points</strong> – Irreversible climate changes (e.g., ice sheet collapse) that accelerate global warming.
+                <br><em>Warning</em>: Once triggered, they are difficult to stop.</li>
+            <li><strong>Political Will is a Renewable Resource</strong> – Gore argues that activism and policy pressure can drive systemic change.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <blockquote>“The climate crisis is not a political issue, it is a moral and spiritual challenge to all of humanity.”</blockquote>
+        <blockquote>“We have everything we need to begin solving this crisis, except the political will.”</blockquote>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>The documentary version of <strong>An Inconvenient Truth</strong> was initially rejected by distributors who feared it was “too boring.” It later went on to win <strong>two Academy Awards</strong> and is credited with changing the public dialogue on climate change.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>The book encourages readers to reduce their carbon footprint by driving less, conserving electricity, recycling, and voting for leaders committed to climate action. It also inspires schools, businesses, and communities to engage in sustainability practices and education.</p>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>The Sixth Extinction</strong> by Elizabeth Kolbert – Investigates mass extinctions driven by human activity.</li>
+            <li><strong>This Changes Everything</strong> by Naomi Klein – Connects capitalism and climate change, calling for systemic reform.</li>
+        </ul>
+   </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

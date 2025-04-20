@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 117: The Tangled Tree by David Quammen</strong></p>
+        <audio controls>
+            <source src="{% static 'the_tangled_tree.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>David Quammen’s</strong> <em>The Tangled Tree: A Radical New History of Life</em> is an enthralling deep dive into the world of evolutionary biology, with a focus on one of its most revolutionary shifts: the discovery of horizontal gene transfer (HGT). Published in 2018, the book reimagines the classic Darwinian "tree of life" and presents a more complex, web-like model for the evolution of life.</p>
+        <p>What sets <em>The Tangled Tree</em> apart is Quammen’s ability to combine cutting-edge science with compelling storytelling. He makes molecular biology accessible without oversimplifying, and he introduces the human characters—scientists like Carl Woese, Lynn Margulis, and Ford Doolittle—who reshaped our understanding of life’s origins. The book challenges conventional evolutionary theory and invites readers to consider a more interconnected and tangled view of life on Earth.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p><em>The Tangled Tree</em> recounts the rise of molecular phylogenetics and the growing realization that life doesn't evolve only through vertical descent (parent to offspring), but also horizontally—between unrelated species.</p>
+        <ul>
+            <li><strong>Carl Woese and the Third Domain</strong> – Quammen begins with the groundbreaking work of Carl Woese, who used ribosomal RNA to discover a third domain of life: Archaea, alongside Bacteria and Eukarya. This alone shook the biological world.</li>
+            <li><strong>Horizontal Gene Transfer (HGT)</strong> – The heart of the book lies in how genes can move across species boundaries. In bacteria, this has long been known (e.g., antibiotic resistance), but HGT is now known to occur across all life forms—including humans.</li>
+            <li><strong>Endosymbiosis</strong> – Quammen discusses how eukaryotic cells likely evolved through the engulfment of bacteria, leading to mitochondria and chloroplasts—once free-living organisms that now live inside our cells.</li>
+            <li><strong>A Tangled Tree, Not a Neat One</strong> – The classic Darwinian tree of life suggested a neat, branching lineage. But with gene-swapping across domains and symbiotic mergers, the evolutionary picture looks more like a web or network.</li>
+            <li><strong>The Human Story</strong> – He ends by connecting these findings to humans, revealing how parts of our own genome are products of ancient HGT, including DNA from viruses and even Neanderthals.</li>
+        </ul>
+        <p>The book celebrates the messiness of biology and urges readers to embrace a richer, more nuanced view of evolution.</p>
+
+        <p class="w3-large"><strong>Memorable Insight or Case Study</strong></p>
+        <p>One of the most striking insights is the story of Carl Woese, who defied the molecular biology mainstream by insisting that studying ribosomal RNA could revolutionize our view of life’s branches. Despite early ridicule, his work led to the discovery of Archaea—a new domain of life—and laid the foundation for recognizing the extent of HGT.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>Evolution is Not Only Vertical</strong> – Genes can transfer laterally between unrelated species.</li>
+            <li><strong>Carl Woese Changed Evolutionary Biology</strong> – He redefined life’s domains with molecular tools.</li>
+            <li><strong>Endosymbiosis is Fundamental</strong> – Eukaryotic cells are the product of ancient microbial mergers.</li>
+            <li><strong>The Tree of Life is Actually a Web</strong> – Evolutionary relationships are more tangled than tidy.</li>
+            <li><strong>Human DNA Has Foreign Roots</strong> – Our genome includes genes from viruses and archaic humans.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>Horizontal Gene Transfer (HGT)</strong> – The movement of genes between organisms that are not parent and offspring.
+                <br><em>Example</em>: Bacteria acquiring antibiotic resistance from unrelated strains.</li>
+            <li><strong>Ribosomal RNA as an Evolutionary Tool</strong> – Carl Woese used rRNA to map relationships among organisms.
+                <br><em>Significance</em>: Led to discovery of Archaea.</li>
+            <li><strong>Endosymbiosis Theory</strong> – Organelles like mitochondria originated from engulfed bacteria.
+                <br><em>Relevance</em>: Demonstrates that cooperation and merger are key to evolution.</li>
+            <li><strong>Mobile Genetic Elements</strong> – Viruses and transposons (“jumping genes”) that insert themselves into genomes.
+                <br><em>Implication</em>: Genome evolution is more dynamic than previously thought.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <blockquote>“The tree of life is more like a thicket or a web.”</blockquote>
+        <blockquote>“Genes don’t care about borders.”</blockquote>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>As much as 8% of the human genome comes from viruses—not from our ancestors but from ancient infections that embedded viral DNA into our lineage. These genes may influence things as vital as pregnancy.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>Understanding HGT is crucial in medicine, particularly in antibiotic resistance. It also reframes how we think about identity, ancestry, and the interconnectedness of life. The book challenges the notion of species purity and supports a broader, more relational view of life on Earth.</p>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>I Contain Multitudes</strong> by Ed Yong – Explores how microbes shape our bodies and the natural world.</li>
+            <li><strong>The Gene</strong> by Siddhartha Mukherjee – A sweeping history of genetics that complements the molecular themes in <em>The Tangled Tree</em>.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

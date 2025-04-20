@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 120: The Infinite Machine by Camila Russo</strong></p>
+        <audio controls>
+            <source src="{% static 'the_infinite_machine.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>Camila Russo’s</strong> <em>The Infinite Machine: How an Army of Crypto-hackers Is Building the Next Internet with Ethereum</em> is the definitive origin story of Ethereum—the decentralized, blockchain-based platform that promised to revolutionize how the internet works. Published in 2020, the book charts Ethereum’s rise from a dream in the mind of a teenage prodigy to one of the most disruptive technologies of the 21st century.</p>
+        <p>What sets this book apart is its vivid, human-centered storytelling. Russo, a financial journalist and former Bloomberg reporter, takes readers behind the scenes with the programmers, dreamers, entrepreneurs, and anarchists who helped launch Ethereum. It’s not just a story about technology—it’s about vision, risk, idealism, chaos, and what happens when a powerful idea escapes the lab and enters the real world.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p><em>The Infinite Machine</em> unfolds as a fast-paced narrative covering Ethereum’s conception, launch, early success, and growing pains.</p>
+        <ul>
+            <li><strong>Vitalik Buterin and the Birth of an Idea</strong> – The book opens with the unlikely rise of Vitalik, a Russian-Canadian teenager who wrote the Ethereum white paper at just 19 years old. He envisioned a “world computer” where decentralized apps could be built on blockchain.</li>
+            <li><strong>Early Team and Conflicts</strong> – Russo recounts how Vitalik gathered a diverse, often conflicting group of co-founders—from coders to capitalists. The tension between idealism and business became a recurring theme.</li>
+            <li><strong>The Crowdsale and Launch</strong> – In 2014, Ethereum raised $18 million in one of the first major Initial Coin Offerings (ICOs), an event that would shape the future of crypto fundraising.</li>
+            <li><strong>DAO Boom and Disaster</strong> – The Decentralized Autonomous Organization (DAO) was meant to be a self-running investment fund on Ethereum. When it was hacked in 2016, over $50 million was stolen, leading to the controversial “hard fork” that split Ethereum into two blockchains.</li>
+            <li><strong>From Niche to Movement</strong> – Russo explores how Ethereum evolved beyond crypto circles to power NFTs, DeFi (decentralized finance), and experiments in governance and identity—all part of the vision to create a new, user-owned internet.</li>
+        </ul>
+        <p>Through it all, Russo maintains a journalist’s objectivity but captures the idealism and messiness of building the future.</p>
+
+        <p class="w3-large"><strong>Memorable Insight or Case Study</strong></p>
+        <p>The DAO hack stands out as a pivotal moment in Ethereum’s history. Designed to be a leaderless, code-governed investment fund, it raised $150 million in ETH before a hacker exploited a vulnerability. The Ethereum community was faced with a dilemma: let the hack stand or intervene and rewrite history. They chose to “fork” the blockchain—essentially resetting it—sparking a philosophical debate on immutability versus pragmatism and leading to the creation of Ethereum Classic.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>Ethereum Was Born from Idealism</strong> – Vitalik wanted more than digital currency—he imagined a decentralized future.</li>
+            <li><strong>Startups Are Messy—Even in Crypto</strong> – Behind every blockchain protocol is a story of egos, visions, and tension.</li>
+            <li><strong>Smart Contracts Changed Everything</strong> – Ethereum’s programmability enabled decentralized applications (dApps).</li>
+            <li><strong>Security and Governance Are Critical</strong> – The DAO hack revealed blockchain's fragility and forced tough decisions.</li>
+            <li><strong>Ethereum Is Still Evolving</strong> – It continues to be the backbone of NFTs, DeFi, DAOs, and Web3.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>Smart Contracts</strong> – Self-executing contracts with terms written in code on the blockchain.
+                <br><em>Example</em>: A loan app that disperses funds automatically once conditions are met—no bank required.</li>
+            <li><strong>Blockchain and Immutability</strong> – Ethereum is a distributed ledger where data can’t be altered—unless the community votes to fork.
+                <br><em>Significance</em>: Ensures trust, but makes updates and fixes harder.</li>
+            <li><strong>Initial Coin Offering (ICO)</strong> – A way to raise funds by selling a new cryptocurrency.
+                <br><em>Impact</em>: ICOs sparked massive speculation and innovation.</li>
+            <li><strong>Hard Fork</strong> – A blockchain split that creates two versions of the same network.
+                <br><em>Relevance</em>: Ethereum’s hard fork after the DAO hack created Ethereum Classic.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <blockquote>“Ethereum wasn’t just another coin; it was a new kind of internet.”</blockquote>
+        <blockquote>“The infinite machine would never stop running, never stop evolving.”</blockquote>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>Vitalik Buterin once received a $100,000 Thiel Fellowship (from Peter Thiel, PayPal co-founder) to drop out of university and build Ethereum. That decision arguably shaped the future of crypto—and Web3.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>Ethereum underpins much of today’s crypto infrastructure. From buying NFTs and trading without banks to participating in DAOs or earning yield through decentralized finance, understanding Ethereum helps people engage with the future of the digital economy and digital ownership.</p>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>The Age of Cryptocurrency</strong> by Paul Vigna and Michael J. Casey – A primer on Bitcoin and the broader crypto movement.</li>
+            <li><strong>Out of the Ether</strong> by Matthew Leising – Offers another detailed look at Ethereum’s founding and the personalities involved.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

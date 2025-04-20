@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 131: A People’s History of the United States by Howard Zinn</strong></p>
+        <audio controls>
+            <source src="{% static 'a_peoples_history_of_the_us.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><em>A People’s History of the United States</em> by Howard Zinn, first published in 1980, is a groundbreaking and controversial retelling of American history from the perspective of those traditionally left out of the narrative: Indigenous peoples, slaves, workers, immigrants, women, and dissenters. Instead of focusing on presidents, generals, and political elites, Zinn gives voice to the masses—the exploited, the disenfranchised, and the rebels.</p>
+        <p>A former professor and civil rights activist, Zinn wrote this book as a counter-history, a challenge to the triumphalist version taught in most schools. With moral urgency and meticulous research, he argues that American progress has often come at the expense of human suffering, and that social movements—not politicians—are the true agents of change. The book has inspired generations of readers and activists, while also attracting criticism for its openly ideological stance. Regardless of one’s views, it has reshaped how history can be written and who it should represent.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>Zinn begins with the arrival of Columbus, portraying the explorer not as a hero but as a violent initiator of genocide against Native Americans. Drawing from Bartolomé de las Casas, Zinn describes how European conquest devastated entire civilizations under the guise of exploration and religion.</p>
+        <p>He moves on to early colonial society, where economic interests drove slavery and indentured servitude. The story of the American Revolution, often framed as a fight for liberty, is shown to have also been a strategy by elites to maintain control while deflecting class tensions.</p>
+        <p>Throughout the 19th century, Zinn highlights contradictions: the expansion of democracy alongside the perpetuation of slavery and genocide against Native peoples. He emphasizes the brutality of the Mexican-American War, the complicity of presidents in slavery, and the limits of Lincoln’s Emancipation Proclamation, which was more strategic than moral.</p>
+        <p>The Industrial Age is portrayed through the struggles of workers: strikes, massacres, child labor, and the violent suppression of unions. Zinn tells of the Haymarket affair, the Pullman Strike, and the Ludlow Massacre—not as footnotes, but as pivotal moments in U.S. history. Immigrants were used and discarded, while corporations grew powerful through government alliances.</p>
+        <p>Zinn devotes chapters to women’s resistance, Black civil rights, and anti-war movements. From Sojourner Truth to Emma Goldman, from Vietnam War protestors to working-class feminists, he shows how progress came through grassroots defiance rather than top-down benevolence.</p>
+        <p>In the 20th century, he critiques U.S. foreign policy as imperialistic—from interventions in Latin America to the Cold War arms race. The Vietnam War receives particular focus, with Zinn documenting its lies, atrocities, and the bravery of soldiers and citizens who resisted.</p>
+        <p>Even recent presidencies—Reagan, Clinton, and Bush—are scrutinized for perpetuating inequality and militarism. Zinn ends with hope in collective action, especially through movements like Occupy Wall Street and climate activism. His narrative insists that democracy is something to be fought for from below.</p>
+
+        <p class="w3-large"><strong>Historical Impact and Legacy</strong></p>
+        <p><em>Zinn’s book has sold millions of copies</em>, influenced university syllabi, and become a touchstone for educators and activists. It helped redefine history as a dynamic, contested terrain, rather than a fixed story. It paved the way for more inclusive and critical histories, including those focused on race, gender, labor, and empire. While some critics accuse Zinn of bias or selective omission, even detractors acknowledge his role in democratizing historical discourse.</p>
+
+        <p class="w3-large"><strong>What Makes It Stand Out</strong></p>
+        <p>What makes <em>A People’s History</em> unique is its <strong>bottom-up perspective</strong>. Zinn doesn’t hide his political leanings—he openly questions patriotism, capitalism, and authority—but his use of primary sources, oral histories, and contemporary accounts gives power to those who rarely feature in standard textbooks.</p>
+        <p>Zinn’s voice is passionate, urgent, and unapologetically human. He doesn’t just recount facts; he invites readers to question power and examine history’s winners and losers. His goal is not neutrality, but <strong>justice through awareness</strong>.</p>
+
+        <p class="w3-large"><strong>Quotes and Reflections</strong></p>
+        <blockquote>“There is no flag large enough to cover the shame of killing innocent people.”</blockquote>
+        <blockquote>“Protest beyond the law is not a departure from democracy; it is absolutely essential to it.”</blockquote>
+
+        <p class="w3-large"><strong>Recommended Companion Reads</strong></p>
+        <ul>
+            <li><strong>Voices of a People’s History of the United States</strong> by Howard Zinn and Anthony Arnove – A collection of primary sources complementing Zinn’s narrative.</li>
+            <li><strong>Lies My Teacher Told Me</strong> by James W. Loewen – Another classic that challenges textbook versions of American history.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

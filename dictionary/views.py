@@ -8299,3 +8299,26 @@ sh_dict = {
 "computer": "The computer stopped working and needed to be repaired.",
 "consider": "We need to consider all options before making a decision."
 }
+
+words_200 = [
+    "turtle", "rabbit", "monkey", "shark", "whale", "penguin", "zebra", "butterfly", "spider", "snail",
+    "cake", "egg", "tomato", "potato", "onion", "grapes", "lemon", "chicken", "pizza", "carrot",
+    "ice cream", "peas", "rice", "soup", "corn", "watermelon", "pancake", "sandwich", "honey", "candy",
+    "window", "mirror", "lamp", "rug", "vase", "clock", "towel", "bucket", "broom", "stairs",
+    "oven", "sink", "fridge", "knife", "napkin", "dress", "scarf", "mittens", "gloves", "boots",
+    "pajamas", "belt", "nose", "ear", "mouth", "teeth", "knee", "elbow", "shoulder", "finger",
+    "toe", "leg", "arm", "neck", "swim", "fly", "read", "write", "draw", "paint",
+    "climb", "cook", "clean", "wash", "push", "pull", "open", "close", "smile", "laugh",
+    "cry", "shout", "listen", "see", "hear", "taste", "touch", "happy", "sad", "angry",
+    "tired", "hungry", "full", "dirty", "wet", "dry", "soft", "hard", "loud", "quiet",
+    "bright", "dark", "sweet", "sour", "warm", "cool", "river", "grass", "mountain", "lake",
+    "ocean", "beach", "shell", "stone", "dirt", "helicopter", "truck", "van", "motorcycle", "scooter",
+    "rocket", "kite", "drum", "whistle", "puzzle", "balloon", "robot", "school", "teacher", "friend",
+    "baby", "family", "game", "story", "song", "picture", "party", "present", "money", "day",
+    "night", "morning", "evening", "week", "year", "circle", "square", "triangle", "heart", "oval",
+    "rectangle", "red", "blue", "yellow", "green", "purple", "pink", "brown", "black", "white",
+    "sister", "brother", "grandma", "grandpa", "pencil", "eraser", "ruler", "backpack", "glue", "scissors",
+    "kitchen", "bathroom", "bedroom", "study", "garden", "wind", "rain", "storm", "fog", "one",
+    "two", "three", "four", "five", "dance", "sing", "cut", "fold", "pour", "catch",
+    "throw", "kick", "slide", "swing", "curly", "straight", "tall", "short", "fat", "thin"
+]

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 130: The Climate Book by Greta Thunberg</strong></p>
+        <audio controls>
+            <source src="{% static 'the_climate_book.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>The Climate Book</strong> is Greta Thunberg’s monumental anthology on the climate crisis—a collaborative, science-based, and action-oriented volume aimed at educating and mobilizing readers. Published in 2022, this comprehensive collection features over 100 contributions from scientists, journalists, Indigenous leaders, economists, activists, and more.</p>
+        <p>What sets this book apart is its <strong>breadth, clarity, and collective voice</strong>. Thunberg curated the work not to center herself, but to amplify the voices of those on the frontlines of the climate emergency. The book is both an <strong>educational resource and a manifesto</strong>—offering facts, context, and a bold call for systems change. It equips readers with the knowledge and tools to act.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>The book is structured in five major sections that guide the reader from understanding to action:</p>
+        <ul>
+            <li><strong>How Climate Works</strong> – This section introduces the science of climate change: the greenhouse effect, carbon cycles, feedback loops, and tipping points. Leading scientists explain how burning fossil fuels has pushed Earth systems beyond their natural variability.</li>
+            <li><strong>How Our Planet is Changing</strong> – Contributors describe the physical impacts already underway: rising sea levels, melting ice, droughts, floods, biodiversity collapse, and heatwaves. Data and maps show how the crisis is unfolding globally, disproportionately affecting the most vulnerable.</li>
+            <li><strong>How It Affects Us</strong> – Economists, health experts, and sociologists explore climate’s impact on agriculture, migration, mental health, and economic inequality. The intersectionality of the crisis is emphasized, especially how marginalized communities suffer first and worst.</li>
+            <li><strong>What We’ve Done About It</strong> – This critical section covers climate denial, greenwashing, failed international agreements, and the myth of endless economic growth. It highlights how delay and distraction tactics have stalled progress.</li>
+            <li><strong>What We Must Do Now</strong> – The final part lays out a vision for radical change: phasing out fossil fuels, adopting degrowth and equity-focused models, protecting biodiversity, and embracing climate justice. Greta and others argue that the time for incrementalism is over.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Memorable Insight or Case Study</strong></p>
+        <p>One of the most compelling insights comes from Greta herself: that “hope is not passive—it is taking action.” She explains that real hope is earned through engagement and resistance. Her argument reframes climate hope from vague optimism to <strong>responsible agency</strong>, inspiring individuals to act regardless of how small their influence may seem.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>The Science is Conclusive</strong> – Climate change is real, human-caused, and accelerating.</li>
+            <li><strong>Inequality Deepens the Crisis</strong> – Poorer communities and nations face greater harm despite contributing least.</li>
+            <li><strong>Political Inaction is the Norm</strong> – Governments and corporations often delay or distract from meaningful solutions.</li>
+            <li><strong>The Economy Must Be Rethought</strong> – Infinite growth is incompatible with a finite planet.</li>
+            <li><strong>Youth and Grassroots Movements Are Essential</strong> – Change is driven from the bottom up, not top down.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>Carbon Budget</strong> – The amount of CO₂ humanity can emit before surpassing 1.5°C or 2°C warming.
+                <br><em>Implication</em>: At current rates, we’ll exhaust the budget within a few years.</li>
+            <li><strong>Climate Justice</strong> – A movement emphasizing fairness, recognizing that the crisis affects people unequally.
+                <br><em>Application</em>: Solutions must uplift the vulnerable and address historical emissions.</li>
+            <li><strong>Tipping Points</strong> – Climate thresholds that, once crossed, trigger irreversible change.
+                <br><em>Example</em>: Melting permafrost releasing methane, accelerating warming.</li>
+            <li><strong>Greenwashing</strong> – Superficial environmental claims that mask harmful practices.
+                <br><em>Critique</em>: Many corporations promote sustainability while continuing to pollute.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <blockquote>“We are not just facing a climate crisis; we are also facing a crisis of inequality, of disinformation, of inaction.” – Greta Thunberg</blockquote>
+        <blockquote>“Once you fully understand the climate emergency, you cannot look away.”</blockquote>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>The book includes voices from more than <strong>50 countries</strong>, making it one of the most globally representative climate works ever published. Contributors range from climate scientists and historians to Indigenous elders and activists—showing that climate change is both scientific and deeply human.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>The book urges readers to get educated, organize locally, reduce consumption, vote with climate in mind, and demand systemic change. It encourages climate literacy in schools, responsible media coverage, and ending fossil fuel subsidies. The message: <em>individual action matters, but collective pressure is essential.</em></p>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>This Changes Everything</strong> by Naomi Klein – A systemic look at capitalism’s conflict with climate action.</li>
+            <li><strong>The Future We Choose</strong> by Christiana Figueres and Tom Rivett-Carnac – Offers optimistic, actionable pathways to a livable climate future.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

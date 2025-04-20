@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 123: Why We Get Sick by Randolph M. Nesse & George C. Williams</strong></p>
+        <audio controls>
+            <source src="{% static 'why_we_get_sick.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>Why We Get Sick: The New Science of Darwinian Medicine</strong> is a groundbreaking book by psychiatrist Randolph M. Nesse and evolutionary biologist George C. Williams, first published in 1994. The book introduces the field of <em>evolutionary medicine</em>, which asks not just how disease happens, but <em>why</em>—from the perspective of natural selection and human evolutionary history.</p>
+        <p>What sets this book apart is its revolutionary framework. Instead of viewing diseases purely as biological malfunctions, Nesse and Williams argue that many medical symptoms are <strong>evolved defenses</strong>, shaped over millions of years to increase survival. The book is a wake-up call for both patients and physicians to see sickness not only through biochemical or physiological lenses, but through the evolutionary logic of adaptation, trade-offs, and mismatches.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p><em>Why We Get Sick</em> reorients medical understanding around six core reasons why disease exists—not as evolutionary failures, but as consequences of adaptation.</p>
+        <ul>
+            <li><strong>Defenses, Not Defects</strong> – Many symptoms like fever, anxiety, and nausea aren’t malfunctions but evolved defenses. They might feel unpleasant, but they protect us.</li>
+            <li><strong>Infection and Evolutionary Arms Races</strong> – Pathogens evolve faster than humans, leading to constant microbial battles.</li>
+            <li><strong>Mismatch with Modern Life</strong> – Our bodies are adapted for ancient environments. Obesity, diabetes, and anxiety rise because we live in a world we weren’t designed for.</li>
+            <li><strong>Constraints of Evolution</strong> – Evolution can only work with available materials. Our spine, prone to back pain, is an imperfect solution.</li>
+            <li><strong>Trade-offs</strong> – Traits that help in one context hurt in another. High iron supports growth but also feeds bacteria.</li>
+            <li><strong>Genes and Aging</strong> – Some genes benefit us early in life but cause problems later (e.g., prostate enlargement, Alzheimer's).</li>
+        </ul>
+        <p>The authors also explore how understanding emotions, pain, and immune responses through evolution could lead to smarter, more compassionate medicine.</p>
+
+        <p class="w3-large"><strong>Memorable Insight or Case Study</strong></p>
+        <p>One striking insight is the idea that <strong>fever is not a bug, but a feature</strong>. The authors explain how fever helps the body fight infection by raising temperature to levels that inhibit pathogens. Suppressing fever with medication may actually prolong illness. This challenges conventional wisdom and underscores the importance of seeing symptoms as potentially <em>adaptive</em> rather than merely harmful.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>Symptoms Often Serve a Purpose</strong> – Pain, fever, and fatigue may be protective, not pathological.</li>
+            <li><strong>Mismatch Diseases Are Common</strong> – Modern ailments arise because our environments have changed faster than our genes.</li>
+            <li><strong>Pathogens Are Evolving Too</strong> – Understanding co-evolution helps explain resistance and virulence.</li>
+            <li><strong>There Are No Perfect Designs</strong> – Evolution works with compromises and constraints.</li>
+            <li><strong>Aging and Disease Are Evolutionarily Inevitable</strong> – Evolution selects for reproduction, not longevity.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>Evolutionary Trade-Offs</strong> – Every adaptation has a cost.
+                <br><em>Example</em>: Morning sickness may protect embryos from toxins but causes distress.</li>
+            <li><strong>Smoke Detector Principle</strong> – Evolution favors false alarms (like panic or pain) over missing real threats.
+                <br><em>Impact</em>: Why anxiety and other “overreactions” might be evolutionarily sensible.</li>
+            <li><strong>Evolutionary Mismatch</strong> – Diseases arise when evolved traits meet novel conditions.
+                <br><em>Example</em>: Sugar cravings were adaptive in the wild but harmful in modern diets.</li>
+            <li><strong>Antagonistic Pleiotropy</strong> – Genes can have opposing effects at different life stages.
+                <br><em>Example</em>: Testosterone boosts strength early but may lead to prostate issues later.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <blockquote>“Natural selection is more interested in reproductive success than in health or happiness.”</blockquote>
+        <blockquote>“Some of what we call disease is not a defect at all, but a defense shaped by natural selection.”</blockquote>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>The book reveals that <strong>some bacteria deliberately cause diarrhea</strong> to spread faster to new hosts. In this view, even symptoms that seem awful may be evolutionary strategies—on the part of <em>pathogens</em> as well as hosts.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>Understanding that symptoms might be evolved defenses can shift medical practice. Rather than reflexively suppressing every sign of illness, doctors and patients can consider when those responses are actually beneficial. The book also promotes healthier living by aligning lifestyle choices—diet, sleep, exercise—with our evolutionary heritage.</p>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>The Story of the Human Body</strong> by Daniel Lieberman – Explores evolutionary mismatches behind modern diseases.</li>
+            <li><strong>Good Reasons for Bad Feelings</strong> by Randolph Nesse – Applies evolutionary thinking to mental health and emotions.</li>
+        </ul>
+   </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

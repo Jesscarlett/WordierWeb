@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 149: This Is Your Brain on Food by Uma Naidoo</strong></p>
+        <audio controls>
+            <source src="{% static 'thisisyourbrainonfood.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p>Can what you eat affect how you feel? In <em>This Is Your Brain on Food</em>, psychiatrist, nutrition specialist, and professional chef <strong>Dr. Uma Naidoo</strong> explores the fascinating connection between <strong>food and mental health</strong>—showing how our diets can shape our mood, cognition, and overall emotional well-being.</p>
+        <p>Published in 2020, the book provides scientific insights and practical advice on how to use food to support better brain function and manage conditions like anxiety, depression, ADHD, dementia, and more. Naidoo combines her expertise in psychiatry and nutritional neuroscience with culinary know-how to deliver a guide that is both evidence-based and easy to apply.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>Dr. Naidoo opens by explaining the concept of <strong>nutritional psychiatry</strong>—a growing field that studies how dietary patterns influence mental health. She details the <strong>gut-brain connection</strong>, highlighting the role of the microbiome in regulating mood, inflammation, and neurotransmitter production.</p>
+        <p>The book is organized into chapters that address specific mental health conditions, including:</p>
+        <ul>
+            <li><strong>Depression:</strong> Foods rich in omega-3s, fiber, and fermented items can help counter chronic inflammation and poor gut health.</li>
+            <li><strong>Anxiety:</strong> Sugar, caffeine, and alcohol can heighten symptoms, while magnesium, zinc, and B vitamins support calmness.</li>
+            <li><strong>ADHD:</strong> Omega-3s, iron, and protein-rich foods are beneficial, while processed foods and additives may worsen symptoms.</li>
+            <li><strong>Dementia and Cognitive Decline:</strong> Antioxidants, healthy fats, and polyphenols from berries, turmeric, and leafy greens protect brain aging.</li>
+            <li><strong>Insomnia:</strong> Melatonin-boosting foods like tart cherries, pistachios, and bananas support restful sleep.</li>
+            <li><strong>Bipolar Disorder and Schizophrenia:</strong> Anti-inflammatory diets and gut-healing foods may support stability and brain function.</li>
+        </ul>
+        <p>Each chapter includes <strong>“Eat This, Not That”</strong> lists, sample recipes, and lifestyle tips tailored to each condition.</p>
+
+        <p class="w3-large"><strong>Core Concept</strong></p>
+        <p>The core message of <em>This Is Your Brain on Food</em> is: <strong>Food isn’t just fuel—it’s medicine for the mind.</strong></p>
+        <p>What you eat can profoundly impact your mood, focus, stress resilience, sleep quality, and even risk for mental illness. By improving your gut health, reducing inflammation, and feeding your brain the right nutrients, you can enhance your mental well-being.</p>
+
+        <p class="w3-large"><strong>Key Insights and Strategies</strong></p>
+        <ul>
+            <li><strong>The Gut-Brain Axis is Real:</strong> A healthy microbiome produces neurotransmitters like serotonin and GABA, which regulate mood and stress.</li>
+            <li><strong>Inflammation Drives Mental Illness:</strong> Highly processed foods and added sugars increase inflammation, which is linked to depression and anxiety.</li>
+            <li><strong>Nutritional Deficiencies Matter:</strong> Low levels of omega-3s, B vitamins, iron, and zinc are common in people with mood disorders.</li>
+            <li><strong>Psychobiotics Are the New Frontier:</strong> Certain probiotics and fermented foods have been shown to reduce anxiety and improve emotional balance.</li>
+            <li><strong>One Diet Doesn’t Fit All:</strong> Individual needs vary. Personalized nutrition is key, especially for complex conditions.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes to Remember</strong></p>
+        <blockquote>“The gut and brain are in constant communication—and food is the language they use.”</blockquote>
+        <blockquote>“Your fork is your most powerful tool for transforming mental health.”</blockquote>
+        <blockquote>“The brain fog, fatigue, and anxiety we often attribute to stress or aging may actually start on our plates.”</blockquote>
+
+        <p class="w3-large"><strong>Practical Application</strong></p>
+        <ul>
+            <li><strong>Add more fermented foods:</strong> yogurt, kefir, kimchi, sauerkraut, and miso support gut-brain health.</li>
+            <li><strong>Reduce sugar and processed foods:</strong> they fuel inflammation and mood swings.</li>
+            <li><strong>Eat a Mediterranean-style diet:</strong> rich in vegetables, fruits, nuts, olive oil, whole grains, and fish.</li>
+            <li><strong>Support sleep with food:</strong> tart cherries, kiwi, and pistachios naturally boost melatonin.</li>
+            <li><strong>Drink smart:</strong> reduce caffeine and alcohol, especially if you struggle with anxiety or insomnia.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Interesting Facts and Stories</strong></p>
+        <ul>
+            <li><strong>Patients Improved Depression with Diet:</strong> Naidoo shares stories of patients who reduced depression symptoms significantly by cutting sugar and adding gut-healing foods.</li>
+            <li><strong>Chocolate Can Be Brain-Healthy:</strong> Dark chocolate (70%+ cocoa) contains flavonoids and mood-boosting compounds—in moderation.</li>
+            <li><strong>Gut Bacteria Influence Cravings:</strong> Microbes in your gut can send signals to your brain that influence food preferences.</li>
+            <li><strong>Antidepressants Work Better with Better Diets:</strong> Medications are more effective when supported by nutrient-dense, anti-inflammatory foods.</li>
+            <li><strong>Turmeric Is a Natural Antidepressant:</strong> Curcumin improves mood by reducing inflammation and boosting BDNF (a brain growth factor).</li>
+        </ul>
+
+        <p class="w3-large"><strong>If You Liked This…</strong></p>
+        <ul>
+            <li><strong>Brain Maker</strong> by David Perlmutter – How gut microbes shape brain health and behavior.</li>
+            <li><strong>Genius Foods</strong> by Max Lugavere – Foods that support memory, focus, and brain longevity.</li>
+            <li><strong>Eat to Beat Depression and Anxiety</strong> by Drew Ramsey – Nutritional psychiatry strategies tailored to mood disorders.</li>
+        </ul>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

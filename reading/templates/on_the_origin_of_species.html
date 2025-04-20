@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 114: On the Origin of Species by Charles Darwin</strong></p>
+        <audio controls>
+            <source src="{% static 'on_the_origin_of_species.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><strong>Charles Darwin’s</strong> <em>On the Origin of Species</em>, first published in 1859, is one of the most important and transformative books in the history of science. It laid the foundation for evolutionary biology and introduced the world to the concept of natural selection—the idea that species evolve over generations due to the survival and reproduction of organisms best suited to their environments.</p>
+        <p>What makes this work so monumental is that it challenged the prevailing views of the time, which largely attributed the diversity of life to divine creation. Darwin offered a naturalistic explanation grounded in empirical observation, transforming not only science but also philosophy, religion, and our understanding of humanity’s place in nature. Written with clarity and a tone of careful humility, the book bridges science and narrative, presenting a revolutionary idea with both rigor and accessibility.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <p>Darwin’s <em>Origin of Species</em> is a comprehensive argument for the theory of evolution through natural selection, supported by observations, experiments, and analogies from both domestic breeding and the natural world.</p>
+        <ul>
+            <li><strong>Variation Under Domestication</strong> – Darwin begins by discussing how humans breed animals and plants for desirable traits. This selective breeding illustrates how significant changes can arise over time.</li>
+            <li><strong>Variation Under Nature</strong> – He extends the principle to wild organisms, noting that natural variation exists within all species.</li>
+            <li><strong>Struggle for Existence</strong> – Darwin describes how more individuals are born than can survive, leading to competition for resources.</li>
+            <li><strong>Natural Selection</strong> – The core concept: individuals with advantageous traits are more likely to survive and reproduce, gradually shaping the species.</li>
+            <li><strong>Laws of Variation and Inheritance</strong> – He explores how traits are passed on, despite not knowing the genetic mechanisms (which would later be discovered).</li>
+            <li><strong>Difficulties on Theory</strong> – Darwin anticipates and addresses objections, such as the gaps in the fossil record and the development of complex organs like the eye.</li>
+            <li><strong>Geological Succession and Biogeography</strong> – He uses the distribution of species across the globe and through time to support his theory.</li>
+            <li><strong>Mutual Affinities of Organic Beings</strong> – Darwin explains taxonomy and shared structures among species as evidence of common ancestry.</li>
+        </ul>
+        <p>Darwin concludes with a powerful vision of a tree of life—where all species, including humans, are related through a shared evolutionary history.</p>
+
+        <p class="w3-large"><strong>Memorable Insight or Case Study</strong></p>
+        <p>Perhaps the most iconic example is Darwin’s study of finches on the Galápagos Islands. He observed that finches had different beak shapes adapted to specific food sources, illustrating how isolation and environmental pressure can drive evolutionary divergence—a cornerstone of the natural selection concept.</p>
+
+        <p class="w3-large"><strong>Key Study Points</strong></p>
+        <ul>
+            <li><strong>Natural Selection</strong> – The mechanism by which evolution occurs; advantageous traits lead to greater reproductive success.</li>
+            <li><strong>Common Descent</strong> – All living organisms share a common ancestor.</li>
+            <li><strong>Variation and Adaptation</strong> – Species change over time due to environmental pressures and inherited differences.</li>
+            <li><strong>Survival of the Fittest</strong> – Not the strongest, but the most suited to their environment tend to survive and reproduce.</li>
+            <li><strong>Gradualism</strong> – Evolution occurs over long periods through the accumulation of small changes.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Concepts and Explanation</strong></p>
+        <ul>
+            <li><strong>Artificial Selection</strong> – Human-directed breeding (e.g., dog breeds) demonstrates the power of selection over time.</li>
+            <li><strong>Struggle for Existence</strong> – Populations face constant competition for limited resources.</li>
+            <li><strong>Descent with Modification</strong> – Traits are passed from generation to generation, but with small variations that can accumulate.</li>
+            <li><strong>Branching Evolution</strong> – Species diverge from common ancestors, resulting in the "tree of life" metaphor.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes</strong></p>
+        <blockquote>“There is grandeur in this view of life...”</blockquote>
+        <blockquote>“It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.”</blockquote>
+
+        <p class="w3-large"><strong>Fun or Surprising Fact</strong></p>
+        <p>Darwin delayed publishing his theory for over 20 years due to fear of backlash from the religious and scientific community. It was only when Alfred Russel Wallace independently came to a similar conclusion that Darwin rushed to publish his own findings.</p>
+
+        <p class="w3-large"><strong>Real-Life Application</strong></p>
+        <p>Darwin’s ideas continue to inform medicine, genetics, conservation, and education. Understanding evolution helps scientists track disease mutations, develop vaccines, protect endangered species, and study antibiotic resistance. The theory remains a cornerstone of biological science.</p>
+
+        <p class="w3-large"><strong>Recommended Books</strong></p>
+        <ul>
+            <li><strong>The Selfish Gene</strong> by Richard Dawkins – Explores evolution from a gene-centric view, deepening Darwin’s insights.</li>
+            <li><strong>Your Inner Fish</strong> by Neil Shubin – Traces human anatomy back through evolutionary history, making Darwin’s tree of life even more personal.</li>
+        </ul>
+   </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+

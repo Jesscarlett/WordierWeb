@@ -48,6 +48,8 @@
         right: 0;
         bottom: 0;
         background: rgba(0,0,0,0.1);
+        z-index: 1;
+        pointer-events: none; /* 👈 allows clicks to go through */
     }
 
     .carousel-content {
@@ -63,6 +65,8 @@
         justify-content: center;
         align-items: flex-start;  /* 👈 Align text inside box to the left */
         text-align: center;
+        position: relative;
+        z-index: 2; /* 👈 makes the content (including <a>) clickable */
     }
 
     .carousel-content h1 {
@@ -260,7 +264,9 @@
             <div class="carousel-content">
               <h1>WORDIER Jr App is Here!</h1>
               <p>Interactive flashcards teaching ABCs, 123s, and first words – all with engaging sounds!</p>
-              <button class="cta-btn">Get it on the App Store</button>
+              <a href="https://apps.apple.com/au/app/wordier-jr-early-word-fun/id6744363021" target="_blank" class="cta-btn">
+                Get it on the App Store
+              </a>
             </div>
         </div>
 
@@ -269,7 +275,9 @@
             <div class="carousel-content">
               <h1>Microlearning: 150 Book Summaries</h1>
               <p>Bite-sized reads and audio clips to boost your knowledge, anytime, anywhere.</p>
-              <button class="cta-btn">Discover Your First Book</button>
+              <a href="{% url 'book' %}" target="_blank" class="cta-btn">
+                  Discover Your First Book
+              </a>
             </div>
         </div>
 
@@ -279,7 +287,9 @@
             <div class="carousel-content">
               <h1>WORDIER: Level Up Your Vocabulary!</h1>
               <p>Engaging games, comprehensive modules, and captivating readings – all in one free app.</p>
-              <button class="cta-btn">Download for Free Today</button>
+              <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank" class="cta-btn">
+                  Download for Free Today
+              </a>
             </div>
         </div>
 

@@ -5,65 +5,320 @@
 {% block content %}
 
 <style>
-    .button-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px; /* Adjust the gap between buttons */
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        height: 80vh;
+        width: 100%;
+        max-height: 800px;
+        margin-bottom: -130px; /* Adjust this negative value (20% of 800px) */
+        position: relative;
+        z-index: 0;
     }
-    .wide-button {
-        flex: 1;
-        max-width: 80%; /* Adjust the maximum width to 80% of the container */
+
+    .w3-row-padding.w3-center {
+          position: relative;
+          z-index: 20;
+    }
+
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
+        height: 80%;
+        background-size: cover;
+        padding-left: 60px; /* 👈 Add space from left edge */
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;  /* 👈 Align content to the left */
+        position: relative;
+    }
+
+    .carousel-slide::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.1);
+    }
+
+    .carousel-content {
+        background: rgba(255, 255, 255, 0.9);  /* Slight white overlay */
+        padding: 10px 30px 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        max-height: 450px;           /* Limit height */
+        overflow: hidden;            /* Hide overflow if any */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;  /* 👈 Align text inside box to the left */
         text-align: center;
     }
-    .small-screen-button {
-        width: 80%;
-        margin-bottom: 10px; /* Adjust the margin between buttons */
+
+    .carousel-content h1 {
+        font-size: 2.0rem;
+        margin-bottom: 10px;
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .carousel-content p {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #000000;
+        line-height: 1.5;
+    }
+
+    .cta-btn {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #808080; /* Grey color */
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 30px;
+        transition: all 0.3s;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cta-btn:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255,255,255,0.8);
+        color: #2c3e50;
+        border: none;
+        font-size: 1.5em;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+
+    .carousel-btn:hover {
+        background-color: white;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .prev {
+        left: 30px;
+    }
+
+    .next {
+        right: 30px;
+    }
+    /* Styles for larger screens (applied when max-width is NOT met) */
+    .button-container {
+        display: flex; /* Use flexbox to easily control spacing */
+        justify-content: center; /* Center the buttons horizontally within the container */
+        align-items: center; /* Vertically align items if needed */
+    }
+
+    .button-container .wide-button {
+        margin: 0 10px; /* Add horizontal margin to both sides of each button */
+    }
+
+    .button-container .wide-button:first-child {
+        margin-left: 0; /* Remove left margin from the first button */
+    }
+
+    .button-container .wide-button:last-child {
+        margin-right: 0; /* Remove right margin from the last button */
+    }
+
+    @media (max-width: 768px) {
+        .carousel-slide {
+            height: 100%; /* Adjust height to 100% on smaller screens */
+        }
+        .carousel-container {
+            height: 70vh;
+            margin-bottom: 0px; /* Adjust this negative value (20% of 800px) */
+
+        }
+
+        .carousel-content {
+            padding: 25px;
+            max-width: 85%;
+        }
+
+        .carousel-content h1 {
+            font-size: 2rem;
+        }
+
+        .carousel-content p {
+            font-size: 1.2rem;
+        }
+
+        .cta-btn {
+            padding: 12px 25px;
+            font-size: 1em;
+        }
+
+        .carousel-btn {
+            width: 40px;
+            height: 40px;
+        }
+
+        .w3-hide-large.w3-center .small-screen-button {
+            display: block; /* Make them block-level elements */
+            width: 100%; /* Take up the full width of the parent */
+            margin-top: 10px; /* Add space between the buttons */
+        }
+
+        /* Remove top margin from the first button to avoid extra space at the top */
+        .w3-hide-large.w3-center .small-screen-button:first-child {
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .carousel-container {
+            height: 60vh;
+            margin-bottom: 0; /* prevent overlap */
+        }
+
+        .carousel-slide {
+            height: 100%;
+            padding-left: 20px; /* reduce side padding for smaller screens */
+        }
+
+        .carousel-content {
+            padding: 20px;
+            max-width: 90%;
+            border-radius: 12px;
+        }
+
+        .carousel-content h1 {
+            font-size: 1.4rem; /* slightly smaller for narrow screens */
+            margin-bottom: 8px;
+        }
+
+        .carousel-content p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            font-size: 0.95em;
+            border-radius: 25px;
+            margin-top: 8px;
+        }
+
+        .carousel-btn {
+            width: 36px;
+            height: 36px;
+            font-size: 1.2em;
+        }
+
+        .w3-hide-large.w3-center .small-screen-button {
+            display: block;
+            width: 90%;
+            margin: 8px auto;
+            font-size: 0.95em;
+            padding: 12px;
+        }
+
+        .w3-hide-large.w3-center .small-screen-button:first-child {
+            margin-top: 0;
+        }
     }
 </style>
+
 <!-- Header with full-height image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-    <div class="w3-display-left w3-text-white" style="padding:48px;">
-        <span class="w3-large"></span><br><br>
-        <span class="w3-xxlarge w3-hide-small">
-            Try Wordier's new
-            <a href="/alpha" class="w3-text-white w3-hover-text-light-blue">alphabets</a>
-            and
-            <a href="/firstwords" class="w3-text-white w3-hover-text-light-blue">first 100 words</a>
-        </span><br>
-        <span class="w3-xlarge w3-hide-large w3-hide-medium">
-            Try the new
-            <a href="/alpha" class="w3-text-white">alphabets</a>
-            and
-            <a href="/firstwords" class="w3-text-white">first 100 words</a>
-        </span><br>
-        <span class="w3-large" >Learn English and Build Vocabulary</span><br>
-        <span class="w3-large w3-hide-small" >{{ quote }}</span><br>
-<!--        <span class="w3-large w3-hide-small">Joke - {{ joke }}</span><br>-->
-        <p><a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank" class="w3-button w3-white w3-padding-medium w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download Wordier app today</a></p>
-        <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
-        <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>
+<header id="home">
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <!-- Slide 1 -->
+        <div class="carousel-slide" style='background-image: url("{% static "wordierjr.png" %}");'>
+            <div class="carousel-content">
+              <h1>WORDIER Jr App is Here!</h1>
+              <p>Interactive flashcards teaching ABCs, 123s, and first words – all with engaging sounds!</p>
+              <button class="cta-btn">Get it on the App Store</button>
+            </div>
+        </div>
+
+      <!-- Slide 2 -->
+        <div class="carousel-slide" style='background-image: url("{% static "microlearning.png" %}");'>
+            <div class="carousel-content">
+              <h1>Microlearning: 150 Book Summaries</h1>
+              <p>Bite-sized reads and audio clips to boost your knowledge, anytime, anywhere.</p>
+              <button class="cta-btn">Discover Your First Book</button>
+            </div>
+        </div>
+
+
+      <!-- Slide 3 -->
+        <div class="carousel-slide" style='background-image: url("{% static "wordier.png" %}");'>
+            <div class="carousel-content">
+              <h1>WORDIER: Level Up Your Vocabulary!</h1>
+              <p>Engaging games, comprehensive modules, and captivating readings – all in one free app.</p>
+              <button class="cta-btn">Download for Free Today</button>
+            </div>
+        </div>
+
     </div>
 
-
+    <!-- Navigation buttons -->
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+  </div>
 </header>
 
+<!--<header class="bgimg w3-display-container w3-grayscale-min" id="home">-->
+<!--    <div class="w3-display-left w3-text-white" style="padding:48px;">-->
+<!--        <span class="w3-large"></span><br><br>-->
+<!--        <span class="w3-xxlarge w3-hide-small">-->
+<!--            Try Wordier's new-->
+<!--            <a href="/alpha" class="w3-text-white w3-hover-text-light-blue">alphabets</a>-->
+<!--            and-->
+<!--            <a href="/firstwords" class="w3-text-white w3-hover-text-light-blue">first 100 words</a>-->
+<!--        </span><br>-->
+<!--        <span class="w3-xlarge w3-hide-large w3-hide-medium">-->
+<!--            Try the new-->
+<!--            <a href="/alpha" class="w3-text-white">alphabets</a>-->
+<!--            and-->
+<!--            <a href="/firstwords" class="w3-text-white">first 100 words</a>-->
+<!--        </span><br>-->
+<!--        <span class="w3-large" >Learn English and Build Vocabulary</span><br>-->
+<!--        <span class="w3-large w3-hide-small" >{{ quote }}</span><br>-->
+<!--&lt;!&ndash;        <span class="w3-large w3-hide-small">Joke - {{ joke }}</span><br>&ndash;&gt;-->
+<!--        <p><a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank" class="w3-button w3-white w3-padding-medium w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Download Wordier app today</a></p>-->
+<!--        <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank"><i class="fa fa-apple w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>-->
+<!--        <a href="https://play.google.com/store/apps/details?id=org.jesscarlett.vocabugoapp" target="_blank"><i class="fa fa-android w3-hover-opacity w3-text-white w3-xxlarge" style="padding:10px 10px"></i></a>-->
+<!--    </div>-->
 
-<!-- dictionary Section -->
-<!--<div class="w3-row-padding w3-center" style="margin-top:30px">-->
-<!--    <a href="https://amzn.to/3JlsLmM" target="_blank">-->
-<!--        <img class="w3-image w3-large w3-hide-small" src="/static/children.png" alt="children">-->
-<!--        <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/children-s.png" alt="children-s">-->
-<!--    </a>-->
-<!--    <p class="w3-center w3-large"><strong>Search A Word</strong></p>-->
-<!--    <form method="post" action="{% url 'dict_view' %}">-->
-<!--    {% csrf_token %}-->
-<!--        <input type="text" name="user_input" id="user_input">-->
-<!--        <input type="submit" value="GO">-->
-<!--    </form>-->
-<!--</div>-->
+<!--</header>-->
+
 
 <!-- AI Section -->
-<div class="w3-row-padding w3-center" style="margin-top:30px">
+<div class="w3-row-padding w3-center" style="margin-top:10px">
     <!-- Left Column: Buttons -->
     <div class="w3-hide-small w3-hide-medium button-container">
         <a href="/chat" class="w3-button w3-purple wide-button" type="button">
@@ -74,7 +329,7 @@
         </a>
     </div>
 </div>
-<div class="w3-hide-large w3-center" style="margin-top:30px">
+<div class="w3-hide-large w3-center" style="margin-top:10px">
     <a href="/chat" class="w3-button w3-purple small-screen-button" type="button">
         <i class="fa fa-cube"> </i>  WordierAI for Primary School
     </a>
@@ -180,36 +435,31 @@
         <img class="w3-image w3-large w3-hide-large w3-hide-medium" src="/static/audio-s.png" alt="audio-s">
     </a>
 </div>
-<!--&lt;!&ndash; Choice Section &ndash;&gt;-->
-<!--<div class="w3-container w3-center w3-light-grey" style="padding:20px 25px">-->
-<!--    <a href = "{% url 'read' %}"><p class="w3-large" style="color:indigo"><i class="fa fa-star"> </i>Reading Comprehension, down the rabbit hole with Alice in Wonderland! <i class="fa fa-star"> </i> </p></a>-->
-<!--</div>-->
 
-<!--&lt;!&ndash; Quotes and Conversations &ndash;&gt;-->
-<!--<div class="w3-row-padding" style="padding:30px 25px">-->
-<!--    <div class="w3-half w3-margin-bottom">-->
-<!--          <img class="w3-image w3-round-large" src="/static/quotes.png" alt="quotes" style="width:100%;">-->
-<!--          <div class="w3-container w3-white">-->
-<!--            <p>{{ q1 }}</p>-->
-<!--            <p>{{ q2 }}</p>-->
-<!--            <p>{{ q3 }}</p>-->
-<!--            <p>{{ q4 }}</p>-->
-<!--            <a href="/quotes" class="w3-button w3-light-grey w3-block">Search Quotes</a>-->
-<!--          </div>-->
-<!--    </div>-->
-<!--    <div class="w3-half w3-margin-bottom">-->
-<!--          <img class="w3-image w3-round-large" src="/static/conversation.png" alt="conversation" style="width:100%;">-->
-<!--          <div class="w3-container w3-white" >-->
-<!--            <p>{{ cq1 }}</p>-->
-<!--            <p>{{ cq2 }}</p>-->
-<!--            <p>{{ cq3 }}</p>-->
-<!--            <p>{{ cq4 }}</p>-->
-<!--            <a href="/conversations" class="w3-button w3-light-grey w3-block">More Conversation Ideas</a>-->
-<!--          </div>-->
-<!--    </div>-->
-<!--</div>-->
 
 <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const track = document.getElementById('carouselTrack');
+  const totalSlides = slides.length;
+
+  function moveSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function updateSlidePosition() {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+    // Auto-slide every 6 seconds
+  setInterval(() => {
+    moveSlide(1);
+  }, 6000);
+
+    // Initialize first slide position
+  updateSlidePosition();
 </script>
+
 
 {% endblock %}

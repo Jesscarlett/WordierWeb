@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 175: The 4-Hour Body by Tim Ferriss</strong></p>
+        <audio controls>
+            <source src="{% static '4hourbody.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><em>The 4-Hour Body</em> by <strong>Tim Ferriss</strong> is a bold guide to hacking the human body through self-experimentation. Published in 2010, the book covers fat loss, muscle gain, sleep, sex, endurance, and longevity—all based on Ferriss’s personal trials and minimalist philosophy. With his concept of the “minimum effective dose,” Ferriss shows readers how to achieve big results with small, smart changes.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <ul>
+            <li><strong>Fat loss:</strong> The Slow-Carb Diet eliminates white carbs, sugar, and dairy; emphasizes protein, legumes, and veggies with a weekly cheat day.</li>
+            <li><strong>Muscle gain:</strong> Occam’s Protocol uses short, infrequent workouts with compound lifts and strategic recovery.</li>
+            <li><strong>Sleep:</strong> Sleep hacks include polyphasic schedules, magnesium, cold exposure, and light management.</li>
+            <li><strong>Sex & hormones:</strong> Boost testosterone naturally through cold exposure, good fats, Vitamin D, and heavy lifting.</li>
+            <li><strong>Injury recovery:</strong> Tools include ice baths, self-myofascial release, and advanced mobility drills.</li>
+            <li><strong>Endurance:</strong> Covers barefoot running, Pose Method, and oxygen-deprivation training strategies.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Core Concept</strong></p>
+        <p>The core message of <em>The 4-Hour Body</em> is: <strong>Radical results come from identifying and applying the minimum effective dose—just enough input to drive maximum change.</strong></p>
+        <p>Experimentation and data tracking are your most powerful health tools.</p>
+
+        <p class="w3-large"><strong>Key Insights and Strategies</strong></p>
+        <ul>
+            <li><strong>Less can be more:</strong> Focus on the few actions that deliver the biggest payoff.</li>
+            <li><strong>Measure everything:</strong> You can’t improve what you don’t track—track meals, sleep, reps, and results.</li>
+            <li><strong>Nutrition > exercise:</strong> Most body composition changes come from diet, not workouts.</li>
+            <li><strong>Rest is performance:</strong> Proper recovery boosts muscle, mood, and hormones.</li>
+            <li><strong>Test, observe, adapt:</strong> N=1 experiments (on yourself) reveal what truly works for you.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes to Remember</strong></p>
+        <blockquote>“If you can’t measure it, you can’t improve it.”</blockquote>
+        <blockquote>“More is not better. Better is better.”</blockquote>
+        <blockquote>“There is no such thing as average. There is only personal.”</blockquote>
+
+        <p class="w3-large"><strong>Practical Application</strong></p>
+        <ul>
+            <li><strong>Start the Slow-Carb Diet:</strong> Eat protein, legumes, and veggies 4x/day, with one weekly cheat day.</li>
+            <li><strong>Do minimal workouts:</strong> Use compound lifts 2x/week and prioritize recovery for muscle gain.</li>
+            <li><strong>Optimize sleep:</strong> Keep your room cool and dark, use magnesium, and reduce screen time at night.</li>
+            <li><strong>Boost hormones naturally:</strong> Eat good fats, train intensely, and spend time in the sun.</li>
+            <li><strong>Track everything:</strong> Use photos, weight, and measurements to guide your progress—not just the scale.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Interesting Facts and Stories</strong></p>
+        <ul>
+            <li><strong>Ferriss gained 34 lbs of muscle in 28 days</strong> with only four hours in the gym using Occam’s Protocol.</li>
+            <li><strong>The Slow-Carb Diet helped clients lose 20+ pounds in a month</strong>—without calorie counting or exercise.</li>
+            <li><strong>Cold exposure enhanced sleep and testosterone</strong>—ice baths became one of Ferriss’s favorite hacks.</li>
+            <li><strong>He tested polyphasic sleep and sex hacks</strong>—documenting extreme results with humor and honesty.</li>
+            <li><strong>The book hit #1 on the NYT bestseller list</strong> and became a cult classic among self-experimenters.</li>
+        </ul>
+
+        <p class="w3-large"><strong>If You Liked This…</strong></p>
+        <ul>
+            <li><strong>Boundless</strong> by Ben Greenfield – A comprehensive take on optimizing health, performance, and longevity.</li>
+            <li><strong>Atomic Habits</strong> by James Clear – Focuses on building systems and identity to sustain healthy behaviors.</li>
+            <li><strong>Tools of Titans</strong> by Tim Ferriss – Lessons from top performers across health, wealth, and wisdom.</li>
+        </ul>
+   </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+
+
+

@@ -54,11 +54,11 @@
 
     .carousel-content {
         background: rgba(255, 255, 255, 0.9);  /* Slight white overlay */
-        padding: 10px 30px 30px;
+        padding: 10px 30px 20px;
         border-radius: 16px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         max-width: 500px;
-        max-height: 450px;           /* Limit height */
+        max-height: 350px;           /* Limit height */
         overflow: hidden;            /* Hide overflow if any */
         display: flex;
         flex-direction: column;
@@ -70,15 +70,15 @@
     }
 
     .carousel-content h1 {
-        font-size: 2.0rem;
-        margin-bottom: 10px;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
         color: #000000;
         font-weight: 700;
     }
 
     .carousel-content p {
         font-size: 1.5rem;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         color: #000000;
         line-height: 1.5;
     }
@@ -167,8 +167,9 @@
         }
 
         .carousel-content {
-            padding: 25px;
-            max-width: 85%;
+            padding: 16px 20px;    /* Less padding */
+            max-height: none;      /* Allow height to adjust naturally */
+
         }
 
         .carousel-content h1 {
@@ -180,7 +181,7 @@
         }
 
         .cta-btn {
-            padding: 12px 25px;
+            padding: 10px 20px;
             font-size: 1em;
         }
 
@@ -286,7 +287,7 @@
         <div class="carousel-slide" style='background-image: url("{% static "wordier.png" %}");'>
             <div class="carousel-content">
               <h1>WORDIER: Level Up Your Vocabulary!</h1>
-              <p>Engaging games, comprehensive modules, and captivating readings – all in one free app.</p>
+              <p>Engaging games, word modules, and captivating readings – all in one free app.</p>
               <a href="https://apps.apple.com/us/app/wordier/id1600186527" target="_blank" class="cta-btn">
                   Download for Free Today
               </a>

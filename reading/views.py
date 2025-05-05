@@ -710,14 +710,18 @@ def boundless(request):
 def the_4_hour_body(request):
     return render(request, 'the_4_hour_body.html')
 
+
 def superlife(request):
     return render(request, 'superlife.html')
 
-def the_power_of_now(request):
-    return render(request, 'the_power_of_now.html')
+
+def the_end_of_alzheimers(request):
+    return render(request, 'the_end_of_alzheimers.html')
+
 
 def radical_acceptance(request):
     return render(request, 'radical_acceptance.html')
+
 
 def wherever_you_go_there_you_are(request):
     return render(request, 'wherever_you_go_there_you_are.html')

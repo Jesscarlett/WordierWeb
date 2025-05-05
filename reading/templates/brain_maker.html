@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 167: Brain Maker by Dr. David Perlmutter</strong></p>
+        <audio controls>
+            <source src="{% static 'brainmaker.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><em>Brain Maker</em> by neurologist <strong>Dr. David Perlmutter</strong> explores how the gut microbiome—the ecosystem of bacteria in your digestive system—plays a pivotal role in brain health. Published in 2015, the book connects gut health with mood, memory, neurological disorders, and even conditions like autism and Alzheimer’s. Perlmutter argues that healing the brain starts in the gut, and offers dietary and lifestyle tools to do just that.</p>
+
+        <p class="w3-large"><strong>Summary</strong></p>
+        <ul>
+            <li><strong>Gut-brain axis:</strong> Gut microbes communicate with the brain through nerves, hormones, and immune pathways.</li>
+            <li><strong>Leaky gut and brain inflammation:</strong> When the gut lining is compromised, it leads to systemic and neuro-inflammation.</li>
+            <li><strong>Microbiome imbalances:</strong> Poor diet, antibiotics, and stress damage beneficial bacteria and affect mood and cognition.</li>
+            <li><strong>Dietary solution:</strong> Reduce sugar, gluten, and processed foods; consume fermented foods and prebiotics.</li>
+            <li><strong>Real case studies:</strong> Gut repair protocols led to improvements in patients with autism, MS, depression, and more.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Core Concept</strong></p>
+        <p>The core message of <em>Brain Maker</em> is: <strong>To protect, heal, or optimize your brain, you must start by restoring your gut microbiome. Gut health drives inflammation, immunity, mood, and cognitive performance.</strong></p>
+        <p>What happens in your intestines echoes in your mind.</p>
+
+        <p class="w3-large"><strong>Key Insights and Strategies</strong></p>
+        <ul>
+            <li><strong>Microbes regulate inflammation:</strong> Good bacteria modulate immune response and reduce neuroinflammation.</li>
+            <li><strong>Gut-produced neurotransmitters:</strong> Serotonin, GABA, and dopamine are influenced by gut bacteria.</li>
+            <li><strong>Leaky gut = leaky brain:</strong> Intestinal permeability can compromise the blood-brain barrier.</li>
+            <li><strong>Feed your microbiome:</strong> Prebiotic fiber and fermented foods support beneficial microbes.</li>
+            <li><strong>Antibiotic caution:</strong> Overuse wipes out microbial diversity and increases disease risk.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Quotes to Remember</strong></p>
+        <blockquote>“The origin of brain disease is in many cases found in the gut.”</blockquote>
+        <blockquote>“You can change the destiny of your brain by what you eat and how you care for your microbiome.”</blockquote>
+        <blockquote>“Heal the gut, heal the brain.”</blockquote>
+
+        <p class="w3-large"><strong>Practical Application</strong></p>
+        <ul>
+            <li><strong>Eat fermented foods daily:</strong> Include sauerkraut, kefir, kimchi, yogurt, or kombucha.</li>
+            <li><strong>Eliminate sugar and gluten:</strong> Avoid foods that inflame the gut and disrupt bacteria balance.</li>
+            <li><strong>Include prebiotic-rich plants:</strong> Garlic, onions, asparagus, leeks, and green bananas nourish gut bacteria.</li>
+            <li><strong>Use probiotics strategically:</strong> Choose quality supplements or foods after illness or antibiotic use.</li>
+            <li><strong>Fast occasionally:</strong> Intermittent fasting can reduce inflammation and support gut healing.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Interesting Facts and Stories</strong></p>
+        <ul>
+            <li><strong>Autism improvement:</strong> A child showed remarkable recovery after implementing a gut-focused plan.</li>
+            <li><strong>MS reversal:</strong> A woman with multiple sclerosis improved dramatically after gut rehab and diet changes.</li>
+            <li><strong>Gut microbes “talk” to the brain:</strong> Short-chain fatty acids affect gene expression and memory.</li>
+            <li><strong>Stress alters the gut:</strong> Chronic stress reshapes microbial composition and harms immunity.</li>
+            <li><strong>The gut is the “second brain”:</strong> The enteric nervous system can operate independently of the brain.</li>
+        </ul>
+
+        <p class="w3-large"><strong>If You Liked This…</strong></p>
+        <ul>
+            <li><strong>Genius Foods</strong> by Max Lugavere – Combines nutrition and brain health with food-first strategies.</li>
+            <li><strong>The End of Alzheimer’s</strong> by Dale Bredesen – A personalized, root-cause approach to cognitive decline.</li>
+            <li><strong>The Good Gut</strong> by Justin & Erica Sonnenburg – A scientific deep dive into the microbiome’s role in health.</li>
+        </ul>
+   </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}
+
+
+

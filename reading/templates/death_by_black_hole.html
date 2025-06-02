@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+   <div class="content">
+        <p class="w3-xlarge"><strong>Day 190: Death by Black Hole by Neil deGrasse Tyson</strong></p>
+        <audio controls>
+            <source src="{% static 'death_by_black_hole.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p>What do black holes, exploding stars, cosmic collisions, and the smell of the moon have in common?</p>
+        <p>They’re all part of the strange, explosive, and deeply fascinating world of astrophysics—and <em>Death by Black Hole</em> is your personal guided tour.</p>
+        <p>In this witty and wide-ranging collection of essays, Neil deGrasse Tyson takes us on a journey through the greatest hits of the cosmos. Originally written for his “Universe” column in <em>Natural History</em> magazine, these chapters blend science, humor, and wonder into bite-sized explorations of everything from the Big Bang to Hollywood space blunders.</p>
+        <p>This is not a book of dry formulas or dense jargon. It’s science storytelling—with Tyson’s signature clarity and charm—and it will leave you seeing the universe in a whole new light.</p>
+
+        <p class="w3-large"><strong>Cosmic Context</strong></p>
+        <p>At its core, <em>Death by Black Hole</em> is about how we understand the universe—and what that understanding says about us.</p>
+        <p>Tyson introduces the idea of “cosmic perspective,” a way of thinking that zooms out beyond our daily lives to grasp our place in the grand structure of space and time. From this viewpoint, Earth becomes a pale blue dot, and humans become a blip on the cosmic timeline.</p>
+        <p>But instead of making us feel insignificant, Tyson argues that this perspective is empowering. We are part of something vast and beautiful—and we have the tools to study it.</p>
+        <p>The book showcases those tools: telescopes, particle accelerators, satellites, and above all, the scientific method. It celebrates the idea that science isn’t just about answers—it’s about how we ask the right questions.</p>
+
+        <p class="w3-large"><strong>Narrative Highlights</strong></p>
+        <ul>
+            <li><strong>“Death by Black Hole”</strong> – The titular essay explores what would actually happen if you fell into a black hole. Spoiler: it’s terrifying, involving “spaghettification” and time distortion. But it’s also strangely poetic.</li>
+            <li><strong>“On Being Round”</strong> – Why are planets and stars spherical? Because gravity is lazy—it pulls equally in all directions. This essay reveals how shape reveals the secrets of cosmic forces.</li>
+            <li><strong>“Hollywood Nights”</strong> – Tyson breaks down how movies like <em>Armageddon</em> and <em>Contact</em> get science wrong—and sometimes surprisingly right.</li>
+            <li><strong>“The Moon That Wasn’t”</strong> – A look at historical astronomical blunders and how even the best minds can be misled by bias, bad data, or wild imagination.</li>
+            <li><strong>“Stick-in-the-Mud Science”</strong> – How the footprints left by astronauts on the moon reveal more about lunar geology than you'd expect.</li>
+            <li><strong>“Let There Be Light”</strong> – A poetic yet scientific exploration of light: how it travels, how we detect it, and what it tells us about distant stars and galaxies.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Mind-Expanding Concepts</strong></p>
+        <ul>
+            <li><strong>Spaghettification</strong> – Near a black hole’s event horizon, gravity varies so strongly over short distances that objects (and people) would stretch into long strands of atoms. It's both horrifying and fascinating.</li>
+            <li><strong>Time Dilation</strong> – According to Einstein’s theory of relativity, time slows down the closer you get to massive objects or the faster you move. Black holes aren’t just deadly—they warp time itself.</li>
+            <li><strong>Scientific Literacy</strong> – Tyson makes the case for why understanding science is essential, not just for scientists, but for citizens, voters, and humans who want to make informed decisions.</li>
+            <li><strong>The Universe as Detective Story</strong> – Whether studying craters, starlight, or cosmic radiation, astrophysics is about piecing together clues to understand what happened billions of years ago.</li>
+            <li><strong>Entropy and the Arrow of Time</strong> – Why does time only move forward? What does that tell us about the heat death of the universe?</li>
+        </ul>
+
+        <p class="w3-large"><strong>Key Takeaways</strong></p>
+        <ul>
+            <li>The universe is vast, violent, and full of surprises—but also understandable with the right tools and mindset.</li>
+            <li>Black holes are not just terrifying—they’re some of the best laboratories for physics in extreme conditions.</li>
+            <li>Movies often get science wrong, but they’re also a great entry point for public curiosity.</li>
+            <li>Scientific thinking requires humility, skepticism, and imagination—all of which are essential for progress.</li>
+            <li>We are not separate from the cosmos. We are made of its ingredients, shaped by its forces, and governed by its laws.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Real-World Connections</strong></p>
+        <p>Tyson doesn’t just explain the science—he explains why it matters.</p>
+        <p>From the climate debates on Earth to the future of space exploration, <em>Death by Black Hole</em> reminds us that science literacy is not a luxury—it’s a necessity.</p>
+        <p>Whether you’re voting on policies that affect the planet, evaluating claims about vaccines or technology, or simply trying to understand your place in the world, science is your compass. Tyson argues that the more we embrace its methods, the more empowered we become—not just to understand the universe, but to live wisely within it.</p>
+        <p>He also touches on education, popular culture, and the media, offering both critique and hope for a society that values curiosity over clickbait.</p>
+
+        <p class="w3-large"><strong>Memorable Quotes</strong></p>
+        <blockquote>“The good thing about science is that it's true whether or not you believe in it.”</blockquote>
+        <blockquote>“We are part of this universe; we are in this universe, but perhaps more important than both of those facts, is that the universe is in us.”</blockquote>
+        <blockquote>“Curious that we spend more time congratulating people who have succeeded than encouraging people who have not.”</blockquote>
+
+        <p class="w3-large"><strong>Conclusion</strong></p>
+        <p><em>Death by Black Hole</em> is not just about dying dramatically in space—it’s about living intelligently on Earth.</p>
+        <p>Neil deGrasse Tyson makes astrophysics feel thrilling, approachable, and vital. His essays invite you to think like a scientist, laugh at the absurdity of ignorance, and fall in love with the universe all over again.</p>
+        <p>This book is perfect for readers who want to dip into science without drowning, who want their brain challenged and their sense of wonder reignited.</p>
+        <p>If you've ever stared into the night sky and felt your heart race with questions, <em>Death by Black Hole</em> will speak directly to you.</p>
+   </div>
+</div>
+
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

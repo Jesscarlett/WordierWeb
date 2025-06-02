@@ -728,3 +728,273 @@ def wherever_you_go_there_you_are(request):
 
 def full_catastrophe_living(request):
     return render(request, 'full_catastrophe_living.html')
+
+def black_holes_and_baby_universes(request):
+    return render(request, 'black_holes_and_baby_universes.html')
+
+def the_grand_design(request):
+    return render(request, 'the_grand_design.html')
+
+def parallel_worlds(request):
+    return render(request, 'parallel_worlds.html')
+
+def hyperspace(request):
+    return render(request, 'hyperspace.html')
+
+def the_future_of_humanity(request):
+    return render(request, 'the_future_of_humanity.html')
+
+def physics_of_the_impossible(request):
+    return render(request, 'physics_of_the_impossible.html')
+
+def the_end_of_everything(request):
+    return render(request, 'the_end_of_everything.html')
+
+def origins(request):
+    return render(request, 'origins.html')
+
+def welcome_to_the_universe(request):
+    return render(request, 'welcome_to_the_universe.html')
+
+def death_by_black_hole(request):
+    return render(request, 'death_by_black_hole.html')
+
+def black_hole_survival_guide(request):
+    return render(request, 'black_hole_survival_guide.html')
+
+def how_the_universe_got_its_spots(request):
+    return render(request, 'how_the_universe_got_its_spots.html')
+
+def the_first_three_minutes(request):
+    return render(request, 'the_first_three_minutes.html')
+
+def the_4_percent_universe(request):
+    return render(request, 'the_4_percent_universe.html')
+
+def dark_matter_and_the_dinosaurs(request):
+    return render(request, 'dark_matter_and_the_dinosaurs.html')
+
+def warped_passages(request):
+    return render(request, 'warped_passages.html')
+
+def the_fabric_of_reality(request):
+    return render(request, 'the_fabric_of_reality.html')
+
+def the_beginning_of_infinity(request):
+    return render(request, 'the_beginning_of_infinity.html')
+
+def until_the_sun_dies(request):
+    return render(request, 'until_the_sun_dies.html')
+
+def fundamentals(request):
+    return render(request, 'fundamentals.html')
+
+def helgoland(request):
+    return render(request, 'helgoland.html')
+
+def the_science_of_interstellar(request):
+    return render(request, 'the_science_of_interstellar.html')
+
+def the_big_picture(request):
+    return render(request, 'the_big_picture.html')
+
+def something_deeply_hidden(request):
+    return render(request, 'something_deeply_hidden.html')
+
+def from_eternity_to_here(request):
+    return render(request, 'from_eternity_to_here.html')
+
+def the_particle_at_the_end_of_the_universe(request):
+    return render(request, 'the_particle_at_the_end_of_the_universe.html')
+
+def our_mathematical_universe(request):
+    return render(request, 'our_mathematical_universe.html')
+
+def a_universe_from_nothing(request):
+    return render(request, 'a_universe_from_nothing.html')
+
+def the_end_of_time(request):
+    return render(request, 'the_end_of_time.html')
+
+def just_six_numbers(request):
+    return render(request, 'just_six_numbers.html')
+
+def the_nature_fix(request):
+    return render(request, 'the_nature_fix.html')
+
+def the_secret_network_of_nature(request):
+    return render(request, 'the_secret_network_of_nature.html')
+
+def the_inner_life_of_animals(request):
+    return render(request, 'the_inner_life_of_animals.html')
+
+def wilding(request):
+    return render(request, 'wilding.html')
+
+def feral(request):
+    return render(request, 'feral.html')
+
+def the_invention_of_nature(request):
+    return render(request, 'the_invention_of_nature.html')
+
+def pilgrim_at_tinker_creek(request):
+    return render(request, 'pilgrim_at_tinker_creek.html')
+
+def desert_solitaire(request):
+    return render(request, 'desert_solitaire.html')
+
+def the_forest_unseen(request):
+    return render(request, 'the_forest_unseen.html')
+
+def the_songs_of_trees(request):
+    return render(request, 'the_songs_of_trees.html')
+
+def the_overstory(request):
+    return render(request, 'the_overstory.html')
+
+def spying_on_whales(request):
+    return render(request, 'spying_on_whales.html')
+
+def the_soul_of_an_octopus(request):
+    return render(request, 'the_soul_of_an_octopus.html')
+
+def journey_of_the_universe(request):
+    return render(request, 'journey_of_the_universe.html')
+
+def gathering_moss(request):
+    return render(request, 'gathering_moss.html')
+
+def regenesis(request):
+    return render(request, 'regenesis.html')
+
+def the_future_earth(request):
+    return render(request, 'the_future_earth.html')
+
+def the_world_without_us(request):
+    return render(request, 'the_world_without_us.html')
+
+def the_story_of_more(request):
+    return render(request, 'the_story_of_more.html')
+
+def lab_girl(request):
+    return render(request, 'lab_girl.html')
+
+def what_the_robin_knows(request):
+    return render(request, 'what_the_robin_knows.html')
+
+def natures_best_hope(request):
+    return render(request, 'natures_best_hope.html')
+
+def a_life_on_our_planet(request):
+    return render(request, 'a_life_on_our_planet.html')
+
+def the_wild_places(request):
+    return render(request, 'the_wild_places.html')
+
+def underland(request):
+    return render(request, 'underland.html')
+
+def the_last_child_in_the_woods(request):
+    return render(request, 'the_last_child_in_the_woods.html')
+
+def the_sixth_wave(request):
+    return render(request, 'the_sixth_wave.html')
+
+def silent_earth(request):
+    return render(request, 'silent_earth.html')
+
+def the_climate_cure(request):
+    return render(request, 'the_climate_cure.html')
+
+def eating_the_sun(request):
+    return render(request, 'eating_the_sun.html')
+
+def i_mammal(request):
+    return render(request, 'i_mammal.html')
+
+def the_making_of_the_fittest(request):
+    return render(request, 'the_making_of_the_fittest.html')
+
+def your_inner_fish(request):
+    return render(request, 'your_inner_fish.html')
+
+def the_universe_within(request):
+    return render(request, 'the_universe_within.html')
+
+def she_has_her_mothers_laugh(request):
+    return render(request, 'she_has_her_mothers_laugh.html')
+
+def parasite_rex(request):
+    return render(request, 'parasite_rex.html')
+
+def microcosm(request):
+    return render(request, 'microcosm.html')
+
+def the_violinists_thumb(request):
+    return render(request, 'the_violinists_thumb.html')
+
+def the_tale_of_the_dueling_neurosurgeons(request):
+    return render(request, 'the_tale_of_the_dueling_neurosurgeons.html')
+
+def the_disappearing_spoon(request):
+    return render(request, 'the_disappearing_spoon.html')
+
+def napoleons_buttons(request):
+    return render(request, 'napoleons_buttons.html')
+
+def the_evolution_of_beauty(request):
+    return render(request, 'the_evolution_of_beauty.html')
+
+def the_genius_of_birds(request):
+    return render(request, 'the_genius_of_birds.html')
+
+def the_bird_way(request):
+    return render(request, 'the_bird_way.html')
+
+def being_a_beast(request):
+    return render(request, 'being_a_beast.html')
+
+def planta_sapiens(request):
+    return render(request, 'planta_sapiens.html')
+
+def the_extended_phenotype(request):
+    return render(request, 'the_extended_phenotype.html')
+
+def on_the_future(request):
+    return render(request, 'on_the_future.html')
+
+def the_serengeti_rules(request):
+    return render(request, 'the_serengeti_rules.html')
+
+def the_geckos_foot(request):
+    return render(request, 'the_geckos_foot.html')
+
+def behave(request):
+    return render(request, 'behave.html')
+
+def monkeyluv(request):
+    return render(request, 'monkeyluv.html')
+
+def survival_of_the_sickest(request):
+    return render(request, 'survival_of_the_sickest.html')
+
+def the_language_of_god(request):
+    return render(request, 'the_language_of_god.html')
+
+def the_vital_question(request):
+    return render(request, 'the_vital_question.html')
+
+def power_sex_suicide(request):
+    return render(request, 'power_sex_suicide.html')
+
+def how_life_works(request):
+    return render(request, 'how_life_works.html')
+
+def the_tangled_bank(request):
+    return render(request, 'the_tangled_bank.html')
+
+def the_epigenetics_revolution(request):
+    return render(request, 'the_epigenetics_revolution.html')
+
+def the_greatest_killer(request):
+    return render(request, 'the_greatest_killer.html')

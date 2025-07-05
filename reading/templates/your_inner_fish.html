@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+    <div class="content">
+        <p class="w3-xlarge"><strong>Day 243: Your Inner Fish by Neil Shubin</strong></p>
+        <audio controls>
+            <source src="{% static 'your_inner_fish.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><em>Your Inner Fish: A Journey into the 3.5-Billion-Year History of the Human Body</em> by Neil Shubin, published in 2008, explores the ancient origins of the human body.</p>
+        <p>Shubin shows how fossils, embryology, and genetics reveal that many of our body’s features can be traced back to fish, reptiles, and amphibians.</p>
+        <p>Our anatomy carries the legacy of our evolutionary ancestors.</p>
+
+        <p class="w3-large"><strong>The Discovery of Tiktaalik: The Missing Link</strong></p>
+        <p>Shubin’s discovery of <em>Tiktaalik</em>, a 375-million-year-old fossil, bridges the gap between fish and land animals.</p>
+        <p><em>Tiktaalik</em> had fins with wrist-like bones, a neck, lungs, and eyes on top of its head—clear signs of a transition from water to land.</p>
+        <p>This discovery provides powerful evidence of evolution’s step-by-step process.</p>
+
+        <p class="w3-large"><strong>The Fishy Origins of Human Anatomy</strong></p>
+        <p>Many parts of the human body can be traced to fish ancestors:</p>
+        <ul>
+            <li><strong>Limbs:</strong> Our arms and wrists evolved from ancient fish fins.</li>
+            <li><strong>Necks:</strong> <em>Tiktaalik</em> shows the first appearance of a movable neck.</li>
+            <li><strong>Ears:</strong> The bones in our middle ears evolved from fish jaw structures.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Embryology: A Window to the Past</strong></p>
+        <p>Human embryos pass through stages that resemble fish and reptile ancestors.</p>
+        <p>We temporarily develop gill-like structures and limb patterns similar to ancient fish, revealing our evolutionary heritage during development.</p>
+
+        <p class="w3-large"><strong>The Genetic Toolkit of Life</strong></p>
+        <p>Shubin introduces <strong>Hox genes</strong>—shared genetic toolkits that control body plans in animals.</p>
+        <p>These genes guide the formation of limbs and other structures in both fish and humans, demonstrating deep genetic connections across species.</p>
+
+        <p class="w3-large"><strong>Teeth, Jaws, and Skin: Deep Connections</strong></p>
+        <ul>
+            <li><strong>Teeth:</strong> Evolved from the scales of primitive fish.</li>
+            <li><strong>Jaws:</strong> Originated from gill supports in jawless fish.</li>
+            <li><strong>Skin:</strong> Contains evolutionary traces like sweat glands and hair follicles from our mammalian past.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Why We Get Sick: Evolution’s Legacy</strong></p>
+        <p>Some human health problems are linked to our evolutionary history:</p>
+        <ul>
+            <li><strong>Back pain:</strong> Our spine was not originally designed for upright walking.</li>
+            <li><strong>Hernias:</strong> Weaknesses in body structures reflect ancient anatomical designs.</li>
+            <li><strong>Sleep apnea:</strong> The balance between breathing and speaking creates vulnerabilities in our airways.</li>
+        </ul>
+        <p>Evolution works by modifying existing structures—not by perfect design.</p>
+
+        <p class="w3-large"><strong>Seeing Ourselves as Part of Nature</strong></p>
+        <p>Shubin emphasizes that humans are not separate from other animals. We are part of the same evolutionary story, sharing ancient blueprints with fish and reptiles.</p>
+        <p>The human body is a living archive of evolutionary history.</p>
+
+        <p class="w3-large"><strong>Key Takeaways and Insights</strong></p>
+        <ul>
+            <li>The human body is shaped by ancient fish, reptiles, and amphibians.</li>
+            <li><em>Tiktaalik</em> provides a key link between fish and land animals.</li>
+            <li>Human limbs evolved from fish fins.</li>
+            <li>Embryology reveals ancestral stages in human development.</li>
+            <li>Hox genes guide body development across species.</li>
+            <li>Teeth, jaws, and skin have deep evolutionary roots.</li>
+            <li>Many health issues are side effects of evolutionary compromises.</li>
+            <li>Humans are part of a continuous evolutionary story, not separate from nature.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Why This Book Matters</strong></p>
+        <p><em>Your Inner Fish</em> reveals how human anatomy is deeply connected to the history of life on Earth.</p>
+        <p>Neil Shubin uses fossils, genetics, and embryology to show that the human body is a walking archive of evolutionary change.</p>
+        <p>This book invites us to see the beauty and complexity of our shared biological heritage—and to understand that inside all of us, there is an inner fish.</p>
+    </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

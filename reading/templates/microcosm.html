@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<!-- Summary Section -->
+<div class="w3-row-padding" style="margin-top:30px; padding-left: 24px; padding-right: 24px;">
+    <div class="content">
+        <p class="w3-xlarge"><strong>Day 247: Microcosm by Carl Zimmer</strong></p>
+        <audio controls>
+            <source src="{% static 'microcosm.mp3' %}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p class="w3-large"><strong>Introduction</strong></p>
+        <p><em>Microcosm: E. coli and the New Science of Life</em> by Carl Zimmer, published in 2008, uses the humble bacterium <em>E. coli</em> to explore life’s complexity, evolution, and the molecular machinery that powers all living things.</p>
+        <p><em>E. coli</em> is not just a microbe—it’s a window into life itself.</p>
+
+        <p class="w3-large"><strong>Why E. coli Matters</strong></p>
+        <p><em>E. coli</em> became one of biology’s most studied organisms because it is easy to grow and has a relatively simple genetic code.</p>
+        <p>It has helped scientists unlock the secrets of DNA, gene expression, mutations, and antibiotic resistance.</p>
+
+        <p class="w3-large"><strong>The Secret Lives of Bacteria</strong></p>
+        <p><em>E. coli</em> can sense its environment, swim toward food, and exchange genes with other bacteria through horizontal gene transfer.</p>
+        <p>This gene-sharing ability makes bacteria incredibly adaptable and quick to evolve antibiotic resistance.</p>
+
+        <p class="w3-large"><strong>Evolution in Real Time</strong></p>
+        <p>Zimmer highlights Richard Lenski’s long-term evolution experiment, which has tracked <em>E. coli</em> populations for over 70,000 generations.</p>
+        <p>Through this experiment, scientists have observed evolution in real time, including the emergence of new abilities like metabolizing citrate.</p>
+
+        <p class="w3-large"><strong>The Molecular Machinery of Life</strong></p>
+        <p><em>E. coli</em> has helped scientists understand how genes are switched on and off, how proteins are made, and how cells repair DNA damage.</p>
+        <p>These processes are not unique to bacteria—they are shared by all living things.</p>
+
+        <p class="w3-large"><strong>E. coli: Friend and Foe</strong></p>
+        <p>Most strains of <em>E. coli</em> are harmless and aid digestion. Others, like O157:H7, can cause severe illness.</p>
+        <p>Pathogenic strains often acquire dangerous genes through horizontal gene transfer.</p>
+
+        <p class="w3-large"><strong>The Age of Genetic Engineering</strong></p>
+        <p><em>E. coli</em> is a workhorse of biotechnology. Scientists use it to produce insulin, industrial enzymes, and genetically engineered products.</p>
+        <p>The story of <em>E. coli</em> is deeply connected to the rise of synthetic biology and genetic manipulation.</p>
+
+        <p class="w3-large"><strong>The Origins of Life</strong></p>
+        <p>Bacteria like <em>E. coli</em> offer clues to the earliest forms of life on Earth. Their simplicity and ancient lineage help scientists explore life’s beginnings.</p>
+
+        <p class="w3-large"><strong>Key Takeaways and Insights</strong></p>
+        <ul>
+            <li><em>E. coli</em> is a model organism that has shaped modern biology.</li>
+            <li>Bacteria are highly adaptable, with complex sensory and motor systems.</li>
+            <li><em>E. coli</em> has provided direct, observable evidence of evolution.</li>
+            <li>Horizontal gene transfer makes bacteria genetically flexible and fast-evolving.</li>
+            <li>Harmless and harmful strains of <em>E. coli</em> differ due to acquired genes.</li>
+            <li><em>E. coli</em> is essential in biotechnology and genetic engineering.</li>
+            <li>Studying <em>E. coli</em> helps scientists understand life’s molecular machinery.</li>
+            <li><em>E. coli</em> connects to life’s earliest origins and universal biological principles.</li>
+        </ul>
+
+        <p class="w3-large"><strong>Why This Book Matters</strong></p>
+        <p><em>Microcosm</em> shows that even the smallest life forms can reveal life’s biggest mysteries.</p>
+        <p>Carl Zimmer uses <em>E. coli</em> to explain evolution, genetics, and the shared systems that unite all living things.</p>
+        <p>This book invites readers to appreciate the beauty and power of the microcosmos that shapes life on Earth.</p>
+    </div>
+</div>
+
+
+<!-- Header with full-height image -->
+{% include 'includes/banner1.html' %}
+<script>
+
+
+</script>
+{% endblock %}

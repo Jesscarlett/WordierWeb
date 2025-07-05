@@ -263,18 +263,24 @@
       <!-- Slide 1 -->
         <div class="carousel-slide" style='background-image: url("{% static "wordierjr.png" %}");'>
             <div class="carousel-content">
-              <h1>WORDIER Jr App is Here for Early Learners!</h1>
-              <p>Interactive flashcards teaching ABCs, 123s, and first words – all with engaging sounds!</p>
-              <a href="https://apps.apple.com/au/app/wordier-jr-early-word-fun/id6744363021" target="_blank" class="cta-btn">
-                Get it on the App Store
-              </a>
+                <h1>WORDIER Jr App is Here for Early Learners!</h1>
+                <p>Interactive flashcards teaching ABCs, 123s, and first words – all with engaging sounds!</p>
+                <div style="display: flex; align-items: center;">
+                    <a href="https://apps.apple.com/au/app/wordier-jr-early-word-fun/id6744363021" target="_blank" style="font-size: 16px; text-decoration: none;">
+                        <i class="fa fa-apple w3-hover-opacity w3-text-grey w3-xxlarge" style="padding:10px;"></i>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.wordier.wordierjr" target="_blank" style="font-size: 16px; text-decoration: none;">
+                        <i class="fa fa-android w3-hover-opacity w3-text-grey w3-xxlarge" style="padding:10px;"></i>
+                    </a>
+                </div>
+
             </div>
         </div>
 
       <!-- Slide 2 -->
         <div class="carousel-slide" style='background-image: url("{% static "microlearning.png" %}");'>
             <div class="carousel-content">
-              <h1>Microlearning: 180 Book Summaries</h1>
+              <h1>Microlearning: 250 Book Summaries</h1>
               <p>Bite-sized reads and audio clips to boost your knowledge, anytime, anywhere.</p>
               <a href="{% url 'book' %}" target="_blank" class="cta-btn">
                   Discover Your First Book
@@ -375,7 +381,7 @@
             <img class="w3-image w3-round-large" src="/static/classic1.png" alt="book" width="1000" height="394">
         </div>
         <div class="w3-col m6" style="padding: 0px 10px">
-            <p class="w3-large"><strong>200 non fiction books' summary, start your 200 days micro-learning!</strong></p>
+            <p class="w3-large"><strong>250 non fiction books' summary, start your 250 days micro-learning!</strong></p>
             <p class="w3-large">Atomic Habits, Deep Work, Thinking, Fast and Slow ... with audio streaming.</p>
             <audio controls>
                 <source src="{% static 'atomic_habits.mp3' %}" type="audio/mpeg">

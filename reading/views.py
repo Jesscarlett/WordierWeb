@@ -183,6 +183,8 @@ def fairy_eight(request):
 def book(request):
     return render(request, 'book.html')
 
+def principles(request):
+    return render(request, 'principles.html')
 
 def atomic_habits(request):
     return render(request, 'atomic_habits.html')

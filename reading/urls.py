@@ -57,6 +57,7 @@ urlpatterns = [
     path('fairy_seven', views.fairy_seven, name='fairy_seven'),
     path('fairy_eight', views.fairy_eight, name='fairy_eight'),
     path('book', views.book, name='book'),
+    path('principles', views.principles, name='principles'),
     path('atomic_habits', views.atomic_habits, name='atomic_habits'),
     path('the_power_of_now', views.the_power_of_now, name='the_power_of_now'),
     path('think_and_grow_rich', views.think_and_grow_rich, name='think_and_grow_rich'),

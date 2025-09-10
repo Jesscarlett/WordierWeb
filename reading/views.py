@@ -986,8 +986,8 @@ def the_language_of_god(request):
 def the_vital_question(request):
     return render(request, 'the_vital_question.html')
 
-def power_sex_suicide(request):
-    return render(request, 'power_sex_suicide.html')
+def The_48_Laws_of_Power(request):
+    return render(request, 'The_48_Laws_of_Power.html')
 
 def how_life_works(request):
     return render(request, 'how_life_works.html')

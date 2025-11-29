@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Header with full-height image -->
+{% include 'includes/header.html' %}
+
+<div class="w3-row-padding" style="margin-top:30px; padding-left:24px; padding-right:24px;">
+  <p class="w3-xlarge"><strong>Classic Books Library</strong></p>
+  <p class="w3-large">Browse the full collection of classic literature. Click any title to open the book.</p>
+
+  <ul class="w3-large">
+
+    <li><a href="{% url 'classic_book' 'A-Christmas-Carol-by-Charles-Dickens' %}">A Christmas Carol by Charles Dickens</a></li>
+    <li><a href="{% url 'classic_book' 'A-Journey-to-the-Interior-of-the-Earth-by-Jules-Verne' %}">A Journey to the Interior of the Earth by Jules Verne</a></li>
+    <li><a href="{% url 'classic_book' 'A-Little-Princess-by-Frances-Hodgson-Burnett-2' %}">A Little Princess by Frances Hodgson Burnett</a></li>
+    <li><a href="{% url 'classic_book' 'Aesops-Fables' %}">Aesop’s Fables</a></li>
+    <li><a href="{% url 'classic_book' 'Alices-Adventures-in-Wonderland-by-Lewis-Carroll' %}">Alice’s Adventures in Wonderland by Lewis Carroll</a></li>
+    <li><a href="{% url 'classic_book' 'Adventures-of-Huckleberry-Finn-by-Mark-Twain' %}">Adventures of Huckleberry Finn by Mark Twain</a></li>
+    <li><a href="{% url 'classic_book' 'Adventures-of-Pinocchio-by-C-Collodi' %}">Adventures of Pinocchio by C. Collodi</a></li>
+    <li><a href="{% url 'classic_book' 'Andersens-Fairy-Tales-by-HC-Andersen' %}">Andersen’s Fairy Tales by H. C. Andersen</a></li>
+
+    <li><a href="{% url 'classic_book' 'Anne-of-Green-Gables' %}">Anne of Green Gables</a></li>
+    <li><a href="{% url 'classic_book' 'Anthem-by-Ayn-Rand' %}">Anthem by Ayn Rand</a></li>
+    <li><a href="{% url 'classic_book' 'A-Tale-of-Two-Cities-by-Charles-Dickens' %}">A Tale of Two Cities by Charles Dickens</a></li>
+
+    <li><a href="{% url 'classic_book' 'Alexander-the-Great-by-Jacob-Abbott' %}">Alexander the Great by Jacob Abbott</a></li>
+    <li><a href="{% url 'classic_book' 'Beowulf' %}">Beowulf</a></li>
+    <li><a href="{% url 'classic_book' 'Beyond-Good-and-Evil-by-Friedrich-Nietzsche' %}">Beyond Good and Evil by Friedrich Nietzsche</a></li>
+
+    <li><a href="{% url 'classic_book' 'David-Copperfield-by-Charles-Dickens' %}">David Copperfield by Charles Dickens</a></li>
+    <li><a href="{% url 'classic_book' 'Decameron-of-Giovanni-Boccaccio-by-Boccaccio' %}">Decameron by Giovanni Boccaccio</a></li>
+    <li><a href="{% url 'classic_book' 'Don-Quixote-vol-1-by-Miguel-De-Cervantes-Saavedra' %}">Don Quixote Vol. I by Miguel de Cervantes</a></li>
+
+    <li><a href="{% url 'classic_book' 'Dracula-by-Bram-Stoker' %}">Dracula by Bram Stoker</a></li>
+    <li><a href="{% url 'classic_book' 'Dream-Psychology-by-Sigmund-Freud' %}">Dream Psychology by Sigmund Freud</a></li>
+    <li><a href="{% url 'classic_book' 'Emma-by-Jane-Austen' %}">Emma by Jane Austen</a></li>
+
+    <li><a href="{% url 'classic_book' 'English-Fairy-Tales-Collected-by-Joseph-Jacobs' %}">English Fairy Tales (Collected by Joseph Jacobs)</a></li>
+    <li><a href="{% url 'classic_book' 'Fairy-Tales-by-the-Brothers-Grimm' %}">Fairy Tales by the Brothers Grimm</a></li>
+    <li><a href="{% url 'classic_book' 'Fifteen-Thousand-Useful-Phrases-by-Grenville-Kleiser' %}">Fifteen Thousand Useful Phrases by Grenville Kleiser</a></li>
+
+    <li><a href="{% url 'classic_book' 'Frankenstein-or-Modern-Prometheus-by-Mary-W-Shelley' %}">Frankenstein by Mary W. Shelley</a></li>
+    <li><a href="{% url 'classic_book' 'Great-Expectations-by-Charles-Dickens' %}">Great Expectations by Charles Dickens</a></li>
+    <li><a href="{% url 'classic_book' 'Gullivers-Travels-by-Jonathan-Swift' %}">Gulliver’s Travels by Jonathan Swift</a></li>
+
+    <li><a href="{% url 'classic_book' 'History-of-the-United-States' %}">History of the United States</a></li>
+    <li><a href="{% url 'classic_book' 'How-to-Speak-and-Write-Correctly-by-Joseph-Devlin' %}">How to Speak and Write Correctly by Joseph Devlin</a></li>
+    <li><a href="{% url 'classic_book' 'Invisible-Man-by-H-G-Wells' %}">Invisible Man by H. G. Wells</a></li>
+
+    <li><a href="{% url 'classic_book' 'Jane-Eyre-version-3-by-Charlotte-Bronte-2' %}">Jane Eyre by Charlotte Brontë</a></li>
+
+    <li><a href="{% url 'classic_book' 'King-Solomons-Mines-by-Haggard' %}">King Solomon’s Mines by H. Rider Haggard</a></li>
+    <li><a href="{% url 'classic_book' 'Last-Days-of-Pompeii' %}">Last Days of Pompeii</a></li>
+    <li><a href="{% url 'classic_book' 'Little-Women-by-Louisa-May-Alcott' %}">Little Women by Louisa May Alcott</a></li>
+
+    <li><a href="{% url 'classic_book' 'Mansfield-Park-by-Jane-Austen' %}">Mansfield Park by Jane Austen</a></li>
+    <li><a href="{% url 'classic_book' 'Moby-Dick-by-Herman-Melville' %}">Moby Dick by Herman Melville</a></li>
+    <li><a href="{% url 'classic_book' 'Mystery-of-the-Yellow-Room-by-Gaston-Leroux' %}">The Mystery of the Yellow Room by Gaston Leroux</a></li>
+
+    <li><a href="{% url 'classic_book' 'Northanger-Abbey-by-Jane-Austen' %}">Northanger Abbey by Jane Austen</a></li>
+    <li><a href="{% url 'classic_book' 'Oliver-Twist-by-Charles-Dickens' %}">Oliver Twist by Charles Dickens</a></li>
+    <li><a href="{% url 'classic_book' 'Paradise-Lost-by-John-Milton' %}">Paradise Lost by John Milton</a></li>
+
+    <li><a href="{% url 'classic_book' 'Persuasion-by-Jane-Austen' %}">Persuasion by Jane Austen</a></li>
+    <li><a href="{% url 'classic_book' 'Peter-Pan-by-J-M-Barrie' %}">Peter Pan by J. M. Barrie</a></li>
+    <li><a href="{% url 'classic_book' 'Poems-Every-Child-Should-Know-Edited-by-Mary-E-Burt' %}">Poems Every Child Should Know</a></li>
+
+    <li><a href="{% url 'classic_book' 'Pollyanna-by-Eleanor-H-Porter' %}">Pollyanna by Eleanor H. Porter</a></li>
+    <li><a href="{% url 'classic_book' 'Pride-and-Prejudice-by-Jane-Austen' %}">Pride and Prejudice by Jane Austen</a></li>
+    <li><a href="{% url 'classic_book' 'Relativity-by-Albert-Einstein' %}">Relativity by Albert Einstein</a></li>
+
+    <li><a href="{% url 'classic_book' 'Return-of-the-Native-by-Thomas-Hardy' %}">Return of the Native by Thomas Hardy</a></li>
+    <li><a href="{% url 'classic_book' 'Robinson-Crusoe-by-Daniel-Defoe' %}">Robinson Crusoe by Daniel Defoe</a></li>
+    <li><a href="{% url 'classic_book' 'Romeo-and-Juliet-version-3-by-William-Shakespeare-0901' %}">Romeo and Juliet by William Shakespeare</a></li>
+
+    <li><a href="{% url 'classic_book' 'Sense-and-Sensibility-by-Jane-Austen' %}">Sense and Sensibility by Jane Austen</a></li>
+    <li><a href="{% url 'classic_book' 'Tarzan-of-the-Apes' %}">Tarzan of the Apes</a></li>
+    <li><a href="{% url 'classic_book' 'The-Adventures-of-Sherlock-Holmes' %}">The Adventures of Sherlock Holmes</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Art-of-War-by-Sun-Tzu-2' %}">The Art of War by Sun Tzu</a></li>
+    <li><a href="{% url 'classic_book' 'The-Autobiography-of-Benjamin-Franklin-Ed-by-Frank-Woodworth-Pine' %}">Autobiography of Benjamin Franklin</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Call-of-the-Wild-by-Jack-London-2' %}">The Call of the Wild by Jack London</a></li>
+    <li><a href="{% url 'classic_book' 'The-Canterbury-Tales-by-Geoffrey-Chaucer' %}">The Canterbury Tales by Geoffrey Chaucer</a></li>
+    <li><a href="{% url 'classic_book' 'The-Colors-of-Space-by-Marion-Zimmer-Bradley' %}">The Colors of Space by Marion Zimmer Bradley</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Consolation-of-Philosophy-by-Boethius' %}">The Consolation of Philosophy</a></li>
+    <li><a href="{% url 'classic_book' 'The-Count-of-Monte-Cristo-by-Alexandre-Dumas' %}">The Count of Monte Cristo by Alexandre Dumas</a></li>
+    <li><a href="{% url 'classic_book' 'The-Decline-and-Fall-of-the-Roman-Empire-vol-1' %}">The Decline and Fall of the Roman Empire Vol. 1</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Divine-Comedy-by-Dante-Alighieri' %}">The Divine Comedy by Dante Alighieri</a></li>
+    <li><a href="{% url 'classic_book' 'The-Federalist-Papers-by-Alexander-Hamilton-John-Jay-and-James-Madison' %}">The Federalist Papers</a></li>
+    <li><a href="{% url 'classic_book' 'The-Golden-Age-by-Kenneth-Grahame' %}">The Golden Age by Kenneth Grahame</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Iliad-by-Homer' %}">The Iliad by Homer</a></li>
+    <li><a href="{% url 'classic_book' 'The-Junior-Classics-vol-1-by-William-Patten' %}">The Junior Classics Vol. 1</a></li>
+    <li><a href="{% url 'classic_book' 'The-Man-Who-Was-Thursday-a-Nightmare-by-Gk-Chesterton' %}">The Man Who Was Thursday by G. K. Chesterton</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Memoirs-of-Sherlock-Holmes-by-Sir-Arthur-Conan-Doyle' %}">The Memoirs of Sherlock Holmes</a></li>
+    <li><a href="{% url 'classic_book' 'The-Mysterious-Island-by-Jules-Verne' %}">The Mysterious Island by Jules Verne</a></li>
+    <li><a href="{% url 'classic_book' 'The-Odyssey-by-Homer' %}">The Odyssey by Homer</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Origin-of-Species-by-Charles-Darwin' %}">The Origin of Species by Charles Darwin</a></li>
+    <li><a href="{% url 'classic_book' 'The-Raven-by-Edgar-Allan-Poe' %}">The Raven by Edgar Allan Poe</a></li>
+    <li><a href="{% url 'classic_book' 'The-Return-of-Sherlock-Holmes-by-Sir-Arthur-Conan-Doyle' %}">The Return of Sherlock Holmes</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Scarlet-Letter-by-Nathaniel-Hawthorne' %}">The Scarlet Letter by Nathaniel Hawthorne</a></li>
+    <li><a href="{% url 'classic_book' 'The-Scarlet-Pimpernel-by-Baroness-Emmuska-Orczy' %}">The Scarlet Pimpernel</a></li>
+    <li><a href="{% url 'classic_book' 'The-Secret-Garden-by-Frances-Hodgson-Burnett' %}">The Secret Garden</a></li>
+
+    <li><a href="{% url 'classic_book' 'The-Swiss-Family-Robinson-by-Johann-David-Wyss' %}">The Swiss Family Robinson</a></li>
+    <li><a href="{% url 'classic_book' 'The-Three-Musketeers-by-Alexandre-Dumas' %}">The Three Musketeers by Alexandre Dumas</a></li>
+    <li><a href="{% url 'classic_book' 'The-Wonderful-Wizard-of-Oz' %}">The Wonderful Wizard of Oz</a></li>
+
+    <li><a href="{% url 'classic_book' 'This-Side-of-Paradise-by-F-Scott-Fitzgerald' %}">This Side of Paradise by F. Scott Fitzgerald</a></li>
+    <li><a href="{% url 'classic_book' 'Tom-Sawyer-by-Mark-Twain' %}">Tom Sawyer by Mark Twain</a></li>
+    <li><a href="{% url 'classic_book' 'Treasure-Island-by-Robert-Louis-Stevenson-2' %}">Treasure Island by Robert Louis Stevenson</a></li>
+
+    <li><a href="{% url 'classic_book' 'Twenty-Thousand-Leagues-Under-the-Sea-by-Jules-Verne' %}">Twenty Thousand Leagues Under the Sea</a></li>
+    <li><a href="{% url 'classic_book' 'Ulysses-by-James-Joyce' %}">Ulysses by James Joyce</a></li>
+    <li><a href="{% url 'classic_book' 'Uncle-Toms-Cabin-by-Harriet-Beecher-Stowe' %}">Uncle Tom’s Cabin by Harriet Beecher Stowe</a></li>
+
+    <li><a href="{% url 'classic_book' 'Walden-by-Henry-David-Thoreau' %}">Walden by Henry David Thoreau</a></li>
+    <li><a href="{% url 'classic_book' 'War-and-Peace-by-Leo-Tolstoy' %}">War and Peace by Leo Tolstoy</a></li>
+    <li><a href="{% url 'classic_book' 'War-of-the-Worlds-by-H-G-Wells' %}">War of the Worlds by H. G. Wells</a></li>
+
+    <li><a href="{% url 'classic_book' 'Wuthering-Heights-by-Emily-Bronte-2' %}">Wuthering Heights by Emily Brontë</a></li>
+
+  </ul>
+</div>
+
+{% endblock %}

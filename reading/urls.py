@@ -335,4 +335,14 @@ urlpatterns = [
     path('the_tangled_bank', views.the_tangled_bank, name='the_tangled_bank'),
     path('the_epigenetics_revolution', views.the_epigenetics_revolution, name='the_epigenetics_revolution'),
     path('the_greatest_killer', views.the_greatest_killer, name='the_greatest_killer'),
+    # Classic Books Index Page
+    path("classic", views.classic, name="classic"),
+
+    # Classic Book Dynamic Loader
+    path(
+        "classic-books/<str:book_name>/",
+        views.classic_book,
+        name="classic_book"
+    ),
+    path("summaries/<str:book_name>/", views.summary_book, name="summary_book"),
 ]

@@ -998,5 +998,24 @@ def the_tangled_bank(request):
 def the_epigenetics_revolution(request):
     return render(request, 'the_epigenetics_revolution.html')
 
+
 def the_greatest_killer(request):
     return render(request, 'the_greatest_killer.html')
+
+
+def classic_book(request, book_name):
+    """
+    Renders any HTML file under:
+    reading/templates/classic-books/
+    """
+    template_path = f"classic-books/{book_name}.html"
+    return render(request, template_path)
+
+
+def classic(request):
+    return render(request, "classic.html")
+
+
+def summary_book(request, book_name):
+    template_path = f"summaries/{book_name}.html"
+    return render(request, template_path)
